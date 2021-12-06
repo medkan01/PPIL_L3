@@ -69,6 +69,14 @@ public:
 	*/
 	operator string() const;
 
+	/**
+	* Distance entre le vecteur u courant et un vecteur v.
+	* 
+	* @param v le second vecteur permettant de calculer la distance.
+	* @return l'entier correspondant à la distance entre un vecteur v et le vecteur u courant.
+	*/
+	const double distance(const Vecteur2D& v) const;
+
 };
 
 const Vecteur2D Vecteur2D::operator+(const Vecteur2D& v) const {
@@ -93,6 +101,10 @@ const Vecteur2D Vecteur2D::operator*(const int& i) const {
 
 Vecteur2D::operator string() const {
 	return "(" + to_string(x) + ", " + to_string(y) + ")";
+}
+
+const double Vecteur2D::distance(const Vecteur2D& v) const {
+	return sqrt(pow(v.x - x, 2) + pow(v.y - y, 2));
 }
 
 inline ostream& operator<<(ostream& s, const Vecteur2D& v) {
