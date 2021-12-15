@@ -88,7 +88,7 @@ const Vecteur2D Vecteur2D::operator-() const {
 }
 
 const Vecteur2D Vecteur2D::operator-(const Vecteur2D& v) const {
-	return Vecteur2D(x - v.x, y - v.y);
+	return Vecteur2D(x + (- v.x), y + (- v.y));
 }
 
 const Vecteur2D Vecteur2D::operator*(const Vecteur2D& v) const {
