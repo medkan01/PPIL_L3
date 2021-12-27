@@ -38,4 +38,18 @@ public:
 	* @return string - vecteur courant.
 	*/
 	virtual operator string() const = 0;
+
+	/**
+	* Récupère la couleur d'une forme.
+	*
+	* @return string - couleur de la forme.
+	*/
+	inline string getCouleur() const { return couleur; }
+
+	/**
+	* Modifie la couleur d'une forme.
+	*
+	* @param const string& c - Nouvelle couleur de la forme.
+	*/
+	inline void setCouleur(const string& c) { couleur = c; }
 };
