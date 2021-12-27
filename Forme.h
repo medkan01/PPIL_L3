@@ -52,4 +52,12 @@ public:
 	* @param const string& c - Nouvelle couleur de la forme.
 	*/
 	inline void setCouleur(const string& c) { couleur = c; }
+
+	/**
+	* Opérateur = qui remplace là forme courante par la forme entrée en paramètre.
+	*
+	* @param const Forme* forme - Nouvelle forme.
+	* @return Forme* - Forme remplacée.
+	*/
+	virtual const Forme* operator =(const Forme* forme) const = 0;
 };
