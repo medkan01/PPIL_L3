@@ -31,4 +31,11 @@ public:
 	* @param const double& angle - Angle de rotation. (en radian)
 	*/
 	virtual void rotation(const Vecteur2D& pi, const double& angle) const = 0;
+
+	/**
+	* Opérateur de cast. Equivalent d'une méthode toString().
+	*
+	* @return string - vecteur courant.
+	*/
+	virtual operator string() const = 0;
 };
