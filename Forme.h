@@ -54,7 +54,7 @@ public:
 	inline void setCouleur(const string& c) { couleur = c; }
 
 	/**
-	* Opérateur = qui remplace là forme courante par la forme entrée en paramètre.
+	* Opérateur = qui remplace la forme courante par la forme entrée en paramètre.
 	*
 	* @param const Forme* forme - Nouvelle forme.
 	* @return Forme* - Forme remplacée.
