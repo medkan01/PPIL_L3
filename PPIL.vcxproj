@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Couleur.h" />
     <ClInclude Include="Forme.h" />
     <ClInclude Include="Vecteur2D.h" />
   </ItemGroup>
