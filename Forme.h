@@ -10,6 +10,13 @@ class Forme {
 	string couleur;
 public:
 	/**
+	* Constructeur de la classe Forme.
+	* 
+	* @param const string& couleur - Couleur de la forme.
+	*/
+	Forme(const string& couleur) : couleur(couleur) {}
+
+	/**
 	* Effectue une translation sur la forme.
 	* 
 	* @param const Vecteur2D& v - Vecteur de translation
