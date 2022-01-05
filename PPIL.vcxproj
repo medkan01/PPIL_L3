@@ -143,6 +143,7 @@
     <ClInclude Include="Forme.h" />
     <ClInclude Include="PolygoneFerme.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
   </ItemGroup>
   <ItemGroup>
