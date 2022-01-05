@@ -142,10 +142,14 @@
     <ClInclude Include="Couleur.h" />
     <ClInclude Include="Forme.h" />
     <ClInclude Include="PolygoneFerme.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Vecteur2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Rapport.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
