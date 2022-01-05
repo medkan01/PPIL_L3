@@ -49,7 +49,7 @@ public:
 	/**
 	* Multiplication de deux vecteurs u et v.
 	*
-	* @param v le vecteur qui sera multiplié avec le vecteur u courant.
+	* @param const Vecteur2D& v - vecteur qui sera multiplié avec le vecteur u courant.
 	* @return le vecteur résultant de la multiplication des vecteurs u et v.
 	*/
 	const Vecteur2D operator*(const Vecteur2D& v) const;
@@ -65,15 +65,15 @@ public:
 	/**
 	* Opérateur de cast. Equivalent d'une méthode toString().
 	*
-	* @return une chaine de caractère correspondant au vecteur courant.
+	* @return string - correspondant au vecteur courant.
 	*/
 	operator string() const;
 
 	/**
 	* Distance entre le vecteur u courant et un vecteur v.
 	* 
-	* @param v le second vecteur permettant de calculer la distance.
-	* @return l'entier correspondant à la distance entre un vecteur v et le vecteur u courant.
+	* @param const Vecteur2D v - le second vecteur permettant de calculer la distance.
+	* @return const double - correspondant à la distance entre un vecteur v et le vecteur u courant.
 	*/
 	const double distance(const Vecteur2D& v) const;
 
@@ -95,7 +95,7 @@ const Vecteur2D Vecteur2D::operator*(const Vecteur2D& v) const {
 	return Vecteur2D(x * v.x, y * v.y);
 }
 
-const Vecteur2D Vecteur2D::operator*(const int& i) const {
+const Vecteur2D Vecteur2D::operator*(const double& i) const {
 	return Vecteur2D(x * i, y * i);
 }
 
