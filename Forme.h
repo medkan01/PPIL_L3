@@ -3,18 +3,19 @@
 #include <string>
 
 #include "Vecteur2D.h"
+#include "Couleur.h"
 
 using namespace std;
 
 class Forme {
-	string couleur;
+	Couleur couleur;
 public:
 	/**
 	* Constructeur de la classe Forme.
 	* 
 	* @param const string& couleur - Couleur de la forme.
 	*/
-	Forme(const string& couleur) : couleur(couleur) {}
+	Forme(const Couleur& couleur) : couleur(couleur) {}
 
 	/**
 	* Effectue une translation sur la forme.
@@ -51,14 +52,14 @@ public:
 	*
 	* @return string - couleur de la forme.
 	*/
-	inline string getCouleur() const { return couleur; }
+	const Couleur getCouleur() const { return couleur; }
 
 	/**
 	* Modifie la couleur d'une forme.
 	*
 	* @param const string& c - Nouvelle couleur de la forme.
 	*/
-	inline void setCouleur(const string& c) { couleur = c; }
+	void setCouleur(const string& c) { couleur = c; }
 
 	/**
 	* Opérateur = qui remplace la forme courante par la forme entrée en paramètre.
