@@ -1,0 +1,4 @@
+Problèmes rencontrés :
+
+Définition d'une forme
+Création du client/serveur
