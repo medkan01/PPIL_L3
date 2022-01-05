@@ -5,7 +5,7 @@
 using namespace std;
 
 /**
-	Cette classe représente un vecteur, un point ou une coordonnées dans un espace en 2 dimensions
+	Représente un vecteur, un point ou une coordonnées dans un espace en 2 dimensions
 */
 class Vecteur2D {
 public:
