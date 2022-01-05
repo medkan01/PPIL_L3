@@ -7,15 +7,22 @@
 
 using namespace std;
 
+/**
+* Représente une forme quelconque.
+* 
+* Définie par une couleur et un point d'origine.
+*/
 class Forme {
 	Couleur couleur;
+	Vecteur2D origine;
 public:
 	/**
 	* Constructeur de la classe Forme.
 	* 
 	* @param const string& couleur - Couleur de la forme.
+	* @param const Vectuer2D& origine - Origine de la forme.
 	*/
-	Forme(const Couleur& couleur) : couleur(couleur) {}
+	Forme(const Couleur& couleur, const Vecteur2D& origine) : couleur(couleur), origine(origine) {}
 
 	/**
 	* Effectue une translation sur la forme.
@@ -48,18 +55,32 @@ public:
 	virtual operator string() const = 0;
 
 	/**
-	* Récupère la couleur d'une forme.
+	* Récupère la couleur de la forme.
 	*
 	* @return string - couleur de la forme.
 	*/
 	const Couleur getCouleur() const { return couleur; }
 
 	/**
-	* Modifie la couleur d'une forme.
+	* Modifie la couleur de la forme.
 	*
-	* @param const string& c - Nouvelle couleur de la forme.
+	* @param const string& c - nouvelle couleur de la forme.
 	*/
 	void setCouleur(const string& c) { couleur = c; }
+
+	/**
+	* Récupère l'origine de la forme.
+	* 
+	* @return const Vecteur2D - origine de la forme.
+	*/
+	const Vecteur2D getOrigine() const { return origine; }
+
+	/**
+	* Modifie l'origine de la forme.
+	* 
+	* @param const Vecteur2D& u - nouvelle origine de la forme.
+	*/
+	void setOrigine(const Vecteur2D& u) { origine = u; }
 
 	/**
 	* Opérateur = qui remplace la forme courante par la forme entrée en paramètre.
