@@ -76,7 +76,6 @@ public:
 	* @return const double - correspondant à la distance entre un vecteur v et le vecteur u courant.
 	*/
 	const double distance(const Vecteur2D& v) const;
-
 };
 
 const Vecteur2D Vecteur2D::operator+(const Vecteur2D& v) const {
@@ -109,4 +108,15 @@ const double Vecteur2D::distance(const Vecteur2D& v) const {
 
 inline ostream& operator<<(ostream& s, const Vecteur2D& v) {
 	return s << (string)v;
+}
+
+/**
+* Déterminant d'un couple de vecteur.
+* 
+* @param const Vecteur2D& u - vecteur u.
+* @param cosnt Vecteur2D& v - vecteur v.
+* @return const double - valeur du déterminant du couple de vecteurs u et v.
+*/
+inline const double determinant(const Vecteur2D& u, const Vecteur2D& v) {
+	return (u.x * v.y) - (u.y * v.x);
 }
