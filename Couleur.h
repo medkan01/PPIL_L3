@@ -11,6 +11,7 @@ public:
 	* 
 	* @param const string& couleur - couleur correspondante.
 	*/
-	inline Couleur(const string& couleur = "blanc") : couleur(couleur) {}
+	inline Couleur(const string& couleur = "blanc") : 
+		couleur(couleur) {}
 
 };

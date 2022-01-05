@@ -18,7 +18,8 @@ public:
 	* @param const double& x - valeur de u1 dans le vecteur u(u1, u2).
 	* @param const double& y - valeur de u2 dans le vecteur u(u1, u2).
 	*/
-	explicit Vecteur2D(const double& x = 0, const double& y = 0) : x(x), y(y) {}
+	explicit Vecteur2D(const double& x = 0, const double& y = 0) : 
+		x(x), y(y) {}
 
 	///	Destructeur de la classe Vecteur2D.
 	virtual ~Vecteur2D() {}

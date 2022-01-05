@@ -22,7 +22,8 @@ public:
 	* @param const string& couleur - Couleur de la forme.
 	* @param const Vectuer2D& origine - Origine de la forme.
 	*/
-	Forme(const Couleur& couleur, const Vecteur2D& origine) : couleur(couleur), origine(origine) {}
+	Forme(const Couleur& couleur, const Vecteur2D& origine) : 
+		couleur(couleur), origine(origine) {}
 
 	/**
 	* Effectue une translation sur la forme.
