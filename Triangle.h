@@ -24,7 +24,7 @@ public:
 
 	/**
 	* Détermine l'aire du triangle.
-	* 
+	*
 	* @return const double - aire du triangle.
 	*/
 	const double aire() const { return determinant(AB, AC) * 0.5; }
