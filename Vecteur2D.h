@@ -85,7 +85,16 @@ public:
 	* @param const double& phi - Angle de rotation.
 	* @return const Vecteur2D - Point après rotation.
 	*/
-	inline virtual const Vecteur2D* rotation(const Vecteur2D& R, const double& phi) const;
+	inline virtual const Vecteur2D rotation(const Vecteur2D& R, const double& phi) const;
+
+	/**
+	* Effectue une homothetie vectorielle à partir d'un point invariant, du point concerné et d'un rapport a.
+	*
+	* @param const Vecteur2D& C - Point invariant.
+	* @param const double& a - Rapport d'homothetie.
+	* @return const Vecteur2D - Point après homothetie.
+	*/
+	inline virtual const Vecteur2D homothetie(const Vecteur2D& C, const double& a) const;
 
 	/**
 	* Déterminant d'un couple de vecteur.
@@ -102,6 +111,15 @@ public:
 	* @return Vecteur2D* - Copie du vecteur.
 	*/
 	virtual Vecteur2D* clone() const { return new Vecteur2D(*this); }
+
+	/**
+	* Multiplication d'un vecteur par un entier i.
+	*
+	* @param const double& i - entier qui sera multiplié avec le vecteur u courant.
+	* @param const Vecteur2D& v - Vecteur qui va être multiplié.
+	* @return const Vecteur2D - vecteur résultant de la multiplication de l'entier i et du vecteur u courant.
+	*/
+	friend const Vecteur2D operator *(const double& i, const Vecteur2D& v);
 };
 
 const Vecteur2D Vecteur2D::operator+(const Vecteur2D& v) const {
@@ -136,14 +154,30 @@ inline ostream& operator<<(ostream& s, const Vecteur2D& v) {
 	return s << (string)v;
 }
 
-const Vecteur2D* Vecteur2D::rotation(const Vecteur2D& R, const double& phi) const {
-	Vecteur2D* v = clone();
-	v->x = x * cos(phi) - y * sin(phi);
-	v->y = x * sin(phi) + y * cos(phi);
+const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const double& phi) const {
+	Vecteur2D v = *this;
+	v.x = x * cos(phi) - y * sin(phi);
+	v.y = x * sin(phi) + y * cos(phi);
+
+	return v;
+}
+
+const Vecteur2D Vecteur2D::homothetie(const Vecteur2D& C, const double& a) const {
+	Vecteur2D v = *this;
+	v.x = a * (x - C.x) + C.x;
+	v.y = a * (y - C.y) + C.y;
 
 	return v;
 }
 
 const double determinant(const Vecteur2D& u, const Vecteur2D& v) {
 	return (u.x * v.y) - (u.y * v.x);
+}
+
+const Vecteur2D operator *(const double& k, const Vecteur2D& v) {
+	Vecteur2D t = v;
+	t.x = t.x * k;
+	t.y = t.y * k;
+
+	return t;
 }
