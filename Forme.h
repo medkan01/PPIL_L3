@@ -92,6 +92,9 @@ public:
 	virtual const Forme* operator =(const Forme* forme) const = 0;
 
 	/**
-	* Clone 
+	* Clone une forme.
+	* 
+	* @return Forme* - Copie de la forme.
 	*/
+	virtual Forme* clone() const = 0;
 };
