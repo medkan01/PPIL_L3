@@ -84,14 +84,6 @@ public:
 	void setOrigine(const Vecteur2D& u) { origine = u; }
 
 	/**
-	* Opérateur = qui remplace la forme courante par la forme entrée en paramètre.
-	*
-	* @param const Forme* forme - Nouvelle forme.
-	* @return Forme* - Forme remplacée.
-	*/
-	virtual const Forme* operator =(const Forme* forme) const = 0;
-
-	/**
 	* Clone une forme.
 	* 
 	* @return Forme* - Copie de la forme.

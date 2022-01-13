@@ -67,7 +67,15 @@ public:
 	*
 	* @return string - vecteur courant.
 	*/
-	virtual operator string() const;
+	inline virtual operator string() const;
+
+	/**
+	* Opérateur = qui remplace la forme courante par la forme entrée en paramètre.
+	*
+	* @param const Forme* forme - Nouvelle forme.
+	* @return Forme* - Forme remplacée.
+	*/
+	inline virtual const Forme* operator =(const Forme* forme) const;
 };
 
 const Forme* Triangle::translation(const Vecteur2D& v) const {
