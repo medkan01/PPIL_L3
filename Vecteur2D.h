@@ -77,6 +77,31 @@ public:
 	* @return const double - correspondant à la distance entre un vecteur v et le vecteur u courant.
 	*/
 	const double distance(const Vecteur2D& v) const;
+
+	/**
+	* Effectue une rotation vectorielle à partir d'un point de rotation R, du point concerné et d'un angle phi.
+	* 
+	* @param const Vecteur2D& R - Centre de rotation.
+	* @param const double& phi - Angle de rotation.
+	* @return const Vecteur2D - Point après rotation.
+	*/
+	inline virtual const Vecteur2D* rotation(const Vecteur2D& R, const double& phi) const;
+
+	/**
+	* Déterminant d'un couple de vecteur.
+	*
+	* @param const Vecteur2D& u - vecteur u.
+	* @param cosnt Vecteur2D& v - vecteur v.
+	* @return const double - valeur du déterminant du couple de vecteurs u et v.
+	*/
+	friend const double determinant(const Vecteur2D& u, const Vecteur2D& v);
+
+	/**
+	* Clone un vecteur.
+	* 
+	* @return const Vecteur2D* - Copie du vecteur.
+	*/
+	virtual Vecteur2D* clone() const { return new Vecteur2D(*this); }
 };
 
 const Vecteur2D Vecteur2D::operator+(const Vecteur2D& v) const {
@@ -111,13 +136,14 @@ inline ostream& operator<<(ostream& s, const Vecteur2D& v) {
 	return s << (string)v;
 }
 
-/**
-* Déterminant d'un couple de vecteur.
-* 
-* @param const Vecteur2D& u - vecteur u.
-* @param cosnt Vecteur2D& v - vecteur v.
-* @return const double - valeur du déterminant du couple de vecteurs u et v.
-*/
-inline const double determinant(const Vecteur2D& u, const Vecteur2D& v) {
+const Vecteur2D* Vecteur2D::rotation(const Vecteur2D& R, const double& phi) const {
+	Vecteur2D* v = clone();
+	v->x = x * cos(phi) - y * sin(phi);
+	v->y = x * sin(phi) + y * cos(phi);
+
+	return v;
+}
+
+const double determinant(const Vecteur2D& u, const Vecteur2D& v) {
 	return (u.x * v.y) - (u.y * v.x);
 }
