@@ -30,7 +30,7 @@ public:
 	* 
 	* @param const Vecteur2D& v - Vecteur de translation
 	*/
-	virtual const Forme* translation(const Vecteur2D& v) = 0;
+	virtual const Forme* translation(const Vecteur2D& v) const = 0;
 
 	/**
 	* Effectue une homothétie sur la forme. (zoom)
@@ -38,7 +38,7 @@ public:
 	* @param const Vecteur2d& - Point invariant.
 	* @param const double& - Rapport d'homothétie.
 	*/
-	virtual const Forme* homothetie(const Vecteur2D& pi, const double& rh) = 0;
+	virtual const Forme* homothetie(const Vecteur2D& pi, const double& rh) const = 0;
 
 	/**
 	* Effectue une rotation sur la forme.
@@ -46,7 +46,7 @@ public:
 	* @param const Vecteur2D& pi - Point invariant. (centre de rotation)
 	* @param const double& angle - Angle de rotation. (en radian)
 	*/
-	virtual const Forme* rotation(const Vecteur2D& pi, const double& angle) = 0;
+	virtual const Forme* rotation(const Vecteur2D& pi, const double& angle) const = 0;
 
 	/**
 	* Opérateur de cast. Equivalent d'une méthode toString().
