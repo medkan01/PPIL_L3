@@ -28,4 +28,40 @@ public:
 	* @return const double - aire du triangle.
 	*/
 	const double aire() const { return determinant(AB, AC) * 0.5; }
+
+	/**
+	* Effectue une translation sur la forme.
+	*
+	* @param const Vecteur2D& v - Vecteur de translation
+	*/
+	inline virtual void translation(const Vecteur2D& v);
+
+	/**
+	* Effectue une homothétie sur la forme. (zoom)
+	* Calcule d'une homothetie : 
+	* OM' = k(OM - OC) + OC
+	* M' = rh * (M - C) + C
+	*
+	* @param const Vecteur2d& - Point invariant.
+	* @param const double& - Rapport d'homothétie.
+	*/
+	inline virtual void homothetie(const Vecteur2D& C, const double& rh);
+
+	/**
+	* Effectue une rotation sur la forme.
+	*
+	* @param const Vecteur2D& pi - Point invariant. (centre de rotation)
+	* @param const double& angle - Angle de rotation. (en radian)
+	*/
+	virtual void rotation(const Vecteur2D& pi, const double& angle);
 };
+
+void Triangle::translation(const Vecteur2D& v) {
+	setOrigine(getOrigine() + v);
+	AB = AB + v;
+	AC = AC + v;
+}
+
+const Triangle Triangle::homothetie(const Vecteur2D& pi, const double& rh) {
+	
+}
