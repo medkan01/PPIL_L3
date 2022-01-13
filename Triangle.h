@@ -54,6 +54,20 @@ public:
 	* @param const double& angle - Angle de rotation. (en radian)
 	*/
 	inline virtual const Forme* rotation(const Vecteur2D& pi, const double& angle) const;
+
+	/**
+	* Clone un triangle.
+	* 
+	* @return Forme* - Copie du triangle
+	*/
+	inline virtual Forme* clone() const;
+
+	/**
+	* Opérateur de cast. Equivalent d'une méthode toString().
+	*
+	* @return string - vecteur courant.
+	*/
+	virtual operator string() const;
 };
 
 const Forme* Triangle::translation(const Vecteur2D& v) const {
@@ -66,4 +80,12 @@ const Forme* Triangle::homothetie(const Vecteur2D& C, const double& k) const {
 
 const Forme* Triangle::rotation(const Vecteur2D& v, const double& angle) const {
 
+}
+
+Triangle::operator string() const {
+	return "[Triangle: A(" + to_string(getOrigine().x) + ", " + to_string(getOrigine().y) + ") - B" + (string) AB + " - C" + (string) AC + " - " + (string) getCouleur() + "]";
+}
+
+Forme* Triangle::clone() const {
+	return new Triangle(*this);
 }

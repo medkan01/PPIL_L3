@@ -14,4 +14,11 @@ public:
 	inline Couleur(const string& couleur = "blanc") : 
 		couleur(couleur) {}
 
+	/**
+	* to_string d'une couleur.
+	* 
+	* @return string - Couleur.
+	*/
+	virtual operator string() const { "[Couleur: " + couleur + "]"; }
+
 };
