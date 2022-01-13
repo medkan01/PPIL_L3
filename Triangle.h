@@ -40,7 +40,7 @@ public:
 	* Effectue une homothétie sur la forme. (zoom)
 	* Calcule d'une homothetie : 
 	* OM' = k(OM - OC) + OC
-	* M' = rh * (M - C) + C
+	* M' = k * (M - C) + C
 	*
 	* @param const Vecteur2d& - Point invariant.
 	* @param const double& - Rapport d'homothétie.
@@ -50,10 +50,10 @@ public:
 	/**
 	* Effectue une rotation sur la forme.
 	*
-	* @param const Vecteur2D& pi - Point invariant. (centre de rotation)
-	* @param const double& angle - Angle de rotation. (en radian)
+	* @param const Vecteur2D& R - Point invariant. (centre de rotation)
+	* @param const double& phi - Angle de rotation. (en radian)
 	*/
-	inline virtual const Forme* rotation(const Vecteur2D& pi, const double& angle) const;
+	inline virtual const Forme* rotation(const Vecteur2D& R, const double& phi) const;
 
 	/**
 	* Clone un triangle.
@@ -71,15 +71,30 @@ public:
 };
 
 const Forme* Triangle::translation(const Vecteur2D& v) const {
-	
+	Triangle* t = new Triangle(*this);
+	t->setOrigine(getOrigine() + v);
+	t->AB = AB + v;
+	t->AC = AC + v;
+
+	return t;
 }
 
 const Forme* Triangle::homothetie(const Vecteur2D& C, const double& k) const {
-	
+	Triangle* t = new Triangle(*this);
+	t->setOrigine(t->getOrigine().homothetie(C, k));
+	t->AB = t->AB.homothetie(C, k);
+	t->AC = t->AC.homothetie(C, k);
+
+	return t;
 }
 
-const Forme* Triangle::rotation(const Vecteur2D& v, const double& angle) const {
+const Forme* Triangle::rotation(const Vecteur2D& R, const double& phi) const {
+	Triangle* t = new Triangle(*this);
+	t->setOrigine(t->getOrigine().rotation(R, phi));
+	t->AB = t->AB.rotation(R, phi);
+	t->AC = t->AC.rotation(R, phi);
 
+	return t;
 }
 
 Triangle::operator string() const {
