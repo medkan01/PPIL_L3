@@ -99,7 +99,7 @@ public:
 	/**
 	* Clone un vecteur.
 	* 
-	* @return const Vecteur2D* - Copie du vecteur.
+	* @return Vecteur2D* - Copie du vecteur.
 	*/
 	virtual Vecteur2D* clone() const { return new Vecteur2D(*this); }
 };
