@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Vecteur2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Rapport.txt" />

@@ -34,7 +34,7 @@ public:
 	*
 	* @param const Vecteur2D& v - Vecteur de translation
 	*/
-	inline virtual void translation(const Vecteur2D& v);
+	inline virtual const Forme* translation(const Vecteur2D& v) const;
 
 	/**
 	* Effectue une homothétie sur la forme. (zoom)
@@ -45,7 +45,7 @@ public:
 	* @param const Vecteur2d& - Point invariant.
 	* @param const double& - Rapport d'homothétie.
 	*/
-	inline virtual void homothetie(const Vecteur2D& C, const double& rh);
+	inline virtual const Forme* homothetie(const Vecteur2D& C, const double& k) const;
 
 	/**
 	* Effectue une rotation sur la forme.
@@ -53,15 +53,17 @@ public:
 	* @param const Vecteur2D& pi - Point invariant. (centre de rotation)
 	* @param const double& angle - Angle de rotation. (en radian)
 	*/
-	virtual void rotation(const Vecteur2D& pi, const double& angle);
+	inline virtual const Forme* rotation(const Vecteur2D& pi, const double& angle) const;
 };
 
-void Triangle::translation(const Vecteur2D& v) {
-	setOrigine(getOrigine() + v);
-	AB = AB + v;
-	AC = AC + v;
+const Forme* Triangle::translation(const Vecteur2D& v) const {
+	
 }
 
-const Triangle Triangle::homothetie(const Vecteur2D& pi, const double& rh) {
+const Forme* Triangle::homothetie(const Vecteur2D& C, const double& k) const {
 	
+}
+
+const Forme* Triangle::rotation(const Vecteur2D& v, const double& angle) const {
+
 }
