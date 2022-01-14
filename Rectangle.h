@@ -1,6 +1,6 @@
 #pragma once
-#include <string>
 #include "PolygoneFerme.h"
+using namespace std;
 
 class Rectangle : public PolygoneFerme {
 

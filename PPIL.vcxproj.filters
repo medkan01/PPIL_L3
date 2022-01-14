@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\Tests">
+      <UniqueIdentifier>{05179921-e227-484d-9cbc-533e4a6eda82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vecteur2D.h">
@@ -33,13 +36,13 @@
     <ClInclude Include="Triangle.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="TestVecteur2D.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Vecteur2D.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="TestVecteur2D.cpp">
+      <Filter>Fichiers sources\Tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

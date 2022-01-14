@@ -1,10 +1,6 @@
 #pragma once
-#include <iostream>
-#include <string>
-
-#include "Vecteur2D.h"
 #include "Couleur.h"
-
+#include "Vecteur2D.h"
 using namespace std;
 
 /**

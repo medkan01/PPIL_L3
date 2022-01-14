@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 #include "Forme.h"
 using namespace std;
 
@@ -10,5 +9,5 @@ public:
 	* 
 	* @param const string& couleur - Couleur du polygone.
 	*/
-	PolygoneFerme(const string& couleur) : Forme(couleur) {}
+	PolygoneFerme(const string& couleur, const Vecteur2D& origine) : Forme(couleur, origine) {}
 };
