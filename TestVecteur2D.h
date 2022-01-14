@@ -86,5 +86,12 @@ bool testDeterminant();
 */
 bool testClone();
 
+/**
+* Affiche le résultat du test.
+* 
+* @param const bool& test - Test à réaliser.
+*/
+void resultatTest(const bool& test);
+
 /// Lance une session de test pour la classe Vecteur2D et affiche les résultats des différents tests.
 void sessionTestVecteur2D();

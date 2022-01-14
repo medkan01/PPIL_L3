@@ -73,25 +73,19 @@ bool testClone() {
 	return false;
 }
 
+void resultatTest(const bool& test) {
+	if (test)
+		cout << ".";
+	else
+		cout << "x";
+}
+
 void sessionTestVecteur2D() {
 	cout << "Lancement des tests.." << endl << "Résultats : ";
-	// Operator +
-	if (testOperatorPlus())
-		cout << ".";
-	else
-		cout << "x";
 
-	// Operator - (unaire)
-	if (testOperatorMoinsUnaire())
-		cout << ".";
-	else
-		cout << "x";
-
-	// Operator -
-	if (testOperatorMoins())
-		cout << ".";
-	else
-		cout << "x";
+	resultatTest(testOperatorPlus());
+	resultatTest(testOperatorMoinsUnaire());
+	resultatTest(testOperatorMoins());
 
 	cout << endl;
 }
