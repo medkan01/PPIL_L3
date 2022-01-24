@@ -2,3 +2,6 @@ Problèmes rencontrés :
 
 Définition d'une forme
 Création du client/serveur
+
+Choix :
+Classe radian pour manipuler plus facilement les angles et donc les rotations.

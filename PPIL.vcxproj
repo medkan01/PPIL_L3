@@ -142,12 +142,15 @@
     <ClInclude Include="Couleur.h" />
     <ClInclude Include="Forme.h" />
     <ClInclude Include="PolygoneFerme.h" />
+    <ClInclude Include="Radian.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="TestRadian.h" />
     <ClInclude Include="TestVecteur2D.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TestRadian.cpp" />
     <ClCompile Include="TestVecteur2D.cpp" />
   </ItemGroup>
   <ItemGroup>

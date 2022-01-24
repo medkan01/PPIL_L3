@@ -39,9 +39,18 @@
     <ClInclude Include="TestVecteur2D.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Radian.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="TestRadian.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestVecteur2D.cpp">
+      <Filter>Fichiers sources\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestRadian.cpp">
       <Filter>Fichiers sources\Tests</Filter>
     </ClCompile>
   </ItemGroup>
