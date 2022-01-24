@@ -42,17 +42,17 @@ public:
 	* Soustraction de deux vecteurs u et v.
 	*
 	* @param const Vecteur2D& v - vecteur qui sera soustrait avec le vecteur u courant.
-	* @return le vecteur résultant de la soustraction des vecteurs u et v.
+	* @return - le vecteur résultant de la soustraction des vecteurs u et v.
 	*/
 	const Vecteur2D operator-(const Vecteur2D& v) const;
 
 	/**
-	* Multiplication de deux vecteurs u et v.
+	* Produit scalaire de deux vecteurs u et v.
 	*
-	* @param const Vecteur2D& v - vecteur qui sera multiplié avec le vecteur u courant.
-	* @return le vecteur résultant de la multiplication des vecteurs u et v.
+	* @param const Vecteur2D& v - vecteur qui résultera du produit scalaire avec le vecteur courant.
+	* @return - produit scalaire de u . v.
 	*/
-	const Vecteur2D operator*(const Vecteur2D& v) const;
+	const double operator*(const Vecteur2D& v) const;
 
 	/**
 	* Multiplication d'un vecteur par un entier i.
@@ -133,8 +133,8 @@ const Vecteur2D Vecteur2D::operator-(const Vecteur2D& v) const {
 	return Vecteur2D(x + (- v.x), y + (- v.y));
 }
 
-const Vecteur2D Vecteur2D::operator*(const Vecteur2D& v) const {
-	return Vecteur2D(x * v.x, y * v.y);
+const double Vecteur2D::operator*(const Vecteur2D& v) const {
+	return x * v.x + y * v.y;
 }
 
 const Vecteur2D Vecteur2D::operator*(const double& i) const {
