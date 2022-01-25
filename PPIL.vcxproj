@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Couleur.h" />
+    <ClInclude Include="Degree.h" />
     <ClInclude Include="Forme.h" />
     <ClInclude Include="PolygoneFerme.h" />
     <ClInclude Include="Radian.h" />
