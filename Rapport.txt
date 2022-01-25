@@ -2,3 +2,15 @@ Problèmes rencontrés :
 
 Définition d'une forme
 Création du client/serveur
+
+Choix :
+Classe radian et degree pour manipuler plus facilement les angles et donc les rotations.
+
+Finalement, plutôt que de prendre un point de repère de la forme, chaque forme sera définie par un 
+point qui sera son centre. Et chaque forme qui héritera de Forme sera composée de ses différents points.
+
+Pour obtenir ce centre, on procède de la façon suivante :
+
+1- On calcule l'aire de la forme grâce à une formule (elle sera dans le rapport)
+
+2- On calcule le centre de gravité (centre de la forme) (pareil, dans le rapport)
