@@ -13,8 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers sources\Tests">
-      <UniqueIdentifier>{05179921-e227-484d-9cbc-533e4a6eda82}</UniqueIdentifier>
+    <Filter Include="Fichiers d%27en-tête\Tests">
+      <UniqueIdentifier>{56de321e-0766-49a9-9828-2932d4287910}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,28 +36,28 @@
     <ClInclude Include="Triangle.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="TestVecteur2D.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Radian.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="TestRadian.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Degree.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="TestVecteur2D.cpp">
-      <Filter>Fichiers sources\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="TestRadian.cpp">
-      <Filter>Fichiers sources\Tests</Filter>
-    </ClCompile>
+    <ClInclude Include="TestRadian.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestVecteur2D.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDegree.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Rapport.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

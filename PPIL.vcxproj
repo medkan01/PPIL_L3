@@ -145,17 +145,17 @@
     <ClInclude Include="PolygoneFerme.h" />
     <ClInclude Include="Radian.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="TestDegree.h" />
     <ClInclude Include="TestRadian.h" />
     <ClInclude Include="TestVecteur2D.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestRadian.cpp" />
-    <ClCompile Include="TestVecteur2D.cpp" />
+    <Text Include="Rapport.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Rapport.txt" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
