@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include "Radian.h"
+#include "Degree.h"
 using namespace std;
 
 /**
@@ -81,10 +83,19 @@ public:
 	* Effectue une rotation vectorielle à partir d'un point de rotation R, du point concerné et d'un angle phi.
 	* 
 	* @param const Vecteur2D& R - Centre de rotation.
-	* @param const double& phi - Angle de rotation.
+	* @param const Radian& phi - Angle de rotation en radian.
 	* @return const Vecteur2D - Point après rotation.
 	*/
-	inline virtual const Vecteur2D rotation(const Vecteur2D& R, const double& phi) const;
+	inline virtual const Vecteur2D rotation(const Vecteur2D& R, const Radian& phi) const;
+
+	/**
+	* Effectue une rotation vectorielle à partir d'un point de rotation R, du point concerné et d'un angle phi.
+	*
+	* @param const Vecteur2D& R - Centre de rotation.
+	* @param const Degree& phi - Angle de rotation en degrée.
+	* @return const Vecteur2D - Point après rotation.
+	*/
+	inline virtual const Vecteur2D rotation(const Vecteur2D& R, const Degree& phi) const;
 
 	/**
 	* Effectue une homothetie vectorielle à partir d'un point invariant, du point concerné et d'un rapport a.
@@ -153,10 +164,18 @@ inline ostream& operator<<(ostream& s, const Vecteur2D& v) {
 	return s << (string)v;
 }
 
-const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const double& phi) const {
+const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Radian& phi) const {
 	Vecteur2D v = *this;
 	v.x = x * cos(phi) - y * sin(phi);
 	v.y = x * sin(phi) + y * cos(phi);
+
+	return v;
+}
+
+const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Degree& phi) const {
+	Vecteur2D v = *this;
+	v.x = x * cos(phi.toRadian()) - y * sin(phi.toRadian());
+	v.y = x * sin(phi.toRadian()) + y * cos(phi.toRadian());
 
 	return v;
 }

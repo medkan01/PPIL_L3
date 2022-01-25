@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Vecteur2D.h"
 using namespace std;
 
@@ -74,57 +74,86 @@ bool testDistance() {
 	return false;
 }
 
-bool testRotation() {
-	Vecteur2D u(4, 0), v(0, 0);
-	
+bool testRotationDegree() {
+	Vecteur2D u(4, 0), w(0,0);
+	Degree theta(90);
+
+	u = u.rotation(w, theta);
+	if ((int) u.x == 0 && (int) u.y == 4)
+		return true;
 	
 	return false;
 }
 
+bool testRotationRadian() {
+	Vecteur2D u(4, 0), w(0, 0);
+	Radian alpha(M_PI / 2);
+
+	u = u.rotation(w, alpha);
+
+	if ((int) u.x == 0 && (int) u.y == (double) 4)
+		return true;
+
+	return false;
+}
+
 bool testHomothetie() {
+	Vecteur2D u(4, 2), v(0, 0);
+	u = u.homothetie(v, 2);
+
+	if ((int) u.x == 8 && (int) u.y == 4)
+		return true;
 
 	return false;
 }
 
 bool testDeterminant() {
+	Vecteur2D u(2, 3), v(4, 5);
+	double delta = determinant(u, v);
+
+	if ((int)delta == -2)
+		return true;
 
 	return false;
 }
 
-bool testClone() {
-
-	return false;
-}
-
-void resultatTest(const bool& test) {
-	if (test)
+int resultatTest(const bool& test) {
+	if (test) {
 		cout << ".";
-	else
-		cout << "x";
+		return 1;
+	}
+
+	cout << "x";
+	return 0;
 }
 
 void sessionTestVecteur2D() {
-	cout << "Lancement des tests.." << endl << "R�sultats : ";
+	bool test;
+	int score = 0;
+	const int nbTests = 12;
 
-	resultatTest(testOperatorPlus());
-	resultatTest(testOperatorMoinsUnaire());
-	resultatTest(testOperatorMoins());
-	resultatTest(testOperatorFois());
-	resultatTest(testOperatorFoisDoubleDroite());
-	resultatTest(testOperatorFoisDoubleGauche());
-	resultatTest(testOperatorString());
-	resultatTest(testDistance());
-	resultatTest(testRotation());
-	resultatTest(testHomothetie());
-	resultatTest(testDeterminant());
-	resultatTest(testClone());
+	cout << "Début de la session de tests.." << endl << "Résultats : ";
 
-	cout << endl;
+	score += resultatTest(testOperatorPlus());
+	score += resultatTest(testOperatorMoinsUnaire());
+	score += resultatTest(testOperatorMoins());
+	score += resultatTest(testOperatorFois());
+	score += resultatTest(testOperatorFoisDoubleDroite());
+	score += resultatTest(testOperatorFoisDoubleGauche());
+	score += resultatTest(testOperatorString());
+	score += resultatTest(testDistance());
+	score += resultatTest(testRotationDegree());
+	score += resultatTest(testRotationRadian());
+	score += resultatTest(testHomothetie());
+	score += resultatTest(testDeterminant());
+
+	cout << endl << "Fin de la session de tests.." << endl;
+
+	cout << endl << "Score : " << score << "/" << nbTests << endl;
 }
 
-/*
 int main() {
 	sessionTestVecteur2D();
+
 	return 0;
 }
-*/

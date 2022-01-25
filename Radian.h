@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 /**
 * Un radian est défini par un double.
 */
@@ -19,20 +22,16 @@ public:
 	virtual ~Radian() {}
 
 	/**
-	* Fonction renvoyant une approximation de la valeur de pi.
-	* 
-	* @return double - approximation de pi.
+	* Permet de passer de radian à degrée.
+	*
+	* @return const double - résultat de la conversion.
 	*/
-	friend const double pi();
-};
+	const double toDegree() const { return (alpha * 180) / M_PI; }
 
-const double pi() {
-	double pi = 0;
-	for (int i = 1; i < 10000000; i += 2) {
-		if (i % 4 == 1)
-			pi += 1.0 / i;
-		else if (i % 4 == 3)
-			pi -= 1.0 / i;
-	}
-	return (double)4 * pi;
-}
+	/**
+	* Opérateur de cast de Radian à double.
+	*
+	* @return double - correspondant à la valeur d'alpha.
+	*/
+	operator double() const { return alpha; }
+};
