@@ -148,6 +148,7 @@
     <ClInclude Include="Segment.h" />
     <ClInclude Include="TestDegree.h" />
     <ClInclude Include="TestRadian.h" />
+    <ClInclude Include="TestSegment.h" />
     <ClInclude Include="TestVecteur2D.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />

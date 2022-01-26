@@ -31,14 +31,14 @@ public:
 	* @param const Vecteur2D& v - vecteur qui sera additionné avec le vecteur u courant.
 	* @return const Vecteur2D - vecteur résultant de l'addition des vecteurs u et v.
 	*/
-	const Vecteur2D operator+(const Vecteur2D& v) const;
+	inline const Vecteur2D operator+(const Vecteur2D& v) const;
 
 	/**
 	* Opérateur - unaire. Permet entre autre d'opposer un vecteur.
 	*
 	* @return const Vecteur2D - opposé du vecteur courant.
 	*/
-	const Vecteur2D operator-() const;
+	inline const Vecteur2D operator-() const;
 
 	/**
 	* Soustraction de deux vecteurs u et v.
@@ -46,7 +46,7 @@ public:
 	* @param const Vecteur2D& v - vecteur qui sera soustrait avec le vecteur u courant.
 	* @return - le vecteur résultant de la soustraction des vecteurs u et v.
 	*/
-	const Vecteur2D operator-(const Vecteur2D& v) const;
+	inline const Vecteur2D operator-(const Vecteur2D& v) const;
 
 	/**
 	* Produit scalaire de deux vecteurs u et v.
@@ -54,7 +54,7 @@ public:
 	* @param const Vecteur2D& v - vecteur qui résultera du produit scalaire avec le vecteur courant.
 	* @return - produit scalaire de u . v.
 	*/
-	const double operator*(const Vecteur2D& v) const;
+	inline const double operator*(const Vecteur2D& v) const;
 
 	/**
 	* Multiplication d'un vecteur par un entier i.
@@ -62,14 +62,22 @@ public:
 	* @param const double& i - entier qui sera multiplié avec le vecteur u courant.
 	* @return const Vecteur2D - vecteur résultant de la multiplication de l'entier i et du vecteur u courant.
 	*/
-	const Vecteur2D operator*(const double& i) const;
+	inline const Vecteur2D operator*(const double& i) const;
+
+	/**
+	* Addtition de deux vecteurs u et v grâce à l'opérateur +=.
+	*
+	* @param const Vecteur2D& v - vecteur qui sera additionné avec le vecteur u courant.
+	* @return const Vecteur2D - vecteur résultant de l'addition des vecteurs u et v.
+	*/
+	inline const Vecteur2D operator+=(const Vecteur2D& v);
 
 	/**
 	* Opérateur de cast. Equivalent d'une méthode toString().
 	*
 	* @return string - correspondant au vecteur courant.
 	*/
-	operator string() const;
+	inline operator string() const;
 
 	/**
 	* Distance entre le vecteur u courant et un vecteur v.
@@ -77,7 +85,7 @@ public:
 	* @param const Vecteur2D v - le second vecteur permettant de calculer la distance.
 	* @return const double - correspondant à la distance entre un vecteur v et le vecteur u courant.
 	*/
-	const double distance(const Vecteur2D& v) const;
+	inline const double distance(const Vecteur2D& v) const;
 
 	/**
 	* Effectue une rotation vectorielle à partir d'un point de rotation R, du point concerné et d'un angle phi.
@@ -160,8 +168,8 @@ const double Vecteur2D::distance(const Vecteur2D& v) const {
 	return sqrt(pow(v.x - x, 2) + pow(v.y - y, 2));
 }
 
-inline ostream& operator<<(ostream& s, const Vecteur2D& v) {
-	return s << (string)v;
+inline ostream& operator<<(ostream& os, const Vecteur2D& v) {
+	return os << (string)v;
 }
 
 const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Radian& phi) const {
@@ -198,4 +206,9 @@ const Vecteur2D operator *(const double& k, const Vecteur2D& v) {
 	t.y = t.y * k;
 
 	return t;
+}
+
+const Vecteur2D Vecteur2D::operator+=(const Vecteur2D& v) {
+	*this = *this + v;
+	return *this;
 }
