@@ -1,10 +1,9 @@
 #pragma once
-#include "Segment.h"
+#include "TestSegment.h"
 using namespace std;
 
 int main() {
-	Vecteur2D u(2, 3);
-	Segment s(Couleur("Noire"), Vecteur2D(0,0), Vecteur2D(5,5));
+	TestSegment::sessionTest();
 
 	return 0;
 }

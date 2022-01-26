@@ -186,16 +186,16 @@ inline ostream& operator<<(ostream& os, const Vecteur2D& v) {
 
 const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Radian& phi) const {
 	Vecteur2D v = *this;
-	v.x = x * cos(phi) - y * sin(phi);
-	v.y = x * sin(phi) + y * cos(phi);
+	v.x = (x * cos(phi) - y * sin(phi));
+	v.y = (x * sin(phi) + y * cos(phi));
 
 	return v;
 }
 
 const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Degree& phi) const {
 	Vecteur2D v = *this;
-	v.x = x * cos(phi.toRadian()) - y * sin(phi.toRadian());
-	v.y = x * sin(phi.toRadian()) + y * cos(phi.toRadian());
+	v.x = (x * cos(phi.toRadian()) - y * sin(phi.toRadian()));
+	v.y = (x * sin(phi.toRadian()) + y * cos(phi.toRadian()));
 
 	return v;
 }

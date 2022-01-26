@@ -227,22 +227,22 @@ int TestVecteur2D::resultatTest(const bool& test) {
 
 void TestVecteur2D::sessionTest() {
 	int score = 0;
-	const int nbTests = 12;
+	int nbTests = 0;
 
 	cout << endl << "Début de la session de tests pour la classe Vecteur2D.." << endl << "Résultats : ";
 
-	score += resultatTest(testOperatorPlus());
-	score += resultatTest(testOperatorMoinsUnaire());
-	score += resultatTest(testOperatorMoins());
-	score += resultatTest(testOperatorFois());
-	score += resultatTest(testOperatorFoisDoubleDroite());
-	score += resultatTest(testOperatorFoisDoubleGauche());
-	score += resultatTest(testOperatorString());
-	score += resultatTest(testDistance());
-	score += resultatTest(testRotationDegree());
-	score += resultatTest(testRotationRadian());
-	score += resultatTest(testHomothetie());
-	score += resultatTest(testDeterminant());
+	score += resultatTest(testOperatorPlus()); nbTests++;
+	score += resultatTest(testOperatorMoinsUnaire()); nbTests++;
+	score += resultatTest(testOperatorMoins()); nbTests++;
+	score += resultatTest(testOperatorFois()); nbTests++;
+	score += resultatTest(testOperatorFoisDoubleDroite()); nbTests++;
+	score += resultatTest(testOperatorFoisDoubleGauche()); nbTests++;
+	score += resultatTest(testOperatorString()); nbTests++;
+	score += resultatTest(testDistance()); nbTests++;
+	score += resultatTest(testRotationDegree()); nbTests++;
+	score += resultatTest(testRotationRadian()); nbTests++;
+	score += resultatTest(testHomothetie()); nbTests++;
+	score += resultatTest(testDeterminant()); nbTests++;
 
 	cout << endl << "Fin de la session de tests.." << endl;
 
