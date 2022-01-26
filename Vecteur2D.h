@@ -138,6 +138,14 @@ public:
 	* @return const Vecteur2D - vecteur résultant de la multiplication de l'entier i et du vecteur u courant.
 	*/
 	friend const Vecteur2D operator *(const double& i, const Vecteur2D& v);
+
+	/**
+	* Opérateur qui vérifie si un vecteur v est égal au vecteur courant.
+	* 
+	* @param const Vecteur2D& v - Vecteur qui sera comparé au vecteur courant.
+	* @return bool - Résultat de la comparaison.
+	*/
+	inline bool operator==(const Vecteur2D v) const;
 };
 
 const Vecteur2D Vecteur2D::operator+(const Vecteur2D& v) const {
