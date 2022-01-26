@@ -145,6 +145,7 @@
     <ClInclude Include="PolygoneFerme.h" />
     <ClInclude Include="Radian.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Segment.h" />
     <ClInclude Include="TestDegree.h" />
     <ClInclude Include="TestRadian.h" />
     <ClInclude Include="TestVecteur2D.h" />
