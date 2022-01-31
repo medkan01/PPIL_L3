@@ -17,3 +17,12 @@ Pour obtenir ce centre, on procède de la façon suivante :
 
 Problèmes pour les tests, erreurs de linkages donc choix de créer des classes de test, puis par 
 création d'une classe Tests qui sera utilisées pour effectuer tous les tests du projet.
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+Questions à poser :
+- Comment bien organiser le projet, les dossiers, les fichiers, les entêtes, etc.
+- Comment gérer le cos, sin et pi qui sont des valeurs approchées et non pas des valeurs exactes.
+	Solution temporaire : Approximer le résultat du test (entre 0 et 0.0001 par exemple).

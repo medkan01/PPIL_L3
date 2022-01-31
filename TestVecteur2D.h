@@ -103,73 +103,50 @@ public:
 bool TestVecteur2D::testOperatorPlus() {
 	Vecteur2D u(1, 3), v(3, 2), w = u + v;
 
-	if (w.x == 4 && w.y == 5)
-		return true;
-
-	return false;
+	return (w.x == 4 && w.y == 5);
 }
 
 bool TestVecteur2D::testOperatorMoinsUnaire() {
 	Vecteur2D u(1, 3), v = -u;
-	if (v.x == -1 && v.y == -3)
-		return true;
 
-	return false;
+	return (v.x == -1 && v.y == -3);
 }
 
 bool TestVecteur2D::testOperatorMoins() {
 	Vecteur2D u(1, 3), v(3, 2), w = u - v;
 
-	if (w.x == -2 && w.y == 1)
-		return true;
-
-	return false;
+	return (w.x == -2 && w.y == 1);
 }
 
 bool TestVecteur2D::testOperatorFois() {
 	Vecteur2D u(1, 3), v(3, 2);
 	double ps = u * v;
 
-	if (ps == 9)
-		return true;
-
-	return false;
+	return (ps == 9);
 }
 
 bool TestVecteur2D::testOperatorFoisDoubleDroite() {
 	Vecteur2D u(1, 3), v = 3 * u;
 
-	if (v.x == 3 && v.y == 9)
-		return true;
-
-	return false;
+	return (v.x == 3 && v.y == 9);
 }
 
 bool TestVecteur2D::testOperatorFoisDoubleGauche() {
 	Vecteur2D u(1, 3), v = u * 3;
 
-	if (v.x == 3 && v.y == 9)
-		return true;
-
-	return false;
+	return (v.x == 3 && v.y == 9);
 }
 
 bool TestVecteur2D::testOperatorString() {
 	Vecteur2D u(1, 3);
 
-	if ((string)u == "(1.000000, 3.000000)")
-		return true;
-
-	return false;
+	return ((string)u == "(1.000000, 3.000000)");
 }
 
 bool TestVecteur2D::testDistance() {
 	Vecteur2D u(1, 3), v(3, 3);
 
-	if (u.distance(v) == 2)
-		return true;
-
-	return false;
+	return (u.distance(v) == 2);
 }
 
 bool TestVecteur2D::testRotationDegree() {
@@ -177,10 +154,8 @@ bool TestVecteur2D::testRotationDegree() {
 	Degree theta(90);
 
 	u = u.rotation(w, theta);
-	if ((int)u.x == 0 && (int)u.y == 4)
-		return true;
 
-	return false;
+	return ((u.y >= 3.9999 && u.y <= 4.0001) && (u.x >= -0.0001 && u.x <= 0.0001));
 }
 
 bool TestVecteur2D::testRotationRadian() {
@@ -189,30 +164,21 @@ bool TestVecteur2D::testRotationRadian() {
 
 	u = u.rotation(w, alpha);
 
-	if ((int)u.x == 0 && (int)u.y == (double)4)
-		return true;
-
-	return false;
+	return ((u.y >= 3.9999 && u.y <= 4.0001) && (u.x >= -0.0001 && u.x <= 0.0001));
 }
 
 bool TestVecteur2D::testHomothetie() {
 	Vecteur2D u(4, 2), v(0, 0);
 	u = u.homothetie(v, 2);
 
-	if ((int)u.x == 8 && (int)u.y == 4)
-		return true;
-
-	return false;
+	return (u.x == 8 && u.y == 4);
 }
 
 bool TestVecteur2D::testDeterminant() {
 	Vecteur2D u(2, 3), v(4, 5);
 	double delta = determinant(u, v);
 
-	if ((int)delta == -2)
-		return true;
-
-	return false;
+	return (delta == -2);
 }
 
 int TestVecteur2D::resultatTest(const bool& test) {
@@ -227,22 +193,22 @@ int TestVecteur2D::resultatTest(const bool& test) {
 
 void TestVecteur2D::sessionTest() {
 	int score = 0;
-	const int nbTests = 12;
+	int nbTests = 0;
 
 	cout << endl << "Début de la session de tests pour la classe Vecteur2D.." << endl << "Résultats : ";
 
-	score += resultatTest(testOperatorPlus());
-	score += resultatTest(testOperatorMoinsUnaire());
-	score += resultatTest(testOperatorMoins());
-	score += resultatTest(testOperatorFois());
-	score += resultatTest(testOperatorFoisDoubleDroite());
-	score += resultatTest(testOperatorFoisDoubleGauche());
-	score += resultatTest(testOperatorString());
-	score += resultatTest(testDistance());
-	score += resultatTest(testRotationDegree());
-	score += resultatTest(testRotationRadian());
-	score += resultatTest(testHomothetie());
-	score += resultatTest(testDeterminant());
+	score += resultatTest(testOperatorPlus()); nbTests++;
+	score += resultatTest(testOperatorMoinsUnaire()); nbTests++;
+	score += resultatTest(testOperatorMoins()); nbTests++;
+	score += resultatTest(testOperatorFois()); nbTests++;
+	score += resultatTest(testOperatorFoisDoubleDroite()); nbTests++;
+	score += resultatTest(testOperatorFoisDoubleGauche()); nbTests++;
+	score += resultatTest(testOperatorString()); nbTests++;
+	score += resultatTest(testDistance()); nbTests++;
+	score += resultatTest(testRotationDegree()); nbTests++;
+	score += resultatTest(testRotationRadian()); nbTests++;
+	score += resultatTest(testHomothetie()); nbTests++;
+	score += resultatTest(testDeterminant()); nbTests++;
 
 	cout << endl << "Fin de la session de tests.." << endl;
 
