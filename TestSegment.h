@@ -57,18 +57,16 @@ bool TestSegment::testRotationDegree() {
 
 	s = s.rotation(s.centre, Degree(180));
 
-	cout << endl << s << endl;
-
-	return (s.a == resA && s.b == resB && s.centre == resCentre);
+	return ((s.a.x >= 3.999 && s.a.x <= 4.0001) && (s.a.y >= -0.0001 && s.a.y <= 0.0001) && (s.b.x >= -4.0001 && s.b.x <= -3.999) && (s.b.y >= -0.0001 && s.b.y <= 0.0001));
 }
 
 bool TestSegment::testRotationRadian() {
-	Vecteur2D a(-4, 0), b(4, 0), resA(0, -4), resB(0, 4), resCentre(0, 0);
+	Vecteur2D a(-4, 0), b(4, 0), resA(4, 0), resB(-4, 0), resCentre(0, 0);
 	Segment s(Couleur("Noire"), a, b);
 
-	s = s.rotation(s.centre, Radian(M_PI / 2));
+	s = s.rotation(s.centre, Radian(M_PI));
 
-	return (s.a == resA && s.b == resB && s.centre == resCentre);
+	return ((s.a.x >= 3.999 && s.a.x <= 4.0001) && (s.a.y >= -0.0001 && s.a.y <= 0.0001) && (s.b.x >= -4.0001 && s.b.x <= -3.999) && (s.b.y >= -0.0001 && s.b.y <= 0.0001));
 }
 
 bool TestSegment::testHomothetie() {
@@ -94,7 +92,7 @@ void TestSegment::sessionTest() {
 	int score = 0;
 	int nbTests = 0;
 
-	cout << endl << "Début de la session de tests pour la classe Vecteur2D.." << endl << "Résultats : ";
+	cout << endl << "Début de la session de tests pour la classe Segment.." << endl << "Résultats : ";
 
 	score += resultatTest(testTranslation()); nbTests++;
 	score += resultatTest(testRotationDegree()); nbTests++;
