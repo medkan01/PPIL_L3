@@ -92,8 +92,8 @@ const double Triangle::abcisseCentre() const {
 	double x = 0;
 	Vecteur2D points[3] = { a, b, c };
 
-	for (int i = 0; i < 2; i++) {
-		x += (points[i].x + points[i + 1].x) * (determinant(points[i], points[i + 1]));
+	for (int i = 0; i < 3; i++) {
+		x += (points[i].x + points[(i + 1) % 3].x) * (determinant(points[i], points[(i + 1) % 3]));
 	}
 
 	return x / (6 * aire());
@@ -103,8 +103,8 @@ const double Triangle::ordonneeCentre() const {
 	double y = 0;
 	Vecteur2D points[3] = { a, b, c };
 
-	for (int i = 0; i < 2; i++) {
-		y += (points[i].y + points[i + 1].y) * (determinant(points[i], points[i + 1]));
+	for (int i = 0; i < 3; i++) {
+		y += (points[i].y + points[(i + 1) % 3].y) * (determinant(points[i], points[(i + 1) % 3]));
 	}
 
 	return y / (6 * aire());
@@ -123,9 +123,10 @@ const double Triangle::aire() const {
 	double aire = 0;
 	Vecteur2D points[3] = { a, b, c };
 
-	for (int i = 0; i < 2; i++) {
-		aire += determinant(points[i], points[i + 1]);
+	for (int i = 0; i < 3; i++) {
+		aire += determinant(points[i], points[(i + 1) % 3]);
 	}
+
 	return aire / 2;
 }
 
