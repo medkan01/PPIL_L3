@@ -22,6 +22,9 @@ public:
 	Forme(const Couleur& couleur, const Vecteur2D& centre) : 
 		couleur(couleur), centre(centre) {}
 
+	/// Constructeur par défaut de la classe Forme.
+	Forme() : couleur(Couleur("Noire")), centre(Vecteur2D(0, 0)) {}
+
 	/**
 	* Opérateur de cast. Equivalent d'une méthode toString().
 	*
