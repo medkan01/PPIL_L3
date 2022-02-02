@@ -18,6 +18,7 @@ Pour obtenir ce centre, on procède de la façon suivante :
 Problèmes pour les tests, erreurs de linkages donc choix de créer des classes de test, puis par 
 création d'une classe Tests qui sera utilisées pour effectuer tous les tests du projet.
 
+pourquoi avoir calculé l'aire du triangle à l'aide de la même formule que les polygones : moins de données sont nécessaires.
 
 
 

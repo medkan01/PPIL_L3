@@ -57,6 +57,9 @@
     <ClInclude Include="TestSegment.h">
       <Filter>Fichiers d%27en-tête\Tests</Filter>
     </ClInclude>
+    <ClInclude Include="TestTriangle.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Rapport.txt" />

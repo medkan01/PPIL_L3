@@ -3,6 +3,7 @@
 #include "TestRadian.h"
 #include "TestDegree.h"
 #include "TestSegment.h"
+#include "TestTriangle.h"
 using namespace std;
 
 int main() {
@@ -10,6 +11,7 @@ int main() {
 	TestRadian::sessionTest();
 	TestDegree::sessionTest();
 	TestSegment::sessionTest();
+	TestTriangle::sessionTest();
 
 	return 0;
 }
