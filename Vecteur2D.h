@@ -149,7 +149,7 @@ public:
 };
 
 bool Vecteur2D::operator==(const Vecteur2D v) const {
-	return x == v.x && y == v.y;
+	return x >= v.x - 0.00001 && x <= v.x + 0.00001 && y >= v.y - 0.00001 && y <= v.y + 0.00001;
 }
 
 const Vecteur2D Vecteur2D::operator+(const Vecteur2D& v) const {
@@ -184,18 +184,19 @@ inline ostream& operator<<(ostream& os, const Vecteur2D& v) {
 	return os << (string)v;
 }
 
-const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Radian& phi) const {
+const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Radian& alpha) const {
 	Vecteur2D v = *this;
-	v.x = (x * cos(phi) - y * sin(phi));
-	v.y = (x * sin(phi) + y * cos(phi));
+	v.x = R.x + ((x - R.x) * cos(alpha) - (y - R.y) * sin(alpha));
+	v.y = R.y + ((x - R.x) * sin(alpha) + (y - R.y) * cos(alpha));
 
 	return v;
 }
 
-const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Degree& phi) const {
+const Vecteur2D Vecteur2D::rotation(const Vecteur2D& R, const Degree& theta) const {
 	Vecteur2D v = *this;
-	v.x = (x * cos(phi.toRadian()) - y * sin(phi.toRadian()));
-	v.y = (x * sin(phi.toRadian()) + y * cos(phi.toRadian()));
+
+	v.x = R.x + ((x - R.x) * cos(theta.toRadian()) - (y - R.y) * sin(theta.toRadian()));
+	v.y = R.y + ((x - R.x) * sin(theta.toRadian()) + (y - R.y) * cos(theta.toRadian()));
 
 	return v;
 }
