@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Client.h" />
     <ClInclude Include="Couleur.h" />
     <ClInclude Include="Degree.h" />
     <ClInclude Include="Forme.h" />

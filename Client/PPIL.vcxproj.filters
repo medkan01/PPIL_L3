@@ -16,32 +16,14 @@
     <Filter Include="Fichiers d%27en-tête\Tests">
       <UniqueIdentifier>{56de321e-0766-49a9-9828-2932d4287910}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Formes">
+      <UniqueIdentifier>{1fe59638-6f95-475e-ac9c-f69e74050b8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\ClientServeur">
+      <UniqueIdentifier>{cd4a790e-a0ad-437f-81f3-9b9fce85e5c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vecteur2D.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Forme.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Couleur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="PolygoneFerme.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Triangle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Radian.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Degree.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="TestRadian.h">
       <Filter>Fichiers d%27en-tête\Tests</Filter>
     </ClInclude>
@@ -51,14 +33,41 @@
     <ClInclude Include="TestDegree.h">
       <Filter>Fichiers d%27en-tête\Tests</Filter>
     </ClInclude>
-    <ClInclude Include="Segment.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="TestSegment.h">
       <Filter>Fichiers d%27en-tête\Tests</Filter>
     </ClInclude>
     <ClInclude Include="TestTriangle.h">
       <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Vecteur2D.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Radian.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="PolygoneFerme.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Forme.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Degree.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Couleur.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>Fichiers d%27en-tête\ClientServeur</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
