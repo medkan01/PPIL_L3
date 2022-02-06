@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-	Client::connect();
+	Client::connection("127.0.0.1", 44444);
 
 	return 0;
 }

@@ -2,6 +2,7 @@ package Server;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import Server.Interlocuteur;
 
 /**
  * Classe serveur qui contient la fonction main.
