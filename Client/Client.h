@@ -6,18 +6,19 @@
 #include <string>
 #include <stdio.h>
 #include <ws2tcpip.h>
+#include <windows.h>
 #pragma comment(lib, "ws2_32.lib")
 
 using namespace std;
 
 class Client {
 public:
-	static void connection(const char* ip, const int& port);
+	static SOCKET envoieDonnee(const char* ip, const int& port, const string& msg = "");
 };
 
-void Client::connection(const char* ip, const int& port) {
+SOCKET Client::envoieDonnee(const char* ip, const int& port, const string& msg) {
 	try {
-		// Déclaration des variables
+		// Déclaration des variables.
 		int r;
 		WSADATA wsaData;
 
@@ -32,7 +33,7 @@ void Client::connection(const char* ip, const int& port) {
 		inet_pton(AF_INET, (PCSTR)ip, &sockaddr.sin_addr.s_addr);
 		sockaddr.sin_port = htons(port);
 
-		// Initialisation de Winsock
+		// Initialisation de Winsock.
 		r = WSAStartup(MAKEWORD(2, 0), &wsaData);
 		if (r) throw exception("WSAStartup");
 
@@ -41,27 +42,21 @@ void Client::connection(const char* ip, const int& port) {
 
 		r = connect(sock, (SOCKADDR*)&sockaddr, sizeof(sockaddr));
 		if (r == SOCKET_ERROR) throw exception("Socket error");
-
 		cout << "Connexion au serveur réussie." << endl;
-		string requete;
-		while (requete != "stop") {
-			cout << "Veuillez saisir un message" << endl;
-			getline(cin, requete);
-			if (requete == "") requete = "HelloWorld!";
-			requete += " \r\n";
-			int l = strlen(requete.c_str());
+		
+		// Envoie des données.
+		string requete = msg == "" ? "ping" : msg;
+		requete += "\r\n";
+		int l = strlen(requete.c_str());
 
-			r = send(sock, requete.c_str(), l, 0);
+		r = send(sock, requete.c_str(), l, 0);
+		if (r == SOCKET_ERROR) throw exception("Socket error");
 
-			if (r == SOCKET_ERROR) throw exception("Socket error");
-
-			cout << "Message envoyé avec succés." << endl;
-		}
+		cout << "Message envoyé avec succés." << endl;
 	}
 	catch (exception e) {
 		cout << "Erreur: " << e.what() << endl;
 	}
-	
 }
 
 #endif
