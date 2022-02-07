@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.net.SocketException;
 
 /**
  * Classe qui va gérer les communications entre le serveur et les clients.
@@ -26,14 +27,15 @@ public class Interlocuteur {
     /**
      * Procédure étant le comportement du serveur lorsque qu'il reçoit un message.
      */
-    public void start() {
+    public void start() throws Exception {
         try {
             while(!Thread.interrupted()) {
                 String requete = this.fluxEntrant.readLine();
                 System.out.println("Message reçu: " + requete + "\n");
-                this.fluxSortant.println("1");
             }
-        } catch (Exception e) {
+        } catch (SocketException e) {
+            System.out.println("Connection arrêtée par le client.");
+        } catch (Exception e){
             System.out.println("Erreur: " + e.getMessage());
         }
     }
