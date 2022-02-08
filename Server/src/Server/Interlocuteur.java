@@ -6,17 +6,21 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.net.SocketException;
 
+import DecodageFormesCOR.DecodeurForme;
+import Forme.Forme;
+
 /**
  * Classe qui va gérer les communications entre le serveur et les clients.
  */
 public class Interlocuteur {
     BufferedReader fluxEntrant;
-	PrintStream fluxSortant;
+    PrintStream fluxSortant;
 
     /**
      * Constructeur de la classe Interlocuteur.
      * 
-     * @param Socket socket - socket permettant la connexion entre un client et le serveur.
+     * @param Socket socket - socket permettant la connexion entre un client et le
+     *               serveur.
      * @throws Exception
      */
     public Interlocuteur(Socket socket) throws Exception {
@@ -29,14 +33,20 @@ public class Interlocuteur {
      */
     public void start() throws Exception {
         try {
-            while(!Thread.interrupted()) {
+            while (!Thread.interrupted()) {
                 String requete = this.fluxEntrant.readLine();
                 System.out.println("Message reçu: " + requete + "\n");
+
+                Forme f = DecodeurForme.decode(requete);
+                if (f != null)
+                    System.out.println(f.toString());
+                else
+                    System.out.println("Impossible de déterminer la forme.");
             }
         } catch (SocketException e) {
             System.out.println("Connection arrêtée par le client.");
-        } catch (Exception e){
-            System.out.println("Erreur: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Erreur: " + e);
         }
     }
 }

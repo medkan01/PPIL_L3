@@ -177,7 +177,7 @@ const Triangle Triangle::rotation(const Vecteur2D& R, const Radian& alpha) const
 }
 
 Triangle::operator string() const {
-	return "[Triangle: A" + (string)a + " - B" + (string) b + " - C" + (string) c + " - " + (string) couleur + "]";
+	return "triangle/" + (string)a + "/" + (string) b + "/" + (string) c + "/" + (string) couleur;
 }
 
 Forme* Triangle::clone() const {

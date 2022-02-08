@@ -19,6 +19,6 @@ public:
 	* 
 	* @return string - Couleur.
 	*/
-	virtual operator string() const { return "[Couleur: " + couleur + "]"; }
+	virtual operator string() const { return couleur; }
 
 };

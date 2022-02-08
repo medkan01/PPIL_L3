@@ -2,7 +2,6 @@ package Server;
 
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
 
 /**
  * Classe serveur qui contient la fonction main.
@@ -14,7 +13,7 @@ public class Server {
             int port = 44444;
             ServerSocket serveur = new ServerSocket(port);
             System.out.println("Démarrage du serveur...");
-            while(true){
+            while (true) {
                 System.out.println("En attente de connexion...");
                 Socket adresseClient = serveur.accept();
                 System.out.println("Connexion en cours...");
@@ -22,8 +21,8 @@ public class Server {
                 Interlocuteur interlocuteur = new Interlocuteur(adresseClient);
                 interlocuteur.start();
             }
-        } catch (Exception e){
-            System.out.println("Erreur: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Erreur: " + e);
         }
     }
 }

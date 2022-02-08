@@ -173,7 +173,7 @@ const Vecteur2D Vecteur2D::operator*(const double& i) const {
 }
 
 Vecteur2D::operator string() const {
-	return "(" + to_string(x) + ", " + to_string(y) + ")";
+	return to_string(x) + "/" + to_string(y);
 }
 
 const double Vecteur2D::distance(const Vecteur2D& v) const {
