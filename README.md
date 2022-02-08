@@ -2,7 +2,7 @@
 ## Projet de synthèse - L3
 
 Afin de valider la troisième année de Licence Informatique, je dois réaliser un projet de synthèse sur une durée d'environ 4 mois.
-Ce projet doit permettre de créer et dessiner des formes et des groupes de formes à l'aide d'une application client/serveur codé avec C++ (_pour la partie serveur_) et Java (_pour la partie client_).
+Ce projet doit permettre de créer et dessiner des formes et des groupes de formes à l'aide d'une application client/serveur codé avec C++ (_pour la partie client_) et Java (_pour la partie serveur_).
 Le fait d'utiliser Java ET C++ dans une même application permet de profiter des performances de calcule de C++ et les performances de gestion d'interface graphique de Java.
 
 Le but de ce projet est d'utiliser toutes les compétences acquises durant ces 3 années de Licence Informatique (_dans mon cas, mes 2 ans de DUT Informatique puis ma 3ème années de Licence Informatique_) et notamment les compétences suivantes :
