@@ -18,9 +18,13 @@ class Client {
 	WSADATA wsaData;
 	static Client s_client;
 
-	// Methodes
+	/// Constructeur de la classe Client. Mis en prive pour l'utilisation du pattern singleton.
 	inline Client();
+
+	/// Destructeur de la classe singleton.
 	inline ~Client();
+
+	/// Constructeur par recopie supprime pour eviter de pouvoir creer des copies de l'instance singleton.
 	Client(const Client&) = delete;
 
 public:
@@ -64,12 +68,15 @@ public:
 };
 
 Client::Client() {
-	int r;
+	// Declaration des constantes
 	const char* ip = "127.0.0.1";
-	int port = 44444;
-	int familleAdresse = AF_INET;
-	int typeSocket = SOCK_STREAM;
-	int protocole = IPPROTO_TCP;
+	const int port = 44444;
+	const int familleAdresse = AF_INET;
+	const int typeSocket = SOCK_STREAM;
+	const int protocole = IPPROTO_TCP;
+
+	// Variable de resultat des actions vers le serveur
+	int r;
 
 	sockaddr.sin_family = AF_INET;
 	inet_pton(AF_INET, (PCSTR)ip, &sockaddr.sin_addr.s_addr);
