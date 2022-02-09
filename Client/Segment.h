@@ -85,5 +85,5 @@ Segment Segment::rotation(const Vecteur2D& pi, const Radian& angle) const {
 }
 
 Segment::operator string() const {
-	return "[Segment : a :" + (string)a + " - b : " + (string)b + " - centre : " + (string)centre + "]";
+	return "segment/" + (string)a + "/" + (string)b + "/" + (string)couleur;
 }
