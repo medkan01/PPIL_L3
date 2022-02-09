@@ -10,18 +10,26 @@ import java.net.Socket;
 public class Server {
     public static void main(String[] args) {
         try {
+            int n = 10;
+
+            // Creation et initialisation du socket
             int port = 44444;
             ServerSocket serveur = new ServerSocket(port);
-            System.out.println("Démarrage du serveur...");
-            while (true) {
-                System.out.println("En attente de connexion...");
-                Socket adresseClient = serveur.accept();
-                System.out.println("Connexion en cours...");
-                System.out.println("Client connecté: " + adresseClient);
+            while (--n >= 0) {
+                // Attente de connexion
+                Socket adresseClient = serveur.accept(); // Bloquant
                 Interlocuteur interlocuteur = new Interlocuteur(adresseClient);
-                interlocuteur.start();
+
+                // Creation d'un thread pour permettre la connexion de plusieurs client
+                // simultanement
+                ThreadServeur t = new ThreadServeur(interlocuteur);
+                t.start();
             }
-        } catch (Exception e) {
+
+            serveur.close();
+        } catch (
+
+        Exception e) {
             System.out.println("Erreur: " + e);
         }
     }

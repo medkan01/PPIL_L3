@@ -6,8 +6,8 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.net.SocketException;
 
-import DecodageFormesCOR.DecodeurForme;
-import Forme.Forme;
+// import DecodageFormesCOR.DecodeurForme;
+// import Forme.Forme;
 
 /**
  * Classe qui va gérer les communications entre le serveur et les clients.
@@ -36,18 +36,12 @@ public class Interlocuteur {
             while (!Thread.interrupted()) {
                 String requete = this.fluxEntrant.readLine();
                 if (requete != null)
-                    System.out.println("Message reçu: " + requete + "\n");
-
-                Forme f = DecodeurForme.decode(requete);
-                if (f != null)
-                    System.out.println(f.toString());
-                else
-                    System.out.println("Impossible de déterminer la forme.");
-
-                fluxSortant.println("Message recu.\r\n");
+                    System.out.println("Message reçu: \n" + requete + "\n");
+                String reponse = "Message bien recu.";
+                this.fluxSortant.println(reponse);
             }
         } catch (SocketException e) {
-            System.out.println("Connection arrêtée par le client.");
+            // System.out.println("Connection arrêtée par le client.");
         } catch (Exception e) {
             System.out.println("Erreur: " + e);
         }
