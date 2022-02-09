@@ -35,13 +35,16 @@ public class Interlocuteur {
         try {
             while (!Thread.interrupted()) {
                 String requete = this.fluxEntrant.readLine();
-                System.out.println("Message reçu: " + requete + "\n");
+                if (requete != null)
+                    System.out.println("Message reçu: " + requete + "\n");
 
                 Forme f = DecodeurForme.decode(requete);
                 if (f != null)
                     System.out.println(f.toString());
                 else
                     System.out.println("Impossible de déterminer la forme.");
+
+                fluxSortant.println("Message recu.\r\n");
             }
         } catch (SocketException e) {
             System.out.println("Connection arrêtée par le client.");
