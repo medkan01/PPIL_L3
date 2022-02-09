@@ -22,6 +22,9 @@
     <Filter Include="Fichiers d%27en-tête\ClientServeur">
       <UniqueIdentifier>{cd4a790e-a0ad-437f-81f3-9b9fce85e5c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\ClientServeur">
+      <UniqueIdentifier>{8dc551e6-0bf5-459c-b60f-e8fd0b5e3a95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestRadian.h">
@@ -76,6 +79,9 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>Fichiers sources\ClientServeur</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

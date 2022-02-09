@@ -17,29 +17,8 @@ int main() {
 
 	Triangle t(noire, a, b, c);
 	Segment s(blanche, d, e);
-
-	Client::envoieDonnee("127.0.0.1", 44444, t);
-	Client::envoieDonnee("127.0.0.1", 44444, s);
 	*/
-	WSADATA wsaData;
-	SOCKET sock;
-	Client::connection("127.0.0.1", 44444, &wsaData, &sock);
-	int r;
 
-	char recvbuf[512];
-	int recvbuflen = 512;
-
-	// Envoie de donnees au serveur
-	if ((r = send(sock, "HelloWorld!\r\n", 13, 0)) == SOCKET_ERROR)
-		throw exception("Socket Error.");
-	
-	if((r = recv(sock, recvbuf, recvbuflen, 0)) == SOCKET_ERROR)
-		throw exception("Socket Error.");
-
-	cout << recvbuf << endl;
-
-	closesocket(sock);
-	WSACleanup();
 
 	return 0;
 }
