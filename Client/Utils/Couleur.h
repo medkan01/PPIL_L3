@@ -14,6 +14,9 @@ public:
 	inline Couleur(const string& couleur = "blanc") : 
 		couleur(couleur) {}
 
+	/// Destructeur de la classe couleur
+	virtual ~Couleur() {}
+
 	/**
 	* to_string d'une couleur.
 	* 

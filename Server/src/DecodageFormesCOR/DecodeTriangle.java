@@ -1,26 +1,49 @@
 package DecodageFormesCOR;
 
-import java.util.Arrays;
-
 import Forme.Forme;
+import Forme.Vecteur2D;
 
 public class DecodeTriangle extends DecodeCOR {
+
+    /**
+     * Constructeur de la classe DecodeTriangle.
+     * 
+     * @param suivant : Expert suivant.
+     */
     public DecodeTriangle(DecodeCOR suivant) {
         super(suivant);
     }
 
+    /**
+     * Decode la forme entree au format texte, si l'expert en est capable.
+     * 
+     * @param str : forme au format texte qui doit etre decode.
+     * @return Forme decodee.
+     */
     protected Forme decodeForme1(String str) {
-        String[] newStr = str.split("/");
+        try {
+            String[] newStr = str.split("/"); // newStr[0] = type; newStr[1] = liste des points; newStr[2] = couleur;
+            String type = newStr[0];
+            String[] listePoints = newStr[1].split(";");
+            String couleur = newStr[2];
 
-        if (newStr.length <= 1)
-            return null;
+            if (!type.equals("triangle"))
+                return null;
 
-        String type = newStr[0];
-        String couleur = newStr[newStr.length - 1];
-        String[] points = Arrays.copyOfRange(newStr, 1, newStr.length - 1);
+            if (listePoints.length != 3)
+                return null;
 
-        if (type.equals("triangle"))
+            Vecteur2D[] points = new Vecteur2D[3]; // 2 points pour un segment
+            int i = 0;
+
+            for (String s : listePoints) {
+                points[i] = new Vecteur2D(s);
+                i++;
+            }
+
             return new Forme(type, points, couleur);
-        return null;
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

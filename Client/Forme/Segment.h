@@ -16,6 +16,9 @@ public:
 	*/
 	Segment(const Couleur& couleur = Couleur("Noire"), const Vecteur2D & a = Vecteur2D(0, 0) , const Vecteur2D & b = Vecteur2D(0, 0)) : Forme(couleur, Vecteur2D((a.x + b.x) / 2, (a.y + b.y) / 2)), a(a), b(b) {}
 
+	/// Destructeur de la classe segment
+	virtual ~Segment() {}
+
 	/**
 	* Effectue une translation sur la forme.
 	*
