@@ -2,27 +2,32 @@ package Forme;
 
 public class Forme {
     String type;
-    String[] points;
+    Vecteur2D[] points;
     String couleur;
 
-    public Forme(String typ, String[] pts, String clr) {
+    /**
+     * Constructeur de la classe Forme.
+     * 
+     * @param typ : type de la forme
+     * @param pts : liste des points de la forme
+     * @param clr : couleur de la forme
+     */
+    public Forme(String typ, Vecteur2D[] pts, String clr) {
         this.type = typ;
         this.points = pts;
         this.couleur = clr;
     }
 
+    /**
+     * Methode toString permettant de mettre un forme au format texte.
+     * 
+     * @return Forme au format texte.
+     */
     public String toString() {
         String res;
         res = this.type + "\n";
-        int i = 0;
-        for (String s : this.points) {
-            if (i == 1) {
-                res += s + ")\n";
-                i = 0;
-            } else {
-                res += "Point: (" + s + ",";
-                i++;
-            }
+        for (Vecteur2D s : this.points) {
+            res += "Point: (" + s.x + ", " + s.y + ")\n";
         }
         res += "Couleur: " + this.couleur + "\n";
 
