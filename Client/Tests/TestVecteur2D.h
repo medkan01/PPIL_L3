@@ -5,97 +5,97 @@ using namespace std;
 class TestVecteur2D {
 public:
 	/**
-	* Test de l'op�rateur +.
+	* Test de l'operateur +.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testOperatorPlus();
 
 	/**
-	* Test de l'op�rateur - unaire.
+	* Test de l'operateur - unaire.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testOperatorMoinsUnaire();
 
 	/**
-	* Test de l'op�rateur -.
+	* Test de l'operateur -.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testOperatorMoins();
 
 	/**
-	* Test de l'op�rateur *.
+	* Test de l'operateur *.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testOperatorFois();
 
 	/**
-	* Test de l'op�rateur * avec un double en tant qu'op�rande droite.
+	* Test de l'operateur * avec un double en tant qu'operande droite.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testOperatorFoisDoubleDroite();
 
 	/**
-	* Test de l'op�rateur * avec un double en tant qu'op�rande gauche.
+	* Test de l'operateur * avec un double en tant qu'operande gauche.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testOperatorFoisDoubleGauche();
 
 	/**
-	* Test de l'op�rateur string (cast).
+	* Test de l'operateur string (cast).
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testOperatorString();
 
 	/**
-	* Test de la m�thode distance.
+	* Test de la methode distance.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testDistance();
 
 	/**
-	* Test de la m�thode rotation avec les degr�es.
+	* Test de la methode rotation avec les degrees.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testRotationDegree();
 
 	/**
-	* Test de la m�thode rotation avec les radians.
+	* Test de la methode rotation avec les radians.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testRotationRadian();
 
 	/**
-	* Test de la m�thode homothetie.
+	* Test de la methode homothetie.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testHomothetie();
 
 	/**
 	* Test de la fonction amie determinant.
 	*
-	* @return bool - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testDeterminant();
 
 	/**
-	* Affiche le r�sultat du test.
+	* Affiche le resultat du test.
 	*
-	* @param const bool& test - Test � r�aliser.
+	* @param test Testarealiser.
 	*/
-	inline static int resultatTest(const bool&);
+	inline static int resultatTest(const bool& test);
 
-	/// Lance une session de test pour la classe Vecteur2D et affiche les r�sultats des diff�rents tests.
+	/// Lance une session de test pour la classe Vecteur2D et affiche les resultats des differents tests.
 	inline static void sessionTest();
 
 };
@@ -195,7 +195,7 @@ void TestVecteur2D::sessionTest() {
 	int score = 0;
 	int nbTests = 0;
 
-	cout << endl << "D�but de la session de tests pour la classe Vecteur2D.." << endl << "R�sultats : ";
+	cout << endl << "Debut de la session de tests pour la classe Vecteur2D.." << endl << "Resultats : ";
 
 	score += resultatTest(testOperatorPlus()); nbTests++;
 	score += resultatTest(testOperatorMoinsUnaire()); nbTests++;

@@ -7,20 +7,20 @@ using namespace std;
 class TestDegree {
 public:
 	/**
-	* Test la m�thode toDegree().
+	* Test la methode toDegree().
 	*
-	* @return const double - R�sultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testToRadian();
 
 	/**
-	* Affiche le r�sultat du test.
+	* Affiche le resultat du test.
 	*
-	* @param const bool& test - Test � r�aliser.
+	* @param test Testarealiser.
 	*/
-	inline static int resultatTest(const bool&);
+	inline static int resultatTest(const bool& test);
 
-	/// Lance une session de test et affiche les r�sultats des diff�rents tests.
+	/// Lance une session de test et affiche les resultats des differents tests.
 	inline static void sessionTest();
 };
 
@@ -47,7 +47,7 @@ void TestDegree::sessionTest() {
 	int score = 0;
 	const int nbTests = 1;
 
-	cout << endl << "D�but de la session de tests pour la classe Degree.." << endl << "R�sultats : ";
+	cout << endl << "Debut de la session de tests pour la classe Degree.." << endl << "Resultats : ";
 
 	score += resultatTest(testToRadian());
 

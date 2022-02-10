@@ -31,28 +31,28 @@ public:
 	/**
 	* Getter de l'attribut sockaddr.
 	* 
-	* @return SOCKADDR_IN - sockaddr
+	* @return sockaddr
 	*/
 	SOCKADDR_IN getSockadrr() const { return sockaddr; }
 
 	/**
 	* Getter de l'attribut sock.
 	*
-	* @return SOCKET - sock
+	* @return sock
 	*/
 	SOCKET getSocket() const { return sock; }
 
 	/**
 	* Getter de l'attribut sockaddr.
 	*
-	* @return WSADATA - wsaData
+	* @return wsaData
 	*/
 	WSADATA getWsaData() const { return wsaData; }
 
 	/**
 	* Permet de récupérer l'instance de client, geree avec le design pattern singleton.
 	* 
-	* @return Client& - instance de client
+	* @return instance de client
 	*/
 	static Client& instance() { return s_client; }
 
@@ -62,7 +62,7 @@ public:
 	/**
 	* Envoie du texte au serveur.
 	* 
-	* @param const string& data - message a envoyer
+	* @param data message a envoyer
 	*/
 	inline void envoiDonnees(const string& data) const;
 };

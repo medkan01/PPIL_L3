@@ -4,9 +4,9 @@
 using namespace std;
 
 /**
-* Repr�sente une forme quelconque.
+* Represente une forme quelconque.
 * 
-* D�finie par une couleur et un point d'origine.
+* Definie par une couleur et un point d'origine.
 */
 class Forme {
 public:
@@ -16,26 +16,26 @@ public:
 	/**
 	* Constructeur de la classe Forme.
 	* 
-	* @param const string& couleur - Couleur de la forme.
-	* @param const Vectuer2D& origine - Origine de la forme.
+	* @param couleur Couleur de la forme.
+	* @param origine Origine de la forme.
 	*/
 	Forme(const Couleur& couleur, const Vecteur2D& centre) : 
 		couleur(couleur), centre(centre) {}
 
-	/// Constructeur par d�faut de la classe Forme.
+	/// Constructeur par defaut de la classe Forme.
 	Forme() : couleur(Couleur("Noire")), centre(Vecteur2D(0, 0)) {}
 
 	/**
-	* Op�rateur de cast. Equivalent d'une m�thode toString().
+	* Operateur de cast. Equivalent d'une methode toString().
 	*
-	* @return string - vecteur courant.
+	* @return toString vecteur courant.
 	*/
 	virtual operator string() const = 0;
 
 	/**
 	* Clone une forme.
 	* 
-	* @return Forme* - Copie de la forme.
+	* @return Copie de la forme.
 	*/
 	virtual Forme* clone() const = 0;
 };

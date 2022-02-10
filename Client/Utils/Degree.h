@@ -12,7 +12,7 @@ public:
 	/**
 	* Constructeur de la classe Radian qui contruit un Radian alpha.
 	*
-	* @param const double& x - valeur de u1 dans le vecteur u(u1, u2).
+	* @param theta - valeur de u1 dans le vecteur u(u1, u2).
 	*/
 	Degree(double theta) : theta(theta) {}
 
@@ -20,16 +20,16 @@ public:
 	virtual ~Degree() {}
 
 	/**
-	* Permet de passer de degrée à radian.
+	* Permet de passer de degree a radian.
 	* 
-	* @return const double - résultat de la conversion.
+	* @return resultat de la conversion.
 	*/
 	const double toRadian() const { return (theta * M_PI) / 180; }
 
 	/**
-	* Opérateur de cast de Degree à double.
+	* Operateur de cast de Degreeadouble.
 	*
-	* @return double - correspondant à la valeur de theta.
+	* @return valeur de theta.
 	*/
 	operator double() const { return theta; }
 };
