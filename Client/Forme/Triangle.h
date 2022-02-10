@@ -3,87 +3,87 @@
 using namespace std;
 
 /**
-* Représente un triangle défini par une couleur, un vecteur d'origine a et deux autres vecteurs b et c.
-* Par exemple, dans le triangle ABC, A est l'origine. Entre autre, le triangle sera donc défini par AB et AC.
+* Represente un triangle defini par une couleur, un vecteur d'origine a et deux autres vecteurs b et c.
+* Par exemple, dans le triangle ABC, A est l'origine. Entre autre, le triangle sera donc defini par AB et AC.
 */
 class Triangle : public Forme {
 	/**
 	* Retourne l'abcisse du centre.
 	* 
-	* @return const double - abcisse du centre du triangle.
+	* @return abcisse du centre du triangle.
 	*/
 	const double abcisseCentre() const;
 
 	/**
-	* Retourne l'ordonnée du centre.
+	* Retourne l'ordonnee du centre.
 	* 
-	* @return const double - ordonnée du centre du triangle.
+	* @return ordonnee du centre du triangle.
 	*/
 	const double ordonneeCentre() const;
 public:
 	Vecteur2D a, b, c;
 	/**
-	* Constructeur de la classe Triangle qui construit un triangle ABC d'une couleur donnée.
+	* Constructeur de la classe Triangle qui construit un triangle ABC d'une couleur donnee.
 	* 
-	* @param const Couleur& couleur - couleur du triangle.
-	* @param const Vecteur2D& a - origine du triangle abc.
-	* @param const Vecteur2D& b - vecteur AB du triangle ABC.
-	* @param const Vecteur2D& c - vecteur AC du triangle ABC.
+	* @param couleur couleur du triangle.
+	* @param a origine du triangle ABC.
+	* @param b vecteur AB du triangle ABC.
+	* @param c vecteur AC du triangle ABC.
 	*/
 	inline Triangle(const Couleur& couleur, const Vecteur2D& a, const Vecteur2D& b, const Vecteur2D& c);
 
 	/**
-	* Détermine l'aire du triangle.
+	* Determine l'aire du triangle.
 	*
-	* @return const double - aire du triangle.
+	* @return aire du triangle.
 	*/
 	inline const double aire() const;
 
 	/**
 	* Effectue une translation sur la forme.
 	*
-	* @param const Vecteur2D& v - Vecteur de translation
+	* @param v Vecteur de translation
 	*/
 	inline virtual const Triangle translation(const Vecteur2D& v) const;
 
 	/**
-	* Effectue une homothétie sur la forme. (zoom)
+	* Effectue une homothetie sur la forme. (zoom)
 	* Calcule d'une homothetie : 
-	* OM' = k(OM - OC) + OC
-	* M' = k * (M - C) + C
+	* OM' = k(OM OC) + OC
+	* M' = k * (M C) + C
 	*
-	* @param const Vecteur2d& - Point invariant.
-	* @param const double& - Rapport d'homothétie.
+	* @param C Point invariant.
+	* @param k Rapport d'homothetie.
 	*/
 	inline virtual const Triangle homothetie(const Vecteur2D& C, const double& k) const;
 
 	/**
 	* Effectue une rotation sur la forme.
 	*
-	* @param const Vecteur2D& R - Point invariant. (centre de rotation)
-	* @param const Degree& theta - Angle de rotation. (en degrée)
+	* @param R Point invariant. (centre de rotation)
+	* @param theta Angle de rotation. (en degree)
 	*/
 	inline virtual const Triangle rotation(const Vecteur2D& R, const Degree& theta) const;
 
 	/**
 	* Effectue une rotation sur la forme.
 	*
-	* @param const Vecteur2D& R - Point invariant. (centre de rotation)
-	* @param const Radian& alpha - Angle de rotation. (en radian)
+	* @param R Point invariant. (centre de rotation)
+	* @param alpha Angle de rotation. (en radian)
 	*/
 	inline virtual const Triangle rotation(const Vecteur2D& R, const Radian& alpha) const;
 
 	/**
 	* Clone un triangle.
 	* 
-	* @return Forme* - Copie du triangle
+	* @return Copie du triangle
 	*/
 	inline virtual Forme* clone() const;
 
 	/**
-	* Opérateur de cast. Equivalent d'une méthode toString().
+	* Operateur de cast. Equivalent d'une methode toString().
 	*
-	* @return string - vecteur courant.
+	* @return toString du vecteur courant.
 	*/
 	inline virtual operator string() const;
 };

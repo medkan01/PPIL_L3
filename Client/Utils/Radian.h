@@ -6,7 +6,7 @@ using namespace std;
 #include <math.h>
 
 /**
-* Un radian est défini par un double.
+* Un radian est defini par un double.
 */
 class Radian {
 public:
@@ -15,7 +15,7 @@ public:
 	/**
 	* Constructeur de la classe Radian qui contruit un Radian alpha.
 	*
-	* @param const double& x - valeur de u1 dans le vecteur u(u1, u2).
+	* @param alpha valeur de u1 dans le vecteur u(u1, u2).
 	*/
 	Radian(double alpha) : alpha(alpha) {}
 
@@ -23,16 +23,16 @@ public:
 	virtual ~Radian() {}
 
 	/**
-	* Permet de passer de radian à degrée.
+	* Permet de passer de radianadegree.
 	*
-	* @return const double - résultat de la conversion.
+	* @return resultat de la conversion.
 	*/
 	const double toDegree() const { return (alpha * 180) / M_PI; }
 
 	/**
-	* Opérateur de cast de Radian à double.
+	* Operateur de cast de Radianadouble.
 	*
-	* @return double - correspondant à la valeur d'alpha.
+	* @return valeur d'alpha.
 	*/
 	operator double() const { return alpha; }
 };

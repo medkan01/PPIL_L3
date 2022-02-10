@@ -1,26 +1,26 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include "Radian.h"
+#include "../Utils/Radian.h"
 using namespace std;
 
 class TestRadian {
 public:
 	/**
-	* Test la méthode toDegree().
+	* Test la methode toDegree().
 	*
-	* @return const double - Résultat du test.
+	* @return Resultat du test.
 	*/
 	inline static bool testToDegree();
 
 	/**
-	* Affiche le résultat du test.
+	* Affiche le resultat du test.
 	*
-	* @param const bool& test - Test à réaliser.
+	* @param test Testarealiser.
 	*/
-	inline static int resultatTest(const bool&);
+	inline static int resultatTest(const bool& test);
 
-	/// Lance une session de test et affiche les résultats des différents tests.
+	/// Lance une session de test et affiche les resultats des differents tests.
 	inline static void sessionTest();
 };
 
@@ -47,7 +47,7 @@ void TestRadian::sessionTest() {
 	int score = 0;
 	const int nbTests = 1;
 
-	cout << endl << "Début de la session de tests pour la classe Radian.." << endl << "Résultats : ";
+	cout << endl << "Debut de la session de tests pour la classe Radian.." << endl << "Resultats : ";
 
 	score += resultatTest(testToDegree());
 

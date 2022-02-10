@@ -9,7 +9,7 @@ public:
 	/**
 	* Constructeur de la classe Couleur.
 	* 
-	* @param const string& couleur - couleur correspondante.
+	* @param couleur couleur correspondante.
 	*/
 	inline Couleur(const string& couleur = "blanc") : 
 		couleur(couleur) {}
@@ -17,7 +17,7 @@ public:
 	/**
 	* to_string d'une couleur.
 	* 
-	* @return string - Couleur.
+	* @return Couleur.
 	*/
 	virtual operator string() const { return couleur; }
 

@@ -1,12 +1,12 @@
 #pragma once
-#include "Couleur.h"
+#include "../Utils/Couleur.h"
 #include "Vecteur2D.h"
 using namespace std;
 
 /**
-* Représente une forme quelconque.
+* Represente une forme quelconque.
 * 
-* Définie par une couleur et un point d'origine.
+* Definie par une couleur et un point d'origine.
 */
 class Forme {
 public:
@@ -16,26 +16,26 @@ public:
 	/**
 	* Constructeur de la classe Forme.
 	* 
-	* @param const string& couleur - Couleur de la forme.
-	* @param const Vectuer2D& origine - Origine de la forme.
+	* @param couleur Couleur de la forme.
+	* @param origine Origine de la forme.
 	*/
 	Forme(const Couleur& couleur, const Vecteur2D& centre) : 
 		couleur(couleur), centre(centre) {}
 
-	/// Constructeur par défaut de la classe Forme.
+	/// Constructeur par defaut de la classe Forme.
 	Forme() : couleur(Couleur("Noire")), centre(Vecteur2D(0, 0)) {}
 
 	/**
-	* Opérateur de cast. Equivalent d'une méthode toString().
+	* Operateur de cast. Equivalent d'une methode toString().
 	*
-	* @return string - vecteur courant.
+	* @return toString vecteur courant.
 	*/
 	virtual operator string() const = 0;
 
 	/**
 	* Clone une forme.
 	* 
-	* @return Forme* - Copie de la forme.
+	* @return Copie de la forme.
 	*/
 	virtual Forme* clone() const = 0;
 };

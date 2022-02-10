@@ -18,37 +18,41 @@ class Client {
 	WSADATA wsaData;
 	static Client s_client;
 
-	// Methodes
+	/// Constructeur de la classe Client. Mis en prive pour l'utilisation du pattern singleton.
 	inline Client();
+
+	/// Destructeur de la classe singleton.
 	inline ~Client();
+
+	/// Constructeur par recopie supprime pour eviter de pouvoir creer des copies de l'instance singleton.
 	Client(const Client&) = delete;
 
 public:
 	/**
 	* Getter de l'attribut sockaddr.
 	* 
-	* @return SOCKADDR_IN - sockaddr
+	* @return sockaddr
 	*/
 	SOCKADDR_IN getSockadrr() const { return sockaddr; }
 
 	/**
 	* Getter de l'attribut sock.
 	*
-	* @return SOCKET - sock
+	* @return sock
 	*/
 	SOCKET getSocket() const { return sock; }
 
 	/**
 	* Getter de l'attribut sockaddr.
 	*
-	* @return WSADATA - wsaData
+	* @return wsaData
 	*/
 	WSADATA getWsaData() const { return wsaData; }
 
 	/**
 	* Permet de récupérer l'instance de client, geree avec le design pattern singleton.
 	* 
-	* @return Client& - instance de client
+	* @return instance de client
 	*/
 	static Client& instance() { return s_client; }
 
@@ -58,18 +62,21 @@ public:
 	/**
 	* Envoie du texte au serveur.
 	* 
-	* @param const string& data - message a envoyer
+	* @param data message a envoyer
 	*/
 	inline void envoiDonnees(const string& data) const;
 };
 
 Client::Client() {
-	int r;
+	// Declaration des constantes
 	const char* ip = "127.0.0.1";
-	int port = 44444;
-	int familleAdresse = AF_INET;
-	int typeSocket = SOCK_STREAM;
-	int protocole = IPPROTO_TCP;
+	const int port = 44444;
+	const int familleAdresse = AF_INET;
+	const int typeSocket = SOCK_STREAM;
+	const int protocole = IPPROTO_TCP;
+
+	// Variable de resultat des actions vers le serveur
+	int r;
 
 	sockaddr.sin_family = AF_INET;
 	inet_pton(AF_INET, (PCSTR)ip, &sockaddr.sin_addr.s_addr);
