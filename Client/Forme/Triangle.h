@@ -32,6 +32,9 @@ public:
 	*/
 	inline Triangle(const Couleur& couleur, const Vecteur2D& a, const Vecteur2D& b, const Vecteur2D& c);
 
+	/// Destructeur de la classe triangle
+	virtual ~Triangle() {}
+
 	/**
 	* Determine l'aire du triangle.
 	*
