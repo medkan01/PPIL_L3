@@ -1,26 +1,26 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include "Degree.h"
+#include "../Utils/Degree.h"
 using namespace std;
 
 class TestDegree {
 public:
 	/**
-	* Test la méthode toDegree().
+	* Test la mï¿½thode toDegree().
 	*
-	* @return const double - Résultat du test.
+	* @return const double - Rï¿½sultat du test.
 	*/
 	inline static bool testToRadian();
 
 	/**
-	* Affiche le résultat du test.
+	* Affiche le rï¿½sultat du test.
 	*
-	* @param const bool& test - Test à réaliser.
+	* @param const bool& test - Test ï¿½ rï¿½aliser.
 	*/
 	inline static int resultatTest(const bool&);
 
-	/// Lance une session de test et affiche les résultats des différents tests.
+	/// Lance une session de test et affiche les rï¿½sultats des diffï¿½rents tests.
 	inline static void sessionTest();
 };
 
@@ -47,7 +47,7 @@ void TestDegree::sessionTest() {
 	int score = 0;
 	const int nbTests = 1;
 
-	cout << endl << "Début de la session de tests pour la classe Degree.." << endl << "Résultats : ";
+	cout << endl << "Dï¿½but de la session de tests pour la classe Degree.." << endl << "Rï¿½sultats : ";
 
 	score += resultatTest(testToRadian());
 

@@ -1,44 +1,44 @@
 #pragma once
-#include "Segment.h"
+#include "../Forme/Segment.h"
 
 class TestSegment {
 public:
 	/**
-	* Test de la méthode translation.
+	* Test de la mï¿½thode translation.
 	* 
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testTranslation();
 
 	/**
-	* Test de la méthode rotation avec les degrées.
+	* Test de la mï¿½thode rotation avec les degrï¿½es.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testRotationDegree();
 
 	/**
-	* Test de la méthode rotation avec les radians.
+	* Test de la mï¿½thode rotation avec les radians.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testRotationRadian();
 
 	/**
-	* Test de la méthode homothetie.
+	* Test de la mï¿½thode homothetie.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testHomothetie();
 
 	/**
-	* Affiche le résultat du test.
+	* Affiche le rï¿½sultat du test.
 	*
-	* @param const bool& test - Test à réaliser.
+	* @param const bool& test - Test ï¿½ rï¿½aliser.
 	*/
 	inline static int resultatTest(const bool&);
 
-	/// Lance une session de test pour la classe Vecteur2D et affiche les résultats des différents tests.
+	/// Lance une session de test pour la classe Vecteur2D et affiche les rï¿½sultats des diffï¿½rents tests.
 	inline static void sessionTest();
 };
 
@@ -92,7 +92,7 @@ void TestSegment::sessionTest() {
 	int score = 0;
 	int nbTests = 0;
 
-	cout << endl << "Début de la session de tests pour la classe Segment.." << endl << "Résultats : ";
+	cout << endl << "Dï¿½but de la session de tests pour la classe Segment.." << endl << "Rï¿½sultats : ";
 
 	score += resultatTest(testTranslation()); nbTests++;
 	score += resultatTest(testRotationDegree()); nbTests++;

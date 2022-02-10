@@ -1,12 +1,12 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include "Radian.h"
-#include "Degree.h"
+#include "../Utils/Radian.h"
+#include "../Utils/Degree.h"
 using namespace std;
 
 /**
-	Représente un vecteur, un point ou une coordonnées dans un espace en 2 dimensions
+	Reprï¿½sente un vecteur, un point ou une coordonnï¿½es dans un espace en 2 dimensions
 */
 class Vecteur2D {
 public:
@@ -28,15 +28,15 @@ public:
 	/**
 	* Addtition de deux vecteurs u et v.
 	*
-	* @param const Vecteur2D& v - vecteur qui sera additionné avec le vecteur u courant.
-	* @return const Vecteur2D - vecteur résultant de l'addition des vecteurs u et v.
+	* @param const Vecteur2D& v - vecteur qui sera additionnï¿½ avec le vecteur u courant.
+	* @return const Vecteur2D - vecteur rï¿½sultant de l'addition des vecteurs u et v.
 	*/
 	inline const Vecteur2D operator+(const Vecteur2D& v) const;
 
 	/**
-	* Opérateur - unaire. Permet entre autre d'opposer un vecteur.
+	* Opï¿½rateur - unaire. Permet entre autre d'opposer un vecteur.
 	*
-	* @return const Vecteur2D - opposé du vecteur courant.
+	* @return const Vecteur2D - opposï¿½ du vecteur courant.
 	*/
 	inline const Vecteur2D operator-() const;
 
@@ -44,14 +44,14 @@ public:
 	* Soustraction de deux vecteurs u et v.
 	*
 	* @param const Vecteur2D& v - vecteur qui sera soustrait avec le vecteur u courant.
-	* @return - le vecteur résultant de la soustraction des vecteurs u et v.
+	* @return - le vecteur rï¿½sultant de la soustraction des vecteurs u et v.
 	*/
 	inline const Vecteur2D operator-(const Vecteur2D& v) const;
 
 	/**
 	* Produit scalaire de deux vecteurs u et v.
 	*
-	* @param const Vecteur2D& v - vecteur qui résultera du produit scalaire avec le vecteur courant.
+	* @param const Vecteur2D& v - vecteur qui rï¿½sultera du produit scalaire avec le vecteur courant.
 	* @return - produit scalaire de u . v.
 	*/
 	inline const double operator*(const Vecteur2D& v) const;
@@ -59,21 +59,21 @@ public:
 	/**
 	* Multiplication d'un vecteur par un entier i.
 	*
-	* @param const double& i - entier qui sera multiplié avec le vecteur u courant.
-	* @return const Vecteur2D - vecteur résultant de la multiplication de l'entier i et du vecteur u courant.
+	* @param const double& i - entier qui sera multipliï¿½ avec le vecteur u courant.
+	* @return const Vecteur2D - vecteur rï¿½sultant de la multiplication de l'entier i et du vecteur u courant.
 	*/
 	inline const Vecteur2D operator*(const double& i) const;
 
 	/**
-	* Addtition de deux vecteurs u et v grâce à l'opérateur +=.
+	* Addtition de deux vecteurs u et v grï¿½ce ï¿½ l'opï¿½rateur +=.
 	*
-	* @param const Vecteur2D& v - vecteur qui sera additionné avec le vecteur u courant.
-	* @return const Vecteur2D - vecteur résultant de l'addition des vecteurs u et v.
+	* @param const Vecteur2D& v - vecteur qui sera additionnï¿½ avec le vecteur u courant.
+	* @return const Vecteur2D - vecteur rï¿½sultant de l'addition des vecteurs u et v.
 	*/
 	inline const Vecteur2D operator+=(const Vecteur2D& v);
 
 	/**
-	* Opérateur de cast. Equivalent d'une méthode toString().
+	* Opï¿½rateur de cast. Equivalent d'une mï¿½thode toString().
 	*
 	* @return string - correspondant au vecteur courant.
 	*/
@@ -83,43 +83,43 @@ public:
 	* Distance entre le vecteur u courant et un vecteur v.
 	* 
 	* @param const Vecteur2D v - le second vecteur permettant de calculer la distance.
-	* @return const double - correspondant à la distance entre un vecteur v et le vecteur u courant.
+	* @return const double - correspondant ï¿½ la distance entre un vecteur v et le vecteur u courant.
 	*/
 	inline const double distance(const Vecteur2D& v) const;
 
 	/**
-	* Effectue une rotation vectorielle à partir d'un point de rotation R, du point concerné et d'un angle phi.
+	* Effectue une rotation vectorielle ï¿½ partir d'un point de rotation R, du point concernï¿½ et d'un angle phi.
 	* 
 	* @param const Vecteur2D& R - Centre de rotation.
 	* @param const Radian& phi - Angle de rotation en radian.
-	* @return const Vecteur2D - Point après rotation.
+	* @return const Vecteur2D - Point aprï¿½s rotation.
 	*/
 	inline virtual const Vecteur2D rotation(const Vecteur2D& R, const Radian& phi) const;
 
 	/**
-	* Effectue une rotation vectorielle à partir d'un point de rotation R, du point concerné et d'un angle phi.
+	* Effectue une rotation vectorielle ï¿½ partir d'un point de rotation R, du point concernï¿½ et d'un angle phi.
 	*
 	* @param const Vecteur2D& R - Centre de rotation.
-	* @param const Degree& phi - Angle de rotation en degrée.
-	* @return const Vecteur2D - Point après rotation.
+	* @param const Degree& phi - Angle de rotation en degrï¿½e.
+	* @return const Vecteur2D - Point aprï¿½s rotation.
 	*/
 	inline virtual const Vecteur2D rotation(const Vecteur2D& R, const Degree& phi) const;
 
 	/**
-	* Effectue une homothetie vectorielle à partir d'un point invariant, du point concerné et d'un rapport a.
+	* Effectue une homothetie vectorielle ï¿½ partir d'un point invariant, du point concernï¿½ et d'un rapport a.
 	*
 	* @param const Vecteur2D& C - Point invariant.
 	* @param const double& a - Rapport d'homothetie.
-	* @return const Vecteur2D - Point après homothetie.
+	* @return const Vecteur2D - Point aprï¿½s homothetie.
 	*/
 	inline virtual const Vecteur2D homothetie(const Vecteur2D& C, const double& a) const;
 
 	/**
-	* Déterminant d'un couple de vecteur.
+	* Dï¿½terminant d'un couple de vecteur.
 	*
 	* @param const Vecteur2D& u - vecteur u.
 	* @param cosnt Vecteur2D& v - vecteur v.
-	* @return const double - valeur du déterminant du couple de vecteurs u et v.
+	* @return const double - valeur du dï¿½terminant du couple de vecteurs u et v.
 	*/
 	friend const double determinant(const Vecteur2D& u, const Vecteur2D& v);
 
@@ -133,17 +133,17 @@ public:
 	/**
 	* Multiplication d'un vecteur par un entier i.
 	*
-	* @param const double& i - entier qui sera multiplié avec le vecteur u courant.
-	* @param const Vecteur2D& v - Vecteur qui va être multiplié.
-	* @return const Vecteur2D - vecteur résultant de la multiplication de l'entier i et du vecteur u courant.
+	* @param const double& i - entier qui sera multipliï¿½ avec le vecteur u courant.
+	* @param const Vecteur2D& v - Vecteur qui va ï¿½tre multipliï¿½.
+	* @return const Vecteur2D - vecteur rï¿½sultant de la multiplication de l'entier i et du vecteur u courant.
 	*/
 	friend const Vecteur2D operator *(const double& i, const Vecteur2D& v);
 
 	/**
-	* Opérateur qui vérifie si un vecteur v est égal au vecteur courant.
+	* Opï¿½rateur qui vï¿½rifie si un vecteur v est ï¿½gal au vecteur courant.
 	* 
-	* @param const Vecteur2D& v - Vecteur qui sera comparé au vecteur courant.
-	* @return bool - Résultat de la comparaison.
+	* @param const Vecteur2D& v - Vecteur qui sera comparï¿½ au vecteur courant.
+	* @return bool - Rï¿½sultat de la comparaison.
 	*/
 	inline bool operator==(const Vecteur2D v) const;
 };

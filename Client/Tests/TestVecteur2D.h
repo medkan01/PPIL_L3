@@ -1,101 +1,101 @@
 #pragma once
-#include "Vecteur2D.h"
+#include "../Forme/Vecteur2D.h"
 using namespace std;
 
 class TestVecteur2D {
 public:
 	/**
-	* Test de l'opérateur +.
+	* Test de l'opï¿½rateur +.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testOperatorPlus();
 
 	/**
-	* Test de l'opérateur - unaire.
+	* Test de l'opï¿½rateur - unaire.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testOperatorMoinsUnaire();
 
 	/**
-	* Test de l'opérateur -.
+	* Test de l'opï¿½rateur -.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testOperatorMoins();
 
 	/**
-	* Test de l'opérateur *.
+	* Test de l'opï¿½rateur *.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testOperatorFois();
 
 	/**
-	* Test de l'opérateur * avec un double en tant qu'opérande droite.
+	* Test de l'opï¿½rateur * avec un double en tant qu'opï¿½rande droite.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testOperatorFoisDoubleDroite();
 
 	/**
-	* Test de l'opérateur * avec un double en tant qu'opérande gauche.
+	* Test de l'opï¿½rateur * avec un double en tant qu'opï¿½rande gauche.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testOperatorFoisDoubleGauche();
 
 	/**
-	* Test de l'opérateur string (cast).
+	* Test de l'opï¿½rateur string (cast).
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testOperatorString();
 
 	/**
-	* Test de la méthode distance.
+	* Test de la mï¿½thode distance.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testDistance();
 
 	/**
-	* Test de la méthode rotation avec les degrées.
+	* Test de la mï¿½thode rotation avec les degrï¿½es.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testRotationDegree();
 
 	/**
-	* Test de la méthode rotation avec les radians.
+	* Test de la mï¿½thode rotation avec les radians.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testRotationRadian();
 
 	/**
-	* Test de la méthode homothetie.
+	* Test de la mï¿½thode homothetie.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testHomothetie();
 
 	/**
 	* Test de la fonction amie determinant.
 	*
-	* @return bool - Résultat du test.
+	* @return bool - Rï¿½sultat du test.
 	*/
 	inline static bool testDeterminant();
 
 	/**
-	* Affiche le résultat du test.
+	* Affiche le rï¿½sultat du test.
 	*
-	* @param const bool& test - Test à réaliser.
+	* @param const bool& test - Test ï¿½ rï¿½aliser.
 	*/
 	inline static int resultatTest(const bool&);
 
-	/// Lance une session de test pour la classe Vecteur2D et affiche les résultats des différents tests.
+	/// Lance une session de test pour la classe Vecteur2D et affiche les rï¿½sultats des diffï¿½rents tests.
 	inline static void sessionTest();
 
 };
@@ -195,7 +195,7 @@ void TestVecteur2D::sessionTest() {
 	int score = 0;
 	int nbTests = 0;
 
-	cout << endl << "Début de la session de tests pour la classe Vecteur2D.." << endl << "Résultats : ";
+	cout << endl << "Dï¿½but de la session de tests pour la classe Vecteur2D.." << endl << "Rï¿½sultats : ";
 
 	score += resultatTest(testOperatorPlus()); nbTests++;
 	score += resultatTest(testOperatorMoinsUnaire()); nbTests++;

@@ -139,28 +139,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Client.h" />
-    <ClInclude Include="Couleur.h" />
-    <ClInclude Include="Degree.h" />
-    <ClInclude Include="Forme.h" />
-    <ClInclude Include="PolygoneFerme.h" />
-    <ClInclude Include="Radian.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="Segment.h" />
-    <ClInclude Include="TestDegree.h" />
-    <ClInclude Include="TestRadian.h" />
-    <ClInclude Include="TestSegment.h" />
-    <ClInclude Include="TestTriangle.h" />
-    <ClInclude Include="TestVecteur2D.h" />
-    <ClInclude Include="Triangle.h" />
-    <ClInclude Include="Vecteur2D.h" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="Rapport.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Client.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TCPIP\Client.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Forme\Forme.h" />
+    <ClInclude Include="Forme\PolygoneFerme.h" />
+    <ClInclude Include="Forme\Rectangle.h" />
+    <ClInclude Include="Forme\Segment.h" />
+    <ClInclude Include="Forme\Triangle.h" />
+    <ClInclude Include="Forme\Vecteur2D.h" />
+    <ClInclude Include="TCPIP\Client.h" />
+    <ClInclude Include="Tests\TestDegree.h" />
+    <ClInclude Include="Tests\TestRadian.h" />
+    <ClInclude Include="Tests\TestSegment.h" />
+    <ClInclude Include="Tests\TestTriangle.h" />
+    <ClInclude Include="Tests\TestVecteur2D.h" />
+    <ClInclude Include="Utils\Couleur.h" />
+    <ClInclude Include="Utils\Degree.h" />
+    <ClInclude Include="Utils\Radian.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="CppProperties.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

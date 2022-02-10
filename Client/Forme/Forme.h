@@ -1,12 +1,12 @@
 #pragma once
-#include "Couleur.h"
+#include "../Utils/Couleur.h"
 #include "Vecteur2D.h"
 using namespace std;
 
 /**
-* Représente une forme quelconque.
+* Reprï¿½sente une forme quelconque.
 * 
-* Définie par une couleur et un point d'origine.
+* Dï¿½finie par une couleur et un point d'origine.
 */
 class Forme {
 public:
@@ -22,11 +22,11 @@ public:
 	Forme(const Couleur& couleur, const Vecteur2D& centre) : 
 		couleur(couleur), centre(centre) {}
 
-	/// Constructeur par défaut de la classe Forme.
+	/// Constructeur par dï¿½faut de la classe Forme.
 	Forme() : couleur(Couleur("Noire")), centre(Vecteur2D(0, 0)) {}
 
 	/**
-	* Opérateur de cast. Equivalent d'une méthode toString().
+	* Opï¿½rateur de cast. Equivalent d'une mï¿½thode toString().
 	*
 	* @return string - vecteur courant.
 	*/

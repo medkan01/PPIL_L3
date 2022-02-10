@@ -1,11 +1,11 @@
 #pragma once
 #include <stdio.h>
-#include "TestVecteur2D.h"
-#include "TestRadian.h"
-#include "TestDegree.h"
-#include "TestSegment.h"
-#include "TestTriangle.h"
-#include "Client.h"
+#include "Tests/TestVecteur2D.h"
+#include "Tests/TestRadian.h"
+#include "Tests/TestDegree.h"
+#include "Tests/TestSegment.h"
+#include "Tests/TestTriangle.h"
+#include "TCPIP/Client.h"
 using namespace std;
 
 int main() {
