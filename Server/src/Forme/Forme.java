@@ -1,9 +1,9 @@
 package Forme;
 
 public class Forme {
-    String type;
-    Vecteur2D[] points;
-    String couleur;
+    public String type;
+    public Vecteur2D[] points;
+    public String couleur;
 
     /**
      * Constructeur de la classe Forme.

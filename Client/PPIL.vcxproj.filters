@@ -25,6 +25,12 @@
     <Filter Include="Fichiers sources\ClientServeur">
       <UniqueIdentifier>{8dc551e6-0bf5-459c-b60f-e8fd0b5e3a95}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Utils">
+      <UniqueIdentifier>{58e8a69c-fdce-45bb-accd-30c140fce83a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visitor">
+      <UniqueIdentifier>{152ce25d-3164-4a29-80be-9f9754c380b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Rapport.txt" />
@@ -38,49 +44,52 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Forme\Forme.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Forme\PolygoneFerme.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Forme\Rectangle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Forme\Segment.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Forme\Triangle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Forme\Vecteur2D.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="TCPIP\Client.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tests\TestDegree.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tests\TestRadian.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tests\TestSegment.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tests\TestTriangle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Tests\TestVecteur2D.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Utils\Couleur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Utils</Filter>
     </ClInclude>
     <ClInclude Include="Utils\Degree.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Utils</Filter>
     </ClInclude>
     <ClInclude Include="Utils\Radian.h">
+      <Filter>Fichiers d%27en-tête\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPIP\Client.h">
+      <Filter>Fichiers d%27en-tête\ClientServeur</Filter>
+    </ClInclude>
+    <ClInclude Include="Forme\Vecteur2D.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Forme\Triangle.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Forme\Segment.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Forme\Rectangle.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Forme\PolygoneFerme.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Forme\Forme.h">
+      <Filter>Fichiers d%27en-tête\Formes</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TestVecteur2D.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TestTriangle.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TestSegment.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRadian.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\TestDegree.h">
+      <Filter>Fichiers d%27en-tête\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor\DessinerFormeVisitor.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
