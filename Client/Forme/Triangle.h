@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TRIANGLE_H
+#define TRIANGLE_H
+
 #include "Forme.h"
 using namespace std;
 
@@ -12,14 +14,14 @@ class Triangle : public Forme {
 	* 
 	* @return abcisse du centre du triangle.
 	*/
-	const double abcisseCentre() const;
+	inline const double abcisseCentre() const;
 
 	/**
 	* Retourne l'ordonnee du centre.
 	* 
 	* @return ordonnee du centre du triangle.
 	*/
-	const double ordonneeCentre() const;
+	inline const double ordonneeCentre() const;
 public:
 	Vecteur2D a, b, c;
 	/**
@@ -89,6 +91,11 @@ public:
 	* @return toString du vecteur courant.
 	*/
 	inline virtual operator string() const;
+
+	/**
+	* Methode visitor pour ajouter des fonctionnalites oublies.
+	*/
+	virtual void accepte(VisiteurForme* visiteur) const;
 };
 
 const double Triangle::abcisseCentre() const {
@@ -190,3 +197,5 @@ Forme* Triangle::clone() const {
 inline ostream& operator<<(ostream& os, const Triangle& t) {
 	return os << (string)t;
 }
+
+#endif

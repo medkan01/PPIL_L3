@@ -1,7 +1,11 @@
-#pragma once
+#ifndef FORME_H
+#define FORME_H
+
 #include "../Utils/Couleur.h"
 #include "Vecteur2D.h"
 using namespace std;
+
+class VisiteurForme;
 
 /**
 * Represente une forme quelconque.
@@ -41,4 +45,11 @@ public:
 	* @return Copie de la forme.
 	*/
 	virtual Forme* clone() const = 0;
+
+	/**
+	* Methode visitor pour ajouter des fonctionnalites oublies.
+	*/
+	virtual void accepte(VisiteurForme* visiteur) const = 0;
 };
+
+#endif

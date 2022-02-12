@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SEGMENT_H
+#define SEGMENT_H
+
 #include "Forme.h"
 using namespace std;
 
@@ -65,6 +67,11 @@ public:
 	* @return Copie de la forme.
 	*/
 	virtual Forme* clone() const { return new Segment(*this); }
+
+	/**
+	* Methode visitor pour ajouter des fonctionnalites oublies.
+	*/
+	virtual void accepte(VisiteurForme* visiteur) const;
 };
 
 inline ostream& operator<<(ostream& os, const Segment& s) {
@@ -90,3 +97,5 @@ Segment Segment::rotation(const Vecteur2D& pi, const Radian& angle) const {
 Segment::operator string() const {
 	return "segment/" + (string)a + "/" + (string)b + "/" + (string)couleur;
 }
+
+#endif

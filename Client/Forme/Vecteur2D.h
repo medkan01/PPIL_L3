@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VECTEUR2D_H
+#define VECTEUR2D_H
 #include <string>
 #include <iostream>
 #include "../Utils/Radian.h"
@@ -145,10 +146,27 @@ public:
 	* @param v Vecteur qui sera compare au vecteur courant.
 	* @return Resultat de la comparaison.
 	*/
-	inline bool operator==(const Vecteur2D v) const;
+	inline const bool operator==(const Vecteur2D v) const;
+
+	/**
+	* Operateur de concatenation de string.
+	* 
+	* @param s String qui va etre concatene au vecteur. (au format string)
+	* @return Resultat de la concatenation.
+	*/
+	inline const string operator+(const string& s) const;
+
+	/**
+	* Operateur de concatenation de string.
+	*
+	* @param s String qui va etre concatene au vecteur. (au format string)
+	* @param u Vecteur qui va être concatene au string.
+	* @return Resultat de la concatenation.
+	*/
+	friend const string operator+(const string& s, const Vecteur2D& u);
 };
 
-bool Vecteur2D::operator==(const Vecteur2D v) const {
+const bool Vecteur2D::operator==(const Vecteur2D v) const {
 	return x >= v.x - 0.00001 && x <= v.x + 0.00001 && y >= v.y - 0.00001 && y <= v.y + 0.00001;
 }
 
@@ -173,7 +191,7 @@ const Vecteur2D Vecteur2D::operator*(const double& i) const {
 }
 
 Vecteur2D::operator string() const {
-	return to_string(x) + "/" + to_string(y);
+	return "(" + to_string(x) + "," + to_string(y) + ")";
 }
 
 const double Vecteur2D::distance(const Vecteur2D& v) const {
@@ -209,11 +227,11 @@ const Vecteur2D Vecteur2D::homothetie(const Vecteur2D& C, const double& a) const
 	return v;
 }
 
-const double determinant(const Vecteur2D& u, const Vecteur2D& v) {
+inline const double determinant(const Vecteur2D& u, const Vecteur2D& v) {
 	return (u.x * v.y) - (u.y * v.x);
 }
 
-const Vecteur2D operator *(const double& k, const Vecteur2D& v) {
+inline const Vecteur2D operator *(const double& k, const Vecteur2D& v) {
 	Vecteur2D t = v;
 	t.x = t.x * k;
 	t.y = t.y * k;
@@ -225,3 +243,13 @@ const Vecteur2D Vecteur2D::operator+=(const Vecteur2D& v) {
 	*this = *this + v;
 	return *this;
 }
+
+const string Vecteur2D::operator+(const string& s) const {
+	return (string)(*this) + s;
+}
+
+inline const string operator+(const string& s, const Vecteur2D& u){
+	return s + (string)u;
+}
+
+#endif
