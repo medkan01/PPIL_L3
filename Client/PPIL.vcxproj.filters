@@ -42,6 +42,12 @@
     <ClCompile Include="TCPIP\Client.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Forme\Triangle.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Forme\Segment.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Utils\Couleur.h">
@@ -90,6 +96,12 @@
       <Filter>Fichiers d%27en-tête\Tests</Filter>
     </ClInclude>
     <ClInclude Include="Visitor\DessinerFormeVisitor.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor\DessinerFormeJava.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor\VisiteurForme.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
