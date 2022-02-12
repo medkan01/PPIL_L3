@@ -18,14 +18,14 @@ public:
 	 * 
 	 * @param s : Segment concerne.
 	 */
-	virtual void visite(Segment* s) = 0;
+	virtual void visite(const Segment* s) const = 0;
 
 	/**
 	 * Ajoute une fonctionnalite a un triangle.
 	 * 
 	 * @param t : Triangle concerne.
 	 */
-	virtual void visite(Triangle* t) = 0;
+	virtual void visite(const Triangle* t) const = 0;
 
 	/**
 	 * Ajoute une fonctionnalite a un cerlce.
