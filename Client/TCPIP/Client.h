@@ -57,7 +57,7 @@ public:
 	static Client& instance() { return s_client; }
 
 	/// Permet de connecter le socket au serveur local 127.0.0.1
-	inline void connection() const;
+	inline void connexion();
 
 	/**
 	* Envoie du texte au serveur.
@@ -65,6 +65,11 @@ public:
 	* @param data message a envoyer
 	*/
 	inline void envoiDonnees(const string& data) const;
+
+	/**
+	* 
+	*/
+	inline void deconnexion();
 };
 
 Client::Client() {
@@ -97,14 +102,15 @@ Client::~Client() {
 	WSACleanup();
 }
 
-void Client::connection() const {
+void Client::connexion() {
 	try {
 		int r;
 		r = connect(sock, (SOCKADDR*)&sockaddr, sizeof(sockaddr));
-		if (r == SOCKET_ERROR) throw exception("Socket error");
+		if (r == SOCKET_ERROR && WSAGetLastError() != WSAEISCONN)
+			throw exception("Socket Error");
 	}
 	catch (exception e) {
-		cout << e.what() << endl;
+		cout << "Error: " << e.what() << endl;
 	}
 }
 
@@ -112,12 +118,27 @@ inline void Client::envoiDonnees(const string& data) const {
 	try {
 		string d = data + "\r\n";
 		const char* buf = d.c_str();
-		const int bufsize = d.length();
+		const size_t bufsize = d.length();
 		if (send(sock, buf, bufsize, 0) == SOCKET_ERROR) throw exception("Socket error");
 	}
 	catch (exception e) {
 		cout << e.what() << endl;
 	}
 
+}
+inline void Client::deconnexion() {
+	try {
+		closesocket(sock);
+	}
+	catch (exception e) {
+		cout << e.what() << endl;
+	}
+
+	try {
+		WSACleanup();
+	}
+	catch (exception e) {
+		cout << e.what() << endl;
+	}
 }
 #endif
