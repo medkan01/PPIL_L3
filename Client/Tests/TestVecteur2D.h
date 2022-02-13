@@ -89,6 +89,34 @@ public:
 	inline static bool testDeterminant();
 
 	/**
+	* Test de l'operateur >=.
+	* 
+	* @return Resultat du test.
+	*/
+	inline static bool testOperateurSuperieurEgal();
+
+	/**
+	* Test de l'operateur <=.
+	*
+	* @return Resultat du test.
+	*/
+	inline static bool testOperateurInferieurEgal();
+
+	/**
+	* Test de l'operateur >.
+	*
+	* @return Resultat du test.
+	*/
+	inline static bool testOperateurSuperieur();
+
+	/**
+	* Test de l'operateur <.
+	*
+	* @return Resultat du test.
+	*/
+	inline static bool testOperateurInferieur();
+
+	/**
 	* Affiche le resultat du test.
 	*
 	* @param test Testarealiser.
@@ -140,7 +168,7 @@ bool TestVecteur2D::testOperatorFoisDoubleGauche() {
 bool TestVecteur2D::testOperatorString() {
 	Vecteur2D u(1, 3);
 
-	return ((string)u == "(1.000000, 3.000000)");
+	return ((string)u == "(1.000000,3.000000)");
 }
 
 bool TestVecteur2D::testDistance() {
@@ -181,6 +209,30 @@ bool TestVecteur2D::testDeterminant() {
 	return (delta == -2);
 }
 
+bool TestVecteur2D::testOperateurSuperieurEgal() {
+	Vecteur2D u(2, 3), v(4, 5), w(2, 5);
+
+	return (u >= v) == false && (u >= w) == false && (u >= u) == true;
+}
+
+bool TestVecteur2D::testOperateurInferieurEgal() {
+	Vecteur2D u(2, 3), v(4, 5), w(2, 5);
+
+	return (u <= v) == true && (u <= w) == true && (u <= u) == true;
+}
+
+bool TestVecteur2D::testOperateurSuperieur() {
+	Vecteur2D u(2, 3), v(4, 5), w(2, 5);
+
+	return (u > v) == false && (u > w) == false && (u > u) == false;
+}
+
+bool TestVecteur2D::testOperateurInferieur() {
+	Vecteur2D u(2, 3), v(4, 5), w(2, 5);
+
+	return (u < v) == true && (u < w) == true && (u < u) == false;
+}
+
 int TestVecteur2D::resultatTest(const bool& test) {
 	if (test) {
 		cout << ".";
@@ -209,6 +261,10 @@ void TestVecteur2D::sessionTest() {
 	score += resultatTest(testRotationRadian()); nbTests++;
 	score += resultatTest(testHomothetie()); nbTests++;
 	score += resultatTest(testDeterminant()); nbTests++;
+	score += resultatTest(testOperateurSuperieurEgal()); nbTests++;
+	score += resultatTest(testOperateurSuperieur()); nbTests++;
+	score += resultatTest(testOperateurInferieurEgal()); nbTests++;
+	score += resultatTest(testOperateurInferieur()); nbTests++;
 
 	cout << endl << "Fin de la session de tests.." << endl;
 

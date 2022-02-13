@@ -151,6 +151,7 @@
     <ClInclude Include="Forme\Forme.h" />
     <ClInclude Include="Forme\PolygoneFerme.h" />
     <ClInclude Include="Forme\Rectangle.h" />
+    <ClInclude Include="Forme\Repere.h" />
     <ClInclude Include="Forme\Segment.h" />
     <ClInclude Include="Forme\Triangle.h" />
     <ClInclude Include="Forme\Vecteur2D.h" />

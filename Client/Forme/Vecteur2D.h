@@ -164,6 +164,42 @@ public:
 	* @return Resultat de la concatenation.
 	*/
 	friend const string operator+(const string& s, const Vecteur2D& u);
+
+	/**
+	* Operateur de comparaison de deux vecteurs pour savoir si le vecteur 
+	* v est inferieur ou egal au vecteur courant.
+	* 
+	* @param v Vecteur a comparer avec le vecteur courant.
+	* @return True si v est inferieur ou egal au vecteur courant. False sinon.
+	*/
+	inline bool operator >=(const Vecteur2D& v) const;
+
+	/**
+	* Operateur de comparaison de deux vecteurs pour savoir si le vecteur
+	* v est superieur ou egal au vecteur courant.
+	*
+	* @param v Vecteur a comparer avec le vecteur courant.
+	* @return True si v est superieur ou egal au vecteur courant. False sinon.
+	*/
+	inline bool operator <=(const Vecteur2D& v) const;
+
+	/**
+	* Operateur de comparaison de deux vecteurs pour savoir si le vecteur
+	* v est strictement inferieur au vecteur courant.
+	*
+	* @param v Vecteur a comparer avec le vecteur courant.
+	* @return True si v est strictement inferieur au vecteur courant. False sinon.
+	*/
+	inline bool operator >(const Vecteur2D& v) const;
+
+	/**
+	* Operateur de comparaison de deux vecteurs pour savoir si le vecteur
+	* v est strictement superieur au vecteur courant.
+	*
+	* @param v Vecteur a comparer avec le vecteur courant.
+	* @return True si v est strictement superieur au vecteur courant. False sinon.
+	*/
+	inline bool operator <(const Vecteur2D& v) const;
 };
 
 const bool Vecteur2D::operator==(const Vecteur2D v) const {
@@ -250,6 +286,22 @@ const string Vecteur2D::operator+(const string& s) const {
 
 inline const string operator+(const string& s, const Vecteur2D& u){
 	return s + (string)u;
+}
+
+bool Vecteur2D::operator >=(const Vecteur2D& v) const {
+	return (x > v.x) || (x == v.x && y >= v.y);
+}
+
+bool Vecteur2D::operator <=(const Vecteur2D& v) const {
+	return (x < v.x) || (x == v.x && y <= v.y);
+}
+
+bool Vecteur2D::operator >(const Vecteur2D& v) const {
+	return (x > v.x) || (x == v.x && y > v.y);
+}
+
+bool Vecteur2D::operator <(const Vecteur2D& v) const {
+	return (x < v.x) || (x == v.x && y < v.y);
 }
 
 #endif

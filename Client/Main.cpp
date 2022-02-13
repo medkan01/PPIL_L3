@@ -1,15 +1,16 @@
 #pragma once
 #include <stdio.h>
 #include "Tests/TestVecteur2D.h"
-#include "Tests/TestRadian.h"
-#include "Tests/TestDegree.h"
-#include "Tests/TestSegment.h"
-#include "Tests/TestTriangle.h"
+// #include "Tests/TestRadian.h"
+// #include "Tests/TestDegree.h"
+// #include "Tests/TestSegment.h"
+// #include "Tests/TestTriangle.h"
 #include "TCPIP/Client.h"
 #include "Visitor/DessinerFormeJava.h"
 using namespace std;
 
 int main() {
+	/*
 	Vecteur2D a(0, 0), b(3, 3), c(6, 0);
 	Vecteur2D d(2, 5), e(8, 9);
 	Couleur noire("Noire");
@@ -27,6 +28,10 @@ int main() {
 	s.accepte(v);
 
 	Client::instance().deconnexion();
+
+	*/
+
+	TestVecteur2D::sessionTest();
 
 	return 0;
 }
