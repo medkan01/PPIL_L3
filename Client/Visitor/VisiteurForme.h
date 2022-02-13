@@ -3,7 +3,7 @@
 
 #include "../Forme/Segment.h"
 #include "../Forme/Triangle.h"
-// #include "../Forme/Cercle.h"
+#include "../Forme/Cercle.h"
 // #include "../Forme/Polygone.h"
 
 /**
@@ -32,14 +32,14 @@ public:
 	 * 
 	 * @param c : Cercle concerne.
 	 */
-	// virtual void visite(Cercle* c) = 0;
+	virtual void visite(const Cercle* c) const = 0;
 
 	/**
 	 * Ajoute une fonctionnalite a un polygone.
 	 * 
 	 * @param p : Polygone concerne.
 	 */
-	// virtual void visite(Polygone* p) = 0;
+	// virtual void visite(const Polygone* p) const = 0;
 };
 
 #endif

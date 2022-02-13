@@ -3,10 +3,13 @@ package Dessin;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Toolkit;
+import Forme.Vecteur2D;
 import java.awt.Dimension;
 
 public class Dessin extends Frame {
     public Graphics graphics;
+    public Vecteur2D p1;
+    public Vecteur2D p2;
 
     /**
      * Constructeur de la classe Dessin.
@@ -43,5 +46,8 @@ public class Dessin extends Frame {
         this.createBufferStrategy(nbBuffers);
         Thread.sleep(50); // 50ms mini pour que le buffer soit operationnel.
         this.graphics = this.getBufferStrategy().getDrawGraphics();
+
+        this.p1 = new Vecteur2D(0, hauteur);
+        this.p2 = new Vecteur2D(largeur, 0);
     }
 }

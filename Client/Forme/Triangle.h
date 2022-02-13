@@ -131,6 +131,7 @@ Triangle::Triangle(const Couleur& couleurTriangle, const Repere& rep, const Vect
 	c = pc;
 	centre = Vecteur2D(abcisseCentre(), ordonneeCentre());
 	couleur = couleurTriangle;
+	repere = rep;
 }
 
 

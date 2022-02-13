@@ -4,9 +4,9 @@ import Dessin.Dessin;
 import Forme.Repere;
 import Forme.Vecteur2D;
 
-public class DessinerTriangle extends DessinerCOR {
+public class DessinerCercle extends DessinerCOR {
 
-    public DessinerTriangle(DessinerCOR suivant) {
+    public DessinerCercle(DessinerCOR suivant) {
         super(suivant);
     }
 
@@ -15,8 +15,8 @@ public class DessinerTriangle extends DessinerCOR {
         String[] newStr = requete.split("/"); // newStr[0] = type; newStr[1] = liste des points; newStr[2] = couleur;
         String type = newStr[0];
 
-        // On verifie si c'est un triangle.
-        if (!type.equals("triangle"))
+        // On verifie si c'est un cercle.
+        if (!type.equals("cercle"))
             return false;
 
         String[] listePoints = newStr[1].split(";");
@@ -27,12 +27,12 @@ public class DessinerTriangle extends DessinerCOR {
 
         Repere r = new Repere(p1, p2, d.p1, d.p2);
 
-        // On verifie qu'il y a le bon nombre de points pour faire un triangle.
-        if (listePoints.length != 3)
+        // On verifie qu'il y a le bon nombre de points pour faire un cercle.
+        if (listePoints.length != 2)
             return false;
 
         // On reparti les points.
-        Vecteur2D[] points = new Vecteur2D[3]; // 3 points pour un triangle
+        Vecteur2D[] points = new Vecteur2D[2]; // 2 points pour un cercle
         int i = 0;
 
         for (String s : listePoints) {
@@ -40,12 +40,11 @@ public class DessinerTriangle extends DessinerCOR {
             i++;
         }
 
-        // Tout est bon pour dessiner le triangle, alors on le dessine
+        // Tout est bon pour dessiner le cercle, alors on le dessine
 
         try {
-            d.graphics.drawLine((int) points[0].x, (int) points[0].y, (int) points[1].x, (int) points[1].y);
-            d.graphics.drawLine((int) points[1].x, (int) points[1].y, (int) points[2].x, (int) points[2].y);
-            d.graphics.drawLine((int) points[2].x, (int) points[2].y, (int) points[0].x, (int) points[0].y);
+            d.graphics.drawOval((int) points[0].x, (int) points[0].y, (int) Vecteur2D.distance(points[0], points[1]),
+                    (int) Vecteur2D.distance(points[0], points[1]));
         } catch (Exception e) {
             return false;
         }

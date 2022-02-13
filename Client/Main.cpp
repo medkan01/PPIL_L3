@@ -8,25 +8,33 @@
 #include "Tests/TestTriangle.h"
 #include "TCPIP/Client.h"
 #include "Visitor/DessinerFormeJava.h"
+#include "Forme/Cercle.h"
 using namespace std;
 
 int main() {
-	Vecteur2D a(50, 50), b(500, 200), c(200, 450);
-	Vecteur2D d(50, 150), e(700, 400);
-	Couleur noire("Noire");
-	Couleur blanche("Blanche");
-	Repere r(Vecteur2D(0,0), Vecteur2D(720, 480));
+	const Vecteur2D a(4, 7), b(6, 7), c(5,7);
+	const Vecteur2D d(4.5, 6), e(4.5, 2);
+	const Vecteur2D f(6.5, 6), g(6.5, 2);
+	const Vecteur2D h(5, 2), i(6, 2);
 
-	Triangle t(noire, r, a, b, c);
-	Segment s(blanche, r, d, e);
-	
+	const Couleur noire("Noire");
+	const Couleur blanche("Blanche");
+	const Repere r(Vecteur2D(0, 0), Vecteur2D(11, 7));
+
+	const Cercle c1(noire, r, a, c), c2(noire, r, b, c), c3(noire, r, h, i);
+	const Segment s1(noire, r, d, e), s2(noire, r, f, g);
+
 	VisiteurForme* v;
 	v = new DessinerFormeJava;
 
 	Client::instance().connexion();
 
-	t.accepte(v);
-	s.accepte(v);
+	c1.accepte(v);
+	c2.accepte(v);
+	c3.accepte(v);
+
+	s1.accepte(v);
+	s2.accepte(v);
 
 	Client::instance().deconnexion();
 
