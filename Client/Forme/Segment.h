@@ -12,11 +12,26 @@ public:
 	/**
 	* Constructeur de la classe Segment.
 	* 
-	* @param couleur Couleur de la forme
-	* @param a point a du segment
-	* @param b point b du segment
+	* @param c Couleur de la forme.
+	* @param rep Repere de la forme.
+	* @param vecA point a du segment.
+	* @param vecB point b du segment.
 	*/
-	Segment(const Couleur& couleur = Couleur("Noire"), const Vecteur2D & a = Vecteur2D(0, 0) , const Vecteur2D & b = Vecteur2D(0, 0)) : Forme(couleur, Vecteur2D((a.x + b.x) / 2, (a.y + b.y) / 2)), a(a), b(b) {}
+	Segment(const Couleur& c = Couleur("Noire"), const Repere& rep = Repere(), const Vecteur2D& vecA = Vecteur2D(0, 0), const Vecteur2D& vecB = Vecteur2D(0, 0)) {
+		couleur = c;
+		Vecteur2D vecCentre = Vecteur2D((vecA.x + vecB.x) / 2, ((vecA.y + vecB.y) / 2));
+
+		try {
+			if (!rep.estDans(vecCentre) || !rep.estDans(vecA) || !rep.estDans(vecB))
+				throw exception("La forme n'est pas dans le repere.");
+			centre = vecCentre;
+			a = vecA;
+			b = vecB;
+		}
+		catch (exception e) {
+			cout << endl << endl << e.what() << endl << endl;
+		}
+	}
 
 	/// Destructeur de la classe segment
 	virtual ~Segment() {}
@@ -79,19 +94,19 @@ inline ostream& operator<<(ostream& os, const Segment& s) {
 }
 
 Segment Segment::translation(const Vecteur2D& v) const {
-	return Segment(couleur, a + v, b + v);
+	return Segment(couleur, repere, a + v, b + v);
 }
 
 Segment Segment::homothetie(const Vecteur2D& pi, const double& rh) const {
-	return Segment(couleur, a.homothetie(pi, rh), b.homothetie(pi, rh));
+	return Segment(couleur, repere, a.homothetie(pi, rh), b.homothetie(pi, rh));
 }
 
 Segment Segment::rotation(const Vecteur2D& pi, const Degree& angle) const {
-	return Segment(couleur, a.rotation(pi, angle), b.rotation(pi, angle));
+	return Segment(couleur, repere, a.rotation(pi, angle), b.rotation(pi, angle));
 }
 
 Segment Segment::rotation(const Vecteur2D& pi, const Radian& angle) const {
-	return Segment(couleur, a.rotation(pi, angle), b.rotation(pi, angle));
+	return Segment(couleur, repere, a.rotation(pi, angle), b.rotation(pi, angle));
 }
 
 Segment::operator string() const {

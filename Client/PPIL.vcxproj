@@ -158,6 +158,7 @@
     <ClInclude Include="TCPIP\Client.h" />
     <ClInclude Include="Tests\TestDegree.h" />
     <ClInclude Include="Tests\TestRadian.h" />
+    <ClInclude Include="Tests\TestRepere.h" />
     <ClInclude Include="Tests\TestSegment.h" />
     <ClInclude Include="Tests\TestTriangle.h" />
     <ClInclude Include="Tests\TestVecteur2D.h" />

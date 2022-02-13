@@ -1,10 +1,11 @@
 #pragma once
 #include <stdio.h>
 #include "Tests/TestVecteur2D.h"
-// #include "Tests/TestRadian.h"
-// #include "Tests/TestDegree.h"
-// #include "Tests/TestSegment.h"
-// #include "Tests/TestTriangle.h"
+#include "Tests/TestRepere.h"
+#include "Tests/TestRadian.h"
+#include "Tests/TestDegree.h"
+#include "Tests/TestSegment.h"
+#include "Tests/TestTriangle.h"
 #include "TCPIP/Client.h"
 #include "Visitor/DessinerFormeJava.h"
 using namespace std;
@@ -31,7 +32,10 @@ int main() {
 
 	*/
 
+	TestSegment::sessionTest();
+	TestTriangle::sessionTest();
 	TestVecteur2D::sessionTest();
+	TestRepere::sessionTest();
 
 	return 0;
 }

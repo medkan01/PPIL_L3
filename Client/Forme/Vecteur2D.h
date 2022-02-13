@@ -297,7 +297,7 @@ bool Vecteur2D::operator <=(const Vecteur2D& v) const {
 }
 
 bool Vecteur2D::operator >(const Vecteur2D& v) const {
-	return (x > v.x) || (x == v.x && y > v.y);
+	return  (x > v.x) || (x == v.x && y > v.y);
 }
 
 bool Vecteur2D::operator <(const Vecteur2D& v) const {

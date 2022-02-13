@@ -27,12 +27,13 @@ public:
 	/**
 	* Constructeur de la classe Triangle qui construit un triangle ABC d'une couleur donnee.
 	* 
-	* @param couleur couleur du triangle.
-	* @param a origine du triangle ABC.
-	* @param b vecteur AB du triangle ABC.
-	* @param c vecteur AC du triangle ABC.
+	* @param couleurTriangle Couleur du triangle.
+	* @param rep Repere de la forme.
+	* @param pa Origine du triangle ABC.
+	* @param pb Point B du triangle ABC.
+	* @param pc Point C du triangle ABC.
 	*/
-	inline Triangle(const Couleur& couleur, const Vecteur2D& a, const Vecteur2D& b, const Vecteur2D& c);
+	inline Triangle(const Couleur& couleurTriangle, const Repere& rep, const Vecteur2D& pa, const Vecteur2D& pb, const Vecteur2D& pc);
 
 	/// Destructeur de la classe triangle
 	virtual ~Triangle() {}
@@ -124,7 +125,7 @@ const double Triangle::ordonneeCentre() const {
 	return y;
 }
 
-Triangle::Triangle(const Couleur& couleurTriangle, const Vecteur2D& pa, const Vecteur2D& pb, const Vecteur2D& pc) {
+Triangle::Triangle(const Couleur& couleurTriangle, const Repere& rep, const Vecteur2D& pa, const Vecteur2D& pb, const Vecteur2D& pc) {
 	a = pa;
 	b = pb;
 	c = pc;
@@ -153,7 +154,7 @@ const Triangle Triangle::translation(const Vecteur2D& v) const {
 	pb = pb + v;
 	pc = pc + v;
 
-	return Triangle(couleur, pa, pb, pc);
+	return Triangle(couleur, repere, pa, pb, pc);
 }
 
 const Triangle Triangle::homothetie(const Vecteur2D& C, const double& k) const {
@@ -163,7 +164,7 @@ const Triangle Triangle::homothetie(const Vecteur2D& C, const double& k) const {
 	pb = pb.homothetie(C, k);
 	pc = pc.homothetie(C, k);
 
-	return Triangle(couleur, pa, pb, pc);
+	return Triangle(couleur, repere, pa, pb, pc);
 }
 
 const Triangle Triangle::rotation(const Vecteur2D& R, const Degree& theta) const {
@@ -173,7 +174,7 @@ const Triangle Triangle::rotation(const Vecteur2D& R, const Degree& theta) const
 	pb = pb.rotation(R, theta);
 	pc = pc.rotation(R, theta);
 
-	return Triangle(couleur, pa, pb, pc);
+	return Triangle(couleur, repere, pa, pb, pc);
 }
 
 const Triangle Triangle::rotation(const Vecteur2D& R, const Radian& alpha) const {
@@ -183,7 +184,7 @@ const Triangle Triangle::rotation(const Vecteur2D& R, const Radian& alpha) const
 	pb = pb.rotation(R, alpha);
 	pc = pc.rotation(R, alpha);
 
-	return Triangle(couleur, pa, pb, pc);
+	return Triangle(couleur, repere, pa, pb, pc);
 }
 
 Triangle::operator string() const {

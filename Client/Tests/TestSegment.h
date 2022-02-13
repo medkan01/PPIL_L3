@@ -44,7 +44,7 @@ public:
 
 bool TestSegment::testTranslation() {
 	Vecteur2D a(0, 0), b(2, 3), u(4, 3), resA(4, 3), resB(6, 6), resCentre(5, 4.5);
-	Segment s(Couleur("Noire"), a, b);
+	Segment s(Couleur("Noire"), Repere(), a, b);
 	
 	s = s.translation(u);
 
@@ -53,7 +53,7 @@ bool TestSegment::testTranslation() {
 
 bool TestSegment::testRotationDegree() {
 	Vecteur2D a(-4, 0), b(4, 0), resA(4, 0), resB(-4, 0), resCentre(0, 0);
-	Segment s(Couleur("Noire"), a, b);
+	Segment s(Couleur("Noire"), Repere(), a, b);
 
 	s = s.rotation(s.centre, Degree(180));
 
@@ -62,7 +62,7 @@ bool TestSegment::testRotationDegree() {
 
 bool TestSegment::testRotationRadian() {
 	Vecteur2D a(-4, 0), b(4, 0), resA(4, 0), resB(-4, 0), resCentre(0, 0);
-	Segment s(Couleur("Noire"), a, b);
+	Segment s(Couleur("Noire"), Repere(), a, b);
 
 	s = s.rotation(s.centre, Radian(M_PI));
 
@@ -71,7 +71,7 @@ bool TestSegment::testRotationRadian() {
 
 bool TestSegment::testHomothetie() {
 	Vecteur2D a(-2, 0), b(2, 0), resA(-3, 0), resB(3, 0), resCentre(0, 0);
-	Segment s(Couleur("Noire"), a, b);
+	Segment s(Couleur("Noire"), Repere(), a, b);
 
 	s = s.homothetie(s.centre, 1.5);
 
