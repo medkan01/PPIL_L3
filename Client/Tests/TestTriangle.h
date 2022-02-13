@@ -44,7 +44,7 @@ public:
 
 bool TestTriangle::testTranslation() {
 	Vecteur2D a(0, 0), b(3, 3), c(6, 0);
-	Triangle t(Couleur("Noire"), a, b, c);
+	Triangle t(Couleur("Noire"), Repere(), a, b, c);
 
 	t = t.translation(Vecteur2D(3, 2));
 
@@ -53,7 +53,7 @@ bool TestTriangle::testTranslation() {
 
 bool TestTriangle::testRotationDegree() {
 	Vecteur2D a(0, 0), b(3, 3), c(6, 0), resA(2,4), resB(5,1), resC(2, -2);
-	Triangle t(Couleur("Noire"), a, b, c);
+	Triangle t(Couleur("Noire"), Repere(), a, b, c);
 
 	t = t.rotation(t.centre, Degree(-90));
 
@@ -62,7 +62,7 @@ bool TestTriangle::testRotationDegree() {
 
 bool TestTriangle::testRotationRadian() {
 	Vecteur2D a(0, 0), b(3, 3), c(6, 0), resA(2, 4), resB(5, 1), resC(2, -2);
-	Triangle t(Couleur("Noire"), a, b, c);
+	Triangle t(Couleur("Noire"), Repere(), a, b, c);
 
 	t = t.rotation(t.centre, Radian(-M_PI / 2));
 
@@ -71,7 +71,7 @@ bool TestTriangle::testRotationRadian() {
 
 bool TestTriangle::testHomothetie() {
 	Vecteur2D a(0, 0), b(3, 3), c(6, 0), resA(1.5, 0.5), resB(3, 2), resC(4.5, 0.5);
-	Triangle t(Couleur("Noire"), a, b, c);
+	Triangle t(Couleur("Noire"), Repere(), a, b, c);
 
 	t = t.homothetie(t.centre, 0.5);
 

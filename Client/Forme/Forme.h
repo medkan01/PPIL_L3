@@ -3,6 +3,8 @@
 
 #include "../Utils/Couleur.h"
 #include "Vecteur2D.h"
+#include "Repere.h"
+
 using namespace std;
 
 class VisiteurForme;
@@ -16,6 +18,7 @@ class Forme {
 public:
 	Couleur couleur;
 	Vecteur2D centre;
+	Repere repere;
 
 	/**
 	* Constructeur de la classe Forme.
@@ -23,8 +26,14 @@ public:
 	* @param couleur Couleur de la forme.
 	* @param origine Origine de la forme.
 	*/
-	Forme(const Couleur& couleur, const Vecteur2D& centre) : 
-		couleur(couleur), centre(centre) {}
+	Forme(const Couleur& couleur, const Vecteur2D& c, const Repere& rep) : 
+		couleur(couleur) {
+		if (!rep.estDans(centre))
+			throw exception("La forme n'est pas dans le repere.");
+		centre = c;
+		repere = rep;
+
+	}
 
 	/// Constructeur par defaut de la classe Forme.
 	Forme() : couleur(Couleur("Noire")), centre(Vecteur2D(0, 0)) {}
@@ -52,4 +61,4 @@ public:
 	virtual void accepte(VisiteurForme* visiteur) const = 0;
 };
 
-#endif
+#endif 

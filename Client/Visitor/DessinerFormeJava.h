@@ -47,7 +47,7 @@ public:
 	 * @param s : Segment concerne.
 	 */
 	void DessinerFormeJava::visite(const Segment* s) const {
-		string donnees =  "segment/" + s->a + ";" + s->b + "/" + (string)s->couleur;
+		string donnees =  "segment/" + s->a + ";" + s->b + "/" + (string)s->couleur + "/" + (string)s->repere;
 		try {
 			Client::instance().envoiDonnees(donnees);
 		}
@@ -66,7 +66,8 @@ public:
 		string type = "triangle/";
 		string vecteurs = t->a + ";" + t->b + ";" + t->c + "/";
 		string couleur = t->couleur;
-		string donnees = type + vecteurs + couleur;
+		string repere = "/" + (string)t->repere;
+		string donnees = type + vecteurs + couleur + repere;
 		try {
 			Client::instance().envoiDonnees(donnees);
 		}

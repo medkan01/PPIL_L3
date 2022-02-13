@@ -6,6 +6,9 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.net.SocketException;
 
+import Dessin.Dessin;
+import DessinerFormesCOR.DessinerForme;
+
 // import DecodageFormesCOR.DecodeurForme;
 // import Forme.Forme;
 
@@ -16,6 +19,8 @@ public class Interlocuteur {
     BufferedReader fluxEntrant;
     PrintStream fluxSortant;
 
+    public Dessin d;
+
     /**
      * Constructeur de la classe Interlocuteur.
      * 
@@ -23,9 +28,10 @@ public class Interlocuteur {
      *               serveur.
      * @throws Exception
      */
-    public Interlocuteur(Socket socket) throws Exception {
+    public Interlocuteur(Socket socket, Dessin d) throws Exception {
         this.fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         this.fluxSortant = new PrintStream(socket.getOutputStream());
+        this.d = d;
     }
 
     /**
@@ -35,10 +41,15 @@ public class Interlocuteur {
         try {
             while (!Thread.interrupted()) {
                 String requete = this.fluxEntrant.readLine();
-                if (requete != null)
-                    System.out.println("Message reçu: \n" + requete + "\n");
-                String reponse = "Message bien recu.";
-                this.fluxSortant.println(reponse);
+                if (requete != null) {
+                    System.out.println("Message reçu: \n" + requete);
+
+                    boolean dessine = DessinerForme.dessine(requete, this.d);
+                    if (dessine)
+                        System.out.println("OK\n");
+                    else
+                        System.out.println("Impossible de determiner la forme\n");
+                }
             }
         } catch (SocketException e) {
             // System.out.println("Connection arrêtée par le client.");

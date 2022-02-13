@@ -151,12 +151,14 @@
     <ClInclude Include="Forme\Forme.h" />
     <ClInclude Include="Forme\PolygoneFerme.h" />
     <ClInclude Include="Forme\Rectangle.h" />
+    <ClInclude Include="Forme\Repere.h" />
     <ClInclude Include="Forme\Segment.h" />
     <ClInclude Include="Forme\Triangle.h" />
     <ClInclude Include="Forme\Vecteur2D.h" />
     <ClInclude Include="TCPIP\Client.h" />
     <ClInclude Include="Tests\TestDegree.h" />
     <ClInclude Include="Tests\TestRadian.h" />
+    <ClInclude Include="Tests\TestRepere.h" />
     <ClInclude Include="Tests\TestSegment.h" />
     <ClInclude Include="Tests\TestTriangle.h" />
     <ClInclude Include="Tests\TestVecteur2D.h" />
