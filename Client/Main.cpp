@@ -11,11 +11,11 @@
 using namespace std;
 
 int main() {
-	Vecteur2D a(0, 0), b(3, 3), c(6, 0);
-	Vecteur2D d(2, 5), e(8, 9);
+	Vecteur2D a(50, 50), b(500, 200), c(200, 450);
+	Vecteur2D d(50, 150), e(700, 400);
 	Couleur noire("Noire");
 	Couleur blanche("Blanche");
-	Repere r;
+	Repere r(Vecteur2D(0,0), Vecteur2D(720, 480));
 
 	Triangle t(noire, r, a, b, c);
 	Segment s(blanche, r, d, e);
