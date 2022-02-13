@@ -15,7 +15,7 @@ public class Server {
             int n = 10;
 
             // Creation d'une fenetre de dessin
-            Dessin d = new Dessin("Serveur de dessin", 0, 0, 720, 480);
+            Dessin d = new Dessin("Serveur de dessin", 0, 0, 1100, 700);
 
             // Creation et initialisation du socket
             int port = 44444;

@@ -142,12 +142,14 @@
     <Text Include="Rapport.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Forme\Cercle.cpp" />
     <ClCompile Include="Forme\Segment.cpp" />
     <ClCompile Include="Forme\Triangle.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="TCPIP\Client.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Forme\Cercle.h" />
     <ClInclude Include="Forme\Forme.h" />
     <ClInclude Include="Forme\PolygoneFerme.h" />
     <ClInclude Include="Forme\Rectangle.h" />

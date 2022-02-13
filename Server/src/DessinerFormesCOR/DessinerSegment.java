@@ -1,6 +1,7 @@
 package DessinerFormesCOR;
 
 import Dessin.Dessin;
+import Forme.Repere;
 import Forme.Vecteur2D;
 
 public class DessinerSegment extends DessinerCOR {
@@ -13,12 +14,18 @@ public class DessinerSegment extends DessinerCOR {
         // On separe les informations.
         String[] newStr = requete.split("/"); // newStr[0] = type; newStr[1] = liste des points; newStr[2] = couleur;
         String type = newStr[0];
-        String[] listePoints = newStr[1].split(";");
-        // String couleur = newStr[2];
 
         // On verifie si c'est un segment.
         if (!type.equals("segment"))
             return false;
+
+        String[] listePoints = newStr[1].split(";");
+        // String couleur = newStr[2];
+        String[] rep = newStr[3].split(";");
+        Vecteur2D p1 = new Vecteur2D(rep[0]);
+        Vecteur2D p2 = new Vecteur2D(rep[1]);
+
+        Repere r = new Repere(p1, p2, d.p1, d.p2);
 
         // On verifie qu'il y a le bon nombre de points pour faire un segment.
         if (listePoints.length != 2)
@@ -29,7 +36,7 @@ public class DessinerSegment extends DessinerCOR {
         int i = 0;
 
         for (String s : listePoints) {
-            points[i] = new Vecteur2D(s);
+            points[i] = r.transforme(new Vecteur2D(s));
             i++;
         }
 

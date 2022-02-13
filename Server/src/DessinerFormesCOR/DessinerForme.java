@@ -9,6 +9,7 @@ public class DessinerForme {
 
         d = new DessinerSegment(null);
         d = new DessinerTriangle(d);
+        d = new DessinerCercle(d);
 
         return d.dessinerForme(s, dessin);
     }

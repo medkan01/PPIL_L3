@@ -3,11 +3,9 @@ package Forme;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.naming.ldap.ManageReferralControl;
-
 public class Vecteur2D {
-    public int x;
-    public int y;
+    public double x;
+    public double y;
 
     /**
      * Constructeur de la classe Vecteur2D.
@@ -15,7 +13,7 @@ public class Vecteur2D {
      * @param x : Abcisse du points.
      * @param y : Ordonnee du points.
      */
-    public Vecteur2D(int x, int y) {
+    public Vecteur2D(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -40,36 +38,9 @@ public class Vecteur2D {
             System.out.println("Pattern incorrect");
             System.exit(1);
         }
-
     }
 
-    public static Vecteur2D changementRepere(Vecteur2D v) {
-        Vecteur2D n = v;
-        // double lambda
-
-        return n;
-    }
-
-    public static void main(String[] args) {
-        Pattern p = Pattern.compile("\\(([+-]?([0-9]*[.])?[0-9]+)\\,\\s*([+-]?([0-9]*[.])?[0-9]+)\\)");
-        Matcher m1 = p.matcher("(10,10)");
-        Matcher m2 = p.matcher("(12.210, 85)");
-        Matcher m3 = p.matcher("(45,87.2)");
-        Matcher m4 = p.matcher("(85,59)");
-
-        System.out.println(m1.find());
-        System.out.println(m2.find());
-        System.out.println(m3.find());
-        System.out.println(m4.find());
-
-        System.out.println(m1.group(1) + ", " + m1.group(3));
-        System.out.println(m2.group(1) + ", " + m2.group(3));
-        System.out.println(m3.group(1) + ", " + m3.group(3));
-        System.out.println(m4.group(1) + ", " + m4.group(3));
-
-        Vecteur2D v = new Vecteur2D("(10,5)");
-
-        System.out.println(v.x + ", " + v.y);
-
+    public static double distance(Vecteur2D u, Vecteur2D v) {
+        return Math.sqrt(Math.pow((v.x - u.x), 2) + Math.pow((v.y - u.y), 2));
     }
 }
