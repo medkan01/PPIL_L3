@@ -29,6 +29,9 @@ public:
 	*/
 	Repere() { p1 = Vecteur2D(-20, -20); p2 = Vecteur2D(20, 20); }
 
+	/// Destructeur de la classe Repere.
+	virtual ~Repere() {}
+
 	/**
 	* Permet de recuperer un string du repere.
 	* 
