@@ -14,14 +14,8 @@ public:
 	* @param b Deuxieme point de la diagonale du repere.
 	*/
 	Repere(const Vecteur2D& a, const Vecteur2D& b) { 
-		if (a > b) {
-			p1 = b;
-			p2 = a;
-		}
-		else {
-			p1 = a;
-			p2 = b;
-		}
+		p1 = a;
+		p2 = b;
 	}
 
 	/**
