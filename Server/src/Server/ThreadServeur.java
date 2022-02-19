@@ -1,10 +1,9 @@
 package Server;
 
-public class ThreadServeur extends Thread {
+public class ThreadServeur implements Runnable {
     Interlocuteur i;
 
     public ThreadServeur(Interlocuteur i) {
-        super();
         this.i = i;
     }
 

@@ -1,6 +1,7 @@
 package DessinerFormesCOR;
 
 import Dessin.Dessin;
+import Dessin.ZoneScene;
 import Forme.Repere;
 import Forme.Vecteur2D;
 
@@ -25,7 +26,9 @@ public class DessinerCercle extends DessinerCOR {
         Vecteur2D p1 = new Vecteur2D(rep[0]);
         Vecteur2D p2 = new Vecteur2D(rep[1]);
 
-        Repere r = new Repere(p1, p2, d.p1, d.p2);
+        ZoneScene zoneRecue = new ZoneScene(p1, p2);
+
+        Repere r = new Repere(zoneRecue, d.zone);
 
         // On verifie qu'il y a le bon nombre de points pour faire un cercle.
         if (listePoints.length != 2)

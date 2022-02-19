@@ -4,6 +4,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 import Dessin.Dessin;
+import Forme.Vecteur2D;
 
 /**
  * Classe serveur qui contient la fonction main.
@@ -15,7 +16,7 @@ public class Server {
             int n = 10;
 
             // Creation d'une fenetre de dessin
-            Dessin d = new Dessin("Serveur de dessin", 0, 0, 1100, 700);
+            Dessin d = new Dessin("Serveur de dessin", new Vecteur2D(0, 0), 1100, 700);
 
             // Creation et initialisation du socket
             int port = 44444;
@@ -27,7 +28,8 @@ public class Server {
 
                 // Creation d'un thread pour permettre la connexion de plusieurs client
                 // simultanement
-                ThreadServeur t = new ThreadServeur(interlocuteur);
+                ThreadServeur run = new ThreadServeur(interlocuteur);
+                Thread t = new Thread(run);
                 t.start();
             }
 

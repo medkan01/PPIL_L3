@@ -1,12 +1,20 @@
 package Forme;
 
+import Dessin.ZoneScene;
+
 public class Repere {
     public double lambda;
     public int e1, e2;
-    public double a, b;
+    public Vecteur2D omega;
 
-    public Repere(Vecteur2D p1, Vecteur2D p2, Vecteur2D q1, Vecteur2D q2) {
+    public Repere(ZoneScene z1, ZoneScene z2) {
+        Vecteur2D p1, p2, q1, q2;
         double x1, x2, y1, y2, x1p, x2p, y1p, y2p;
+
+        p1 = z1.p1;
+        p2 = z1.p2;
+        q1 = z2.p1;
+        q2 = z2.p2;
 
         x1 = p1.x;
         x2 = p2.x;
@@ -43,13 +51,12 @@ public class Repere {
         this.lambda = lambda;
         this.e1 = e1;
         this.e2 = e2;
-        this.a = omega.x;
-        this.b = omega.y;
+        this.omega = omega;
     }
 
     public Vecteur2D transforme(Vecteur2D u) {
-        double xp = this.lambda * this.e1 * u.x + this.a;
-        double yp = this.lambda * this.e2 * u.y + this.b;
+        double xp = this.lambda * this.e1 * u.x + this.omega.x;
+        double yp = this.lambda * this.e2 * u.y + this.omega.y;
 
         Vecteur2D v = new Vecteur2D(xp, yp);
 
@@ -57,8 +64,8 @@ public class Repere {
     }
 
     public Vecteur2D transformeInverse(Vecteur2D u) {
-        double xp = (u.x - this.a) / (this.lambda * e1);
-        double yp = (u.y - this.b) / (this.lambda * e2);
+        double xp = (u.x - this.omega.x) / (this.lambda * e1);
+        double yp = (u.y - this.omega.y) / (this.lambda * e2);
 
         Vecteur2D v = new Vecteur2D(xp, yp);
 
