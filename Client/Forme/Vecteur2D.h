@@ -2,6 +2,7 @@
 #define VECTEUR2D_H
 #include <string>
 #include <iostream>
+#include <vector>
 #include "../Utils/Radian.h"
 #include "../Utils/Degree.h"
 using namespace std;
@@ -220,7 +221,30 @@ public:
 	*/
 	friend const Vecteur2D operator+(const double& d, const Vecteur2D& u);
 
+	/**
+	* Creer un vecteur qui est le resulat d'une translation du vecteur courant par le double d.
+	* La translation s'effectue champ à champ.
+	*
+	* @param d Double qui va servir a la translation.
+	* @return Vecteur resultant de la translation.
+	*/
 	inline const Vecteur2D operator+=(const double& d) const;
+
+	/**
+	* Fonction de tri par fusion.
+	* 
+	* @param T Tableau de Vecteur2D a trier.
+	*/
+	friend vector<Vecteur2D> tri_fusion(vector<Vecteur2D> T);
+
+	/**
+	* Fonction qui fusionne deux tableau tries T1 et T2.
+	* 
+	* @param T1 Premier tableau trie.
+	* @param T2 Deuxieme tableau trie.
+	* @return Tableau trie qui contient les elements de T1 et T2.
+	*/
+	friend vector<Vecteur2D> fusion(vector<Vecteur2D> T1, vector<Vecteur2D> T2);
 };
 
 const bool Vecteur2D::operator==(const Vecteur2D v) const {
@@ -343,6 +367,36 @@ const Vecteur2D Vecteur2D::operator+(const double& d) const {
 
 inline const Vecteur2D Vecteur2D::operator+=(const double& d) const {
 	return (* this) + d;
+}
+
+inline vector<Vecteur2D> tri_fusion(const vector<Vecteur2D> T) {
+	if (T.size() <= 1)
+		return T;
+	else {
+		vector<Vecteur2D> t1(T.begin(), T.begin() + T.size() / 2);
+		vector<Vecteur2D> t2(T.begin() + T.size() / 2, T.end());;
+		return fusion(tri_fusion(t1), tri_fusion(t2));
+	}
+}
+
+inline vector<Vecteur2D> fusion(const vector<Vecteur2D> T1, const vector<Vecteur2D> T2) {
+	if (T1.empty())
+		return T2;
+	if (T2.empty())
+		return T1;
+	if (T1[0] <= T2[0]) {
+		vector<Vecteur2D> t1SansPremier(T1.begin() + 1, T1.end());
+		vector<Vecteur2D> t = fusion(t1SansPremier, T2);
+		t.insert(t.begin(), T1.front());
+		return t;
+	}
+	else {
+		vector<Vecteur2D> t2SansPremier(T2.begin() + 1, T2.end());
+		vector<Vecteur2D> t = fusion(T1, t2SansPremier);
+		t.insert(t.begin(), T2.front());
+		return t;
+	}
+		
 }
 
 #endif

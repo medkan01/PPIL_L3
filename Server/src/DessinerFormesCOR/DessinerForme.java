@@ -10,6 +10,7 @@ public class DessinerForme {
         d = new DessinerSegment(null);
         d = new DessinerTriangle(d);
         d = new DessinerCercle(d);
+        d = new DessinerPolygone(d);
 
         return d.dessinerForme(s, dessin);
     }

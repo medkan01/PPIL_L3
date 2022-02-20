@@ -5,7 +5,7 @@
 #include "../Forme/Triangle.h"
 #include "../Forme/Cercle.h"
 #include "../Forme/GroupeFormes.h"
-// #include "../Forme/Polygone.h"
+#include "../Forme/Polygone.h"
 
 /**
  * Class utilisant le designe pattern visitor et qui va permettre d'ajouter des fonctionnalité
@@ -47,7 +47,7 @@ public:
 	 * 
 	 * @param p : Polygone concerne.
 	 */
-	// virtual void visite(const Polygone* p) const = 0;
+	virtual void visite(const Polygone* p) const = 0;
 };
 
 #endif
