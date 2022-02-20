@@ -50,11 +50,9 @@ public class DessinerPolygone extends DessinerCOR {
         // Tout est bon pour dessiner le segment, alors on le dessine
         try {
             d.graphics.setColor(c);
-            for (int j = 0; j < i - 1; j++)
-                d.graphics.drawLine((int) points[j].x, (int) points[j].y, (int) points[j + 1].x, (int) points[j + 1].y);
-
-            d.graphics.drawLine((int) points[i - 1].x, (int) points[i - 1].y, (int) points[0].x,
-                    (int) points[0].y);
+            for (int j = 0; j < i; j++)
+                d.graphics.drawLine((int) points[j].x, (int) points[j].y, (int) points[(j + 1) % i].x,
+                        (int) points[(j + 1) % i].y);
         } catch (Exception e) {
             return false;
         }

@@ -97,10 +97,12 @@ public:
 	* Methode visitor pour ajouter des fonctionnalites oublies.
 	*/
 	virtual void accepte(VisiteurForme* visiteur) const;
+
+	friend ostream& operator<<(ostream& os, const Triangle& t);
 };
 
 const double Triangle::abcisseCentre() const {
-	double x = 0, aireT = aire();;
+	double x = 0, aireT = aire();
 	Vecteur2D points[3] = { a, b, c };
 
 	for (int i = 0; i < 3; i++) {

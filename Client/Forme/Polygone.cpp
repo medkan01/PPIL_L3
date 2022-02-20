@@ -45,3 +45,77 @@ void Polygone::accepte(VisiteurForme* visiteur) const { visiteur->visite(this); 
 Polygone::operator string() const {
 	return "Polygone[ " + (string)couleur + " - Repere[" + (string)repere + "]]";
 }
+
+const double Polygone::abcisseCentre() const {
+	double x = 0, aireT = aire();
+	vector<Vecteur2D> points = getPoints();
+
+	for (int i = 0; i < points.size(); i++) {
+		x += (points[i].x + points[(i + 1) % 3].x) * determinant(points[i], points[(i + 1) % 3]);
+	}
+
+	x = x / (6 * aireT);
+
+	return x;
+}
+
+const double Polygone::ordonneeCentre() const {
+	double y = 0, aireT = aire();
+	vector<Vecteur2D> points = getPoints();
+
+	for (int i = 0; i < points.size(); i++) {
+		y += (points[i].y + points[(i + 1) % 3].y) * (determinant(points[i], points[(i + 1) % 3]));
+	}
+
+	y = y / (6 * aireT);
+
+	return y;
+}
+
+const double Polygone::aire() const {
+	double aire = 0;
+	vector<Vecteur2D> points = getPoints();
+
+	for (int i = 0; i < points.size(); i++)
+		aire += determinant(points[i], points[(i + 1) % 3]);
+
+	aire = aire / 2;
+
+	return aire;
+}
+
+const Polygone Polygone::translation(const Vecteur2D& v) const {
+	vector<Vecteur2D> points = getPoints();
+
+	for (int i = 0; i < points.size(); i++)
+		points[i] = points[i] + v;
+
+	return Polygone(couleur, repere, points);
+}
+
+const Polygone Polygone::homothetie(const Vecteur2D& C, const double& k) const {
+	vector<Vecteur2D> points = getPoints();
+
+	for (int i = 0; i < points.size(); i++)
+		points[i] = points[i].homothetie(C, k);
+
+	return Polygone(couleur, repere, points);
+}
+
+const Polygone Polygone::rotation(const Vecteur2D& R, const Degree& theta) const {
+	vector<Vecteur2D> points = getPoints();
+
+	for (int i = 0; i < points.size(); i++)
+		points[i] = points[i].rotation(R, theta);
+
+	return Polygone(couleur, repere, points);
+}
+
+const Polygone Polygone::rotation(const Vecteur2D& R, const Radian& alpha) const {
+	vector<Vecteur2D> points = getPoints();
+
+	for (int i = 0; i < points.size(); i++)
+		points[i] = points[i].rotation(R, alpha);
+
+	return Polygone(couleur, repere, points);
+}

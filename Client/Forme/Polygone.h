@@ -14,6 +14,19 @@ using namespace std;
 class Polygone : public Forme {
 	vector<Vecteur2D> points;
 
+	/**
+	* Retourne l'abcisse du centre.
+	*
+	* @return abcisse du centre du polygone.
+	*/
+	inline const double abcisseCentre() const;
+
+	/**
+	* Retourne l'ordonnee du centre.
+	*
+	* @return ordonnee du centre du polygone.
+	*/
+	inline const double ordonneeCentre() const;
 public:
 	/**
 	* Constructeur de la classe Polygone.
@@ -68,6 +81,53 @@ public:
 	* @return toString vecteur courant.
 	*/
 	virtual operator string() const;
+
+	/**
+	* Determine l'aire du polygone.
+	*
+	* @return aire du Polygone.
+	*/
+	inline const double aire() const;
+
+	/**
+	* Effectue une translation sur la forme.
+	*
+	* @param v Vecteur de translation
+	*/
+	inline virtual const Polygone translation(const Vecteur2D& v) const;
+
+	/**
+	* Effectue une homothetie sur la forme. (zoom)
+	* Calcule d'une homothetie :
+	* OM' = k(OM OC) + OC
+	* M' = k * (M C) + C
+	*
+	* @param C Point invariant.
+	* @param k Rapport d'homothetie.
+	*/
+	inline virtual const Polygone homothetie(const Vecteur2D& C, const double& k) const;
+
+	/**
+	* Effectue une rotation sur la forme.
+	*
+	* @param R Point invariant. (centre de rotation)
+	* @param theta Angle de rotation. (en degree)
+	*/
+	inline virtual const Polygone rotation(const Vecteur2D& R, const Degree& theta) const;
+
+	/**
+	* Effectue une rotation sur la forme.
+	*
+	* @param R Point invariant. (centre de rotation)
+	* @param alpha Angle de rotation. (en radian)
+	*/
+	inline virtual const Polygone rotation(const Vecteur2D& R, const Radian& alpha) const;
+
+	friend ostream& operator<<(ostream& os, const Polygone& t);
 };
+
+inline ostream& operator<<(ostream& os, const Polygone& t) {
+	return os << (string)t;
+}
 
 #endif
