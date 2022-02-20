@@ -147,6 +147,7 @@
     <ClCompile Include="Forme\Triangle.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="TCPIP\Client.cpp" />
+    <ClCompile Include="Utils\Couleur.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Forme\Cercle.h" />

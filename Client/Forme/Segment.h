@@ -17,7 +17,7 @@ public:
 	* @param vecA point a du segment.
 	* @param vecB point b du segment.
 	*/
-	Segment(const Couleur& c = Couleur("Noire"), const Repere& rep = Repere(), const Vecteur2D& vecA = Vecteur2D(0, 0), const Vecteur2D& vecB = Vecteur2D(0, 0)) {
+	Segment(const Couleur& c = Couleur::BLACK, const Repere& rep = Repere(), const Vecteur2D& vecA = Vecteur2D(0, 0), const Vecteur2D& vecB = Vecteur2D(0, 0)) {
 		couleur = c;
 		Vecteur2D vecCentre = Vecteur2D((vecA.x + vecB.x) / 2, ((vecA.y + vecB.y) / 2));
 		repere = rep;

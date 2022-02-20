@@ -36,7 +36,7 @@ public:
 	}
 
 	/// Constructeur par defaut de la classe Forme.
-	Forme() : couleur(Couleur("Noire")), centre(Vecteur2D(0, 0)) {}
+	Forme() : couleur(Couleur::BLACK), centre(Vecteur2D(0, 0)) {}
 
 	/// Destructeur de la classe forme
 	virtual ~Forme() {}

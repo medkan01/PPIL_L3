@@ -44,7 +44,13 @@ public:
 };
 
 void DessinerFormeJava::visite(const Segment* s) const {
-	string donnees =  "segment/" + s->a + ";" + s->b + "/" + (string)s->couleur + "/" + (string)s->repere;
+
+	string type = "segment/";
+	string couleur = s->couleur + "/";
+	string repere = (string)s->repere + "/";
+	string vecteurs = s->a + ";" + s->b;
+
+	string donnees = type + couleur + repere + vecteurs;
 	try {
 		Client::instance().envoiDonnees(donnees);
 	}
@@ -55,10 +61,11 @@ void DessinerFormeJava::visite(const Segment* s) const {
 
 void DessinerFormeJava::visite(const Triangle* t) const {
 	string type = "triangle/";
-	string vecteurs = t->a + ";" + t->b + ";" + t->c + "/";
-	string couleur = t->couleur;
-	string repere = "/" + (string)t->repere;
-	string donnees = type + vecteurs + couleur + repere;
+	string couleur = t->couleur + "/";
+	string repere = (string)t->repere + "/";
+	string vecteurs = t->a + ";" + t->b + ";" + t->c;
+
+	string donnees = type + couleur + repere + vecteurs;
 	try {
 		Client::instance().envoiDonnees(donnees);
 	}
@@ -69,11 +76,12 @@ void DessinerFormeJava::visite(const Triangle* t) const {
 
 void DessinerFormeJava::visite(const Cercle* c) const {
 	string type = "cercle/";
+	string couleur = c->couleur + "/";
+	string repere = (string)c->repere + "/";
 	string point = Vecteur2D(c->centre.x - c->r, c->centre.y + c->r) + "/";
 	string rayon = to_string(c->r * 2) + "/";
-	string couleur = c->couleur;
-	string repere = "/" + (string)c->repere;
-	string donnees = type + point + rayon + couleur + repere;
+
+	string donnees = type + couleur + repere + point + rayon;
 	try {
 		Client::instance().envoiDonnees(donnees);
 	}
