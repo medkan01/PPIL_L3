@@ -40,7 +40,7 @@ public:
 	 * 
 	 * @param p : Polygone concerne.
 	 */
-	// virtual void visite(const Polygone* p) const;
+	virtual void visite(const Polygone* p) const;
 
 	/**
 	* Ajoute une fonctionnalite a un groupe de forme.
@@ -89,6 +89,26 @@ void DessinerFormeJava::visite(const Cercle* c) const {
 	string rayon = to_string(c->r * 2) + "/";
 
 	string donnees = type + couleur + repere + point + rayon;
+	try {
+		Client::instance().envoiDonnees(donnees);
+	}
+	catch (exception e) {
+		cout << e.what() << endl;
+	}
+}
+
+inline void DessinerFormeJava::visite(const Polygone* p) const {
+	string type = "polygone/";
+	string couleur = p->couleur + "/";
+	string repere = (string)p->repere + "/";
+	string points = "";
+
+	for (int i = 0; i < p->getPoints().size(); i++) {
+		points += p->getPoints().at(i) + ";";
+	}
+
+	string donnees = type + couleur + repere + points;
+
 	try {
 		Client::instance().envoiDonnees(donnees);
 	}
