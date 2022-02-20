@@ -4,6 +4,7 @@
 #include "../Forme/Segment.h"
 #include "../Forme/Triangle.h"
 #include "../Forme/Cercle.h"
+#include "../Forme/GroupeFormes.h"
 // #include "../Forme/Polygone.h"
 
 /**
@@ -33,6 +34,13 @@ public:
 	 * @param c : Cercle concerne.
 	 */
 	virtual void visite(const Cercle* c) const = 0;
+
+	/**
+	* Ajoute une fonctionnalite a un groupe de forme.
+	* 
+	* @param gf Groupe de formes concerne.
+	*/
+	virtual void visite(const GroupeFormes* gf) const = 0;
 
 	/**
 	 * Ajoute une fonctionnalite a un polygone.

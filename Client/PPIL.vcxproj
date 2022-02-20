@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Forme\Cercle.cpp" />
+    <ClCompile Include="Forme\GroupeFormes.cpp" />
     <ClCompile Include="Forme\Segment.cpp" />
     <ClCompile Include="Forme\Triangle.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -152,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="Forme\Cercle.h" />
     <ClInclude Include="Forme\Forme.h" />
+    <ClInclude Include="Forme\GroupeFormes.h" />
     <ClInclude Include="Forme\PolygoneFerme.h" />
     <ClInclude Include="Forme\Rectangle.h" />
     <ClInclude Include="Forme\Repere.h" />
