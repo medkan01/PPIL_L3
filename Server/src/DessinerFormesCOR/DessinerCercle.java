@@ -20,9 +20,11 @@ public class DessinerCercle extends DessinerCOR {
         if (!type.equals("cercle"))
             return false;
 
-        String[] listePoints = newStr[1].split(";");
-        // String couleur = newStr[2];
-        String[] rep = newStr[3].split(";");
+        String pointCercle = newStr[1];
+
+        double rayonMonde = Double.parseDouble(newStr[2]);
+
+        String[] rep = newStr[4].split(";");
         Vecteur2D p1 = new Vecteur2D(rep[0]);
         Vecteur2D p2 = new Vecteur2D(rep[1]);
 
@@ -30,24 +32,13 @@ public class DessinerCercle extends DessinerCOR {
 
         Repere r = new Repere(zoneRecue, d.zone);
 
-        // On verifie qu'il y a le bon nombre de points pour faire un cercle.
-        if (listePoints.length != 2)
-            return false;
+        Vecteur2D point = r.transforme(new Vecteur2D(pointCercle));
 
-        // On reparti les points.
-        Vecteur2D[] points = new Vecteur2D[2]; // 2 points pour un cercle
-        int i = 0;
-
-        for (String s : listePoints) {
-            points[i] = r.transforme(new Vecteur2D(s));
-            i++;
-        }
+        int rayon = (int) ((d.zone.p2.x * rayonMonde) / p2.x);
 
         // Tout est bon pour dessiner le cercle, alors on le dessine
-
         try {
-            d.graphics.drawOval((int) points[0].x, (int) points[0].y, (int) Vecteur2D.distance(points[0], points[1]),
-                    (int) Vecteur2D.distance(points[0], points[1]));
+            d.graphics.drawOval((int) point.x, (int) point.y, rayon, rayon);
         } catch (Exception e) {
             return false;
         }

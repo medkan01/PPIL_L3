@@ -69,10 +69,11 @@ void DessinerFormeJava::visite(const Triangle* t) const {
 
 void DessinerFormeJava::visite(const Cercle* c) const {
 	string type = "cercle/";
-	string points = c->centre + ";" + c->r + "/";
+	string point = Vecteur2D(c->centre.x - c->r, c->centre.y + c->r) + "/";
+	string rayon = to_string(c->r * 2) + "/";
 	string couleur = c->couleur;
 	string repere = "/" + (string)c->repere;
-	string donnees = type + points + couleur + repere;
+	string donnees = type + point + rayon + couleur + repere;
 	try {
 		Client::instance().envoiDonnees(donnees);
 	}

@@ -28,11 +28,8 @@ public class Vecteur2D {
             String resX = m.group(1);
             String resY = m.group(3);
 
-            double doubleX = Double.parseDouble(resX);
-            double doubleY = Double.parseDouble(resY);
-
-            this.x = (int) doubleX;
-            this.y = (int) doubleY;
+            this.x = Double.parseDouble(resX);
+            this.y = Double.parseDouble(resY);
 
         } catch (Exception e) {
             System.out.println("Pattern incorrect");
@@ -41,6 +38,6 @@ public class Vecteur2D {
     }
 
     public static double distance(Vecteur2D u, Vecteur2D v) {
-        return Math.sqrt(Math.pow((v.x - u.x), 2) + Math.pow((v.y - u.y), 2));
+        return Math.abs(Math.sqrt(Math.pow((v.x - u.x), 2) + Math.pow((v.y - u.y), 2)));
     }
 }

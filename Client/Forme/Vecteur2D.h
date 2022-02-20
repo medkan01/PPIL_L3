@@ -200,6 +200,27 @@ public:
 	* @return True si v est strictement superieur au vecteur courant. False sinon.
 	*/
 	inline bool operator <(const Vecteur2D& v) const;
+
+	/**
+	* Creer un vecteur qui est le resulat d'une translation du vecteur courant par le double d.
+	* La translation s'effectue champ à champ.
+	* 
+	* @param d Double qui va servir a la translation.
+	* @return Vecteur resultant de la translation.
+	*/
+	inline const Vecteur2D operator+(const double& d) const;
+
+	/**
+	* Creer un vecteur qui est le resulat d'une translation du vecteur courant par le double d.
+	* La translation s'effectue champ à champ.
+	*
+	* @param d Double qui va servir a la translation.
+	* @param u Vecteur qui va subir la translation.
+	* @return Vecteur resultant de la translation.
+	*/
+	friend const Vecteur2D operator+(const double& d, const Vecteur2D& u);
+
+	inline const Vecteur2D operator+=(const double& d) const;
 };
 
 const bool Vecteur2D::operator==(const Vecteur2D v) const {
@@ -288,6 +309,14 @@ inline const string operator+(const string& s, const Vecteur2D& u){
 	return s + (string)u;
 }
 
+inline const Vecteur2D operator+(const double& d, const Vecteur2D& u) {
+	Vecteur2D res;
+	res.x = u.x + d;
+	res.y = u.y + d;
+
+	return res;
+}
+
 bool Vecteur2D::operator >=(const Vecteur2D& v) const {
 	return (x > v.x) || (x == v.x && y >= v.y);
 }
@@ -302,6 +331,18 @@ bool Vecteur2D::operator >(const Vecteur2D& v) const {
 
 bool Vecteur2D::operator <(const Vecteur2D& v) const {
 	return (x < v.x) || (x == v.x && y < v.y);
+}
+
+const Vecteur2D Vecteur2D::operator+(const double& d) const {
+	Vecteur2D res;
+	res.x = x + d;
+	res.y = y + d;
+
+	return res;
+}
+
+inline const Vecteur2D Vecteur2D::operator+=(const double& d) const {
+	return (* this) + d;
 }
 
 #endif

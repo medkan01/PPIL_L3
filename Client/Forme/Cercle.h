@@ -5,7 +5,7 @@
 
 class Cercle : public Forme {
 public:
-	Vecteur2D r;
+	double r;
 
 	/**
 	* Constructeur de la classe Cercle.
@@ -15,7 +15,7 @@ public:
 	* @param centreCercle Centre du cercle.
 	* @param rayon Rayon du cercle.
 	*/
-	inline Cercle(const Couleur& couleurCercle, const Repere& rep, const Vecteur2D& centreCercle, const Vecteur2D& rayon);
+	inline Cercle(const Couleur& couleurCercle, const Repere& rep, const Vecteur2D& centreCercle, const double& rayon);
 
 	/// Destructeur de la classe Cercle.
 	virtual ~Cercle() {}
@@ -55,12 +55,12 @@ public:
 	virtual void accepte(VisiteurForme* visiteur) const;
 };
 
-Cercle::Cercle(const Couleur& couleurCercle, const Repere& rep, const Vecteur2D& centreCercle, const Vecteur2D& rayon) {
+Cercle::Cercle(const Couleur& couleurCercle, const Repere& rep, const Vecteur2D& centreCercle, const double& rayon) {
 	couleur = couleurCercle;
 	repere = rep;
 
 	try {
-		if (!repere.estDans(centreCercle) || !repere.estDans(rayon))
+		if (!repere.estDans(centreCercle) || !repere.estDans(centreCercle + rayon))
 			throw exception("La forme n'est pas dans le repere / zone de scene.");
 
 		centre = centreCercle;
@@ -75,9 +75,8 @@ const Cercle Cercle::translation(const Vecteur2D& v) const {
 	Cercle c = *this;
 	
 	c.centre += v;
-	c.r += v;
 	
-	if (!repere.estDans(c.centre) || !repere.estDans(c.r))
+	if (!repere.estDans(c.centre))
 		throw exception("La forme n'est pas dans le repere.");
 
 	return c;
@@ -87,16 +86,16 @@ const Cercle Cercle::homothetie(const Vecteur2D& c, const double& rh) const {
 	Cercle cercle = *this;
 
 	cercle.centre = cercle.centre.homothetie(c, rh);
-	cercle.r = cercle.r.homothetie(c, rh);
+	cercle.r *= rh;
 
-	if (!repere.estDans(cercle.centre) || !repere.estDans(cercle.r))
+	if (!repere.estDans(cercle.centre))
 		throw exception("La forme n'est pas dans le repere.");
 
 	return cercle;
 }
 
 Cercle::operator string() const {
-	return "Cercle[ " + (string)couleur + " - centre" + centre + " - rayon" + r + " - Repere[" + (string)repere + "]]";
+	return "Cercle[ " + (string)couleur + " - centre" + centre + " - rayon" + to_string(r) + " - Repere[" + (string)repere + "]]";
 }
 
 #endif
