@@ -393,7 +393,7 @@ inline vector<Vecteur2D> fusion(const vector<Vecteur2D> T1, const vector<Vecteur
 	else {
 		vector<Vecteur2D> t2SansPremier(T2.begin() + 1, T2.end());
 		vector<Vecteur2D> t = fusion(T1, t2SansPremier);
-		t.insert(t.begin(), T1.front());
+		t.insert(t.begin(), T2.front());
 		return t;
 	}
 		

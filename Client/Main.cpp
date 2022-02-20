@@ -46,6 +46,8 @@ int main() {
 	yeux.ajouterForme(&iris1);
 	yeux.ajouterForme(&iris2);
 
+	sourire = sourire.rotation(sourire.centre, Radian(M_PI));
+
 	VisiteurForme* v;
 	v = new DessinerFormeJava;
 
@@ -53,6 +55,8 @@ int main() {
 
 	yeux.accepte(v);
 	nez.accepte(v);
+	sourire.accepte(v);
+	sourire = sourire.homothetie(sourire.centre, 1.1);
 	sourire.accepte(v);
 
 	Client::instance().deconnexion();

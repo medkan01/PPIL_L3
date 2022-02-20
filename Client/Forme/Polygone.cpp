@@ -4,6 +4,7 @@
 void Polygone::ajouterPoint(const Vecteur2D& p) {
 	points.push_back(p);
 	points = tri_fusion(points);
+	centre = Vecteur2D(abcisseCentre(), ordonneeCentre());
 }
 
 Polygone::Polygone(const Couleur& c, const Repere& r, const vector<Vecteur2D>& listePoints) {
@@ -12,7 +13,9 @@ Polygone::Polygone(const Couleur& c, const Repere& r, const vector<Vecteur2D>& l
 
 	vector<Vecteur2D>::const_iterator it;
 	for (it = listePoints.begin(); it != listePoints.end(); it++)
-		ajouterPoint(Vecteur2D(*it));
+		ajouterPoint(*it);
+
+	centre = Vecteur2D(abcisseCentre(), ordonneeCentre());
 }
 
 Polygone::Polygone(const Polygone& p) {
@@ -21,7 +24,9 @@ Polygone::Polygone(const Polygone& p) {
 
 	vector<Vecteur2D>::const_iterator it;
 	for (it = p.points.begin(); it != p.points.end(); it++)
-		ajouterPoint(Vecteur2D(*it));
+		ajouterPoint(*it);
+
+	centre = Vecteur2D(abcisseCentre(), ordonneeCentre());
 }
 
 Polygone::Polygone() {
@@ -34,6 +39,8 @@ Polygone::Polygone() {
 	ajouterPoint(b);
 	ajouterPoint(c);
 	ajouterPoint(d);
+
+	centre = Vecteur2D(abcisseCentre(), ordonneeCentre());
 }
 
 Polygone::~Polygone() {
@@ -51,7 +58,7 @@ const double Polygone::abcisseCentre() const {
 	vector<Vecteur2D> points = getPoints();
 
 	for (int i = 0; i < points.size(); i++) {
-		x += (points[i].x + points[(i + 1) % 3].x) * determinant(points[i], points[(i + 1) % 3]);
+		x += (points[i].x + points[(i + 1) % points.size()].x) * determinant(points[i], points[(i + 1) % points.size()]);
 	}
 
 	x = x / (6 * aireT);
@@ -64,7 +71,7 @@ const double Polygone::ordonneeCentre() const {
 	vector<Vecteur2D> points = getPoints();
 
 	for (int i = 0; i < points.size(); i++) {
-		y += (points[i].y + points[(i + 1) % 3].y) * (determinant(points[i], points[(i + 1) % 3]));
+		y += (points[i].y + points[(i + 1) % points.size()].y) * (determinant(points[i], points[(i + 1) % points.size()]));
 	}
 
 	y = y / (6 * aireT);
@@ -77,7 +84,7 @@ const double Polygone::aire() const {
 	vector<Vecteur2D> points = getPoints();
 
 	for (int i = 0; i < points.size(); i++)
-		aire += determinant(points[i], points[(i + 1) % 3]);
+		aire += determinant(points[i], points[(i + 1) % points.size()]);
 
 	aire = aire / 2;
 
