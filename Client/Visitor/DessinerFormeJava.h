@@ -41,6 +41,13 @@ public:
 	 * @param p : Polygone concerne.
 	 */
 	// virtual void visite(const Polygone* p) const;
+
+	/**
+	* Ajoute une fonctionnalite a un groupe de forme.
+	*
+	* @param gf Groupe de formes concerne.
+	*/
+	virtual void visite(const GroupeFormes* gf) const;
 };
 
 void DessinerFormeJava::visite(const Segment* s) const {
@@ -84,6 +91,21 @@ void DessinerFormeJava::visite(const Cercle* c) const {
 	string donnees = type + couleur + repere + point + rayon;
 	try {
 		Client::instance().envoiDonnees(donnees);
+	}
+	catch (exception e) {
+		cout << e.what() << endl;
+	}
+}
+
+inline void DessinerFormeJava::visite(const GroupeFormes* gf) const {
+	VisiteurForme* v;
+	v = new DessinerFormeJava;
+
+	try {
+		vector<Forme*>::const_iterator it;
+
+		for (it = gf->groupe.begin(); it != gf->groupe.end(); it++)
+			(*it)->accepte(v);
 	}
 	catch (exception e) {
 		cout << e.what() << endl;
