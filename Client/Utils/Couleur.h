@@ -10,12 +10,13 @@ public:
 	/**
 	* Constructeur de la classe Couleur.
 	* Creer une couleur au format RGB.
+	* Par defaut, la couleur creer est noire.
 	* 
 	* @param red Intensite du rouge.
 	* @param green Intensite du vert.
 	* @param blue Intensite du bleu.
 	*/
-	inline Couleur(const int& red, const int& green, const int& blue);
+	inline Couleur(const int& red = 0, const int& green = 0, const int& blue = 0);
 
 	/// Destructeur de la classe Couleur.
 	virtual ~Couleur() {}
