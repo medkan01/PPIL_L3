@@ -1,7 +1,5 @@
 package Forme;
 
-import Dessin.ZoneScene;
-
 public class Repere {
     public double lambda;
     public int e1, e2;

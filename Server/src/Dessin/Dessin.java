@@ -4,6 +4,8 @@ import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Toolkit;
 import Forme.Vecteur2D;
+import Forme.ZoneScene;
+
 import java.awt.Dimension;
 
 public class Dessin extends Frame {

@@ -1,6 +1,4 @@
-package Dessin;
-
-import Forme.Vecteur2D;
+package Forme;
 
 public class ZoneScene {
     public Vecteur2D p1;

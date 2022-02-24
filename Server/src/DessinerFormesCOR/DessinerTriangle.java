@@ -1,9 +1,10 @@
 package DessinerFormesCOR;
 
 import Dessin.Dessin;
-import Dessin.ZoneScene;
 import Forme.Repere;
 import Forme.Vecteur2D;
+import Forme.ZoneScene;
+
 import java.awt.Color;
 
 public class DessinerTriangle extends DessinerCOR {
