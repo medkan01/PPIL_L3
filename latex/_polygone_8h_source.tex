@@ -1,0 +1,58 @@
+\hypertarget{_polygone_8h_source}{}\doxysection{Polygone.\+h}
+\label{_polygone_8h_source}\index{Client/Forme/Polygone.h@{Client/Forme/Polygone.h}}
+\mbox{\hyperlink{_polygone_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef POLYGONE\_H}}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00002}00002 \textcolor{preprocessor}{\#define POLYGONE\_H}}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00006}00006 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_forme_8h}{Forme.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00014}\mbox{\hyperlink{class_polygone}{00014}} \textcolor{keyword}{class }\mbox{\hyperlink{class_polygone}{Polygone}} : \textcolor{keyword}{public} \mbox{\hyperlink{namespace_forme}{Forme}} \{}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00015}00015     vector<Vecteur2D> points;}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00022}00022     \textcolor{keyword}{inline} \textcolor{keyword}{const} \textcolor{keywordtype}{double} abcisseCentre() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00029}00029     \textcolor{keyword}{inline} \textcolor{keyword}{const} \textcolor{keywordtype}{double} ordonneeCentre() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00030}00030 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00035}00035     \mbox{\hyperlink{class_polygone_aafb4f9ce69d4eaaacaaa29e3fff76b89}{Polygone}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}}\& c, \textcolor{keyword}{const} \mbox{\hyperlink{class_repere}{Repere}}\& r, \textcolor{keyword}{const} vector<Vecteur2D>\& listePoints);}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00041}00041     \mbox{\hyperlink{class_polygone_aafb4f9ce69d4eaaacaaa29e3fff76b89}{Polygone}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}}\& p);}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00047}00047     \mbox{\hyperlink{class_polygone_aafb4f9ce69d4eaaacaaa29e3fff76b89}{Polygone}}();}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00050}00050     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_polygone_ae293043ea9d180259771515a6496cd8c}{\string~Polygone}}();}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00057}00057     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_polygone_ab21629b4541f887686fea3867270730b}{ajouterPoint}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& p);}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00062}00062     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_polygone_a80a9b67c5c44d9ae387ae340a59347e8}{accepte}}(\mbox{\hyperlink{class_visiteur_forme}{VisiteurForme}}* visiteur) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00069}\mbox{\hyperlink{class_polygone_a5f6495fc57b7cc146ab54f49bfe8e448}{00069}}     \textcolor{keyword}{const} vector<Vecteur2D> \mbox{\hyperlink{class_polygone_a5f6495fc57b7cc146ab54f49bfe8e448}{getPoints}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} points; \}}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00076}\mbox{\hyperlink{class_polygone_a7b1b8ce2289513ff5729a3904ea77d83}{00076}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespace_forme}{Forme}}* \mbox{\hyperlink{class_polygone_a7b1b8ce2289513ff5729a3904ea77d83}{clone}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_polygone_aafb4f9ce69d4eaaacaaa29e3fff76b89}{Polygone}}(*\textcolor{keyword}{this}); \}}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00083}00083     \textcolor{keyword}{virtual} \textcolor{keyword}{operator} string() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00090}00090     \textcolor{keyword}{inline} \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_polygone_a6c7fbc4f5c8472c238ffddf33b21d5e6}{aire}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00097}00097     \textcolor{keyword}{inline} \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}} \mbox{\hyperlink{class_polygone_a34018f4f1389d1841638e78026f3f2dd}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00108}00108     \textcolor{keyword}{inline} \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}} \mbox{\hyperlink{class_polygone_ab4815a78a318262141fb602761b8235a}{homothetie}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& C, \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& k) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00116}00116     \textcolor{keyword}{inline} \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}} \mbox{\hyperlink{class_polygone_af4f07099c6741e8f4da3fa9cc0b5c8dc}{rotation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& R, \textcolor{keyword}{const} \mbox{\hyperlink{class_degree}{Degree}}\& theta) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00124}00124     \textcolor{keyword}{inline} \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}} \mbox{\hyperlink{class_polygone_af4f07099c6741e8f4da3fa9cc0b5c8dc}{rotation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& R, \textcolor{keyword}{const} \mbox{\hyperlink{class_radian}{Radian}}\& alpha) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00126}00126     \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{class_polygone_ae5f2e8606f0f7bbcd24d82f8b6b98f82}{operator<<}}(ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}}\& t);}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00127}00127 \};}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00129}\mbox{\hyperlink{class_polygone_ae5f2e8606f0f7bbcd24d82f8b6b98f82}{00129}} \textcolor{keyword}{inline} ostream\& \mbox{\hyperlink{_polygone_8h_ae5f2e8606f0f7bbcd24d82f8b6b98f82}{operator<<}}(ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_polygone}{Polygone}}\& t) \{}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00130}00130     \textcolor{keywordflow}{return} os << (string)t;}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00131}00131 \}}
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_polygone_8h_source_l00133}00133 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,74 @@
+\hypertarget{_cercle_8h_source}{}\doxysection{Cercle.\+h}
+\label{_cercle_8h_source}\index{Client/Forme/Cercle.h@{Client/Forme/Cercle.h}}
+\mbox{\hyperlink{_cercle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef CERCLE\_H}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00002}00002 \textcolor{preprocessor}{\#define CERCLE\_H}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_forme_8h}{Forme.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00006}\mbox{\hyperlink{class_cercle}{00006}} \textcolor{keyword}{class }\mbox{\hyperlink{class_cercle}{Cercle}} : \textcolor{keyword}{public} \mbox{\hyperlink{namespace_forme}{Forme}} \{}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00007}00007 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00008}\mbox{\hyperlink{class_cercle_a59e75bd5f5d9578b0402ff65c888af0b}{00008}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_cercle_a59e75bd5f5d9578b0402ff65c888af0b}{r}};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00018}00018     \textcolor{keyword}{inline} \mbox{\hyperlink{class_cercle_a11fbb48f91f9a0180a0f9917139836cb}{Cercle}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}}\& couleurCercle, \textcolor{keyword}{const} \mbox{\hyperlink{class_repere}{Repere}}\& rep, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& centreCercle, \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& rayon);}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00021}\mbox{\hyperlink{class_cercle_a8749eabc689e99c4739b332712791997}{00021}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_cercle_a8749eabc689e99c4739b332712791997}{\string~Cercle}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00028}00028     \textcolor{keyword}{virtual} \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}} \mbox{\hyperlink{class_cercle_a255dc08dac0c6e7fc683a424506b60a8}{translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00036}00036     \textcolor{keyword}{virtual} \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}} \mbox{\hyperlink{class_cercle_a050f306f6fe3c652cd6769a2a188640c}{homothetie}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& c, \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& rh) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00043}00043     \textcolor{keyword}{virtual} \textcolor{keyword}{inline} \textcolor{keyword}{operator} string() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00050}\mbox{\hyperlink{class_cercle_a4a1adbb93abf9a5d197a29dfdb4206fc}{00050}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespace_forme}{Forme}}* \mbox{\hyperlink{class_cercle_a4a1adbb93abf9a5d197a29dfdb4206fc}{clone}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_cercle_a11fbb48f91f9a0180a0f9917139836cb}{Cercle}}(*\textcolor{keyword}{this}); \}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00055}00055     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cercle_a30c22e1d9767f186c9147e6618cf4362}{accepte}}(\mbox{\hyperlink{class_visiteur_forme}{VisiteurForme}}* visiteur) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00056}00056 \};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00058}\mbox{\hyperlink{class_cercle_a11fbb48f91f9a0180a0f9917139836cb}{00058}} \mbox{\hyperlink{class_cercle_a11fbb48f91f9a0180a0f9917139836cb}{Cercle::Cercle}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}}\& couleurCercle, \textcolor{keyword}{const} \mbox{\hyperlink{class_repere}{Repere}}\& rep, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& centreCercle, \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& rayon) \{}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00059}00059     \mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{couleur}} = couleurCercle;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00060}00060     \mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{repere}} = rep;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00062}00062     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00063}00063         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{repere}}.\mbox{\hyperlink{class_repere_af3e2537b12b5c06d73890f19b92fdbed}{estDans}}(centreCercle) || !\mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{repere}}.\mbox{\hyperlink{class_repere_af3e2537b12b5c06d73890f19b92fdbed}{estDans}}(centreCercle + rayon))}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00064}00064             \textcolor{keywordflow}{throw} exception(\textcolor{stringliteral}{"{}La forme n'est pas dans le repere / zone de scene."{}});}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00066}00066         \mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}} = centreCercle;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00067}00067         \mbox{\hyperlink{class_cercle_a59e75bd5f5d9578b0402ff65c888af0b}{r}} = rayon;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00068}00068     \}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00069}00069     \textcolor{keywordflow}{catch} (exception e) \{}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00070}00070         cout << e.what() << endl;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00071}00071     \}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00072}00072 \}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00074}\mbox{\hyperlink{class_cercle_a255dc08dac0c6e7fc683a424506b60a8}{00074}} \textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}} \mbox{\hyperlink{class_cercle_a255dc08dac0c6e7fc683a424506b60a8}{Cercle::translation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& v)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00075}00075     \mbox{\hyperlink{class_cercle}{Cercle}} c = *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00076}00076     }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00077}00077     c.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}} += v;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00078}00078     }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00079}00079     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{repere}}.\mbox{\hyperlink{class_repere_af3e2537b12b5c06d73890f19b92fdbed}{estDans}}(c.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}))}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00080}00080         \textcolor{keywordflow}{throw} exception(\textcolor{stringliteral}{"{}La forme n'est pas dans le repere."{}});}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00082}00082     \textcolor{keywordflow}{return} c;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00083}00083 \}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00085}\mbox{\hyperlink{class_cercle_a050f306f6fe3c652cd6769a2a188640c}{00085}} \textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}} \mbox{\hyperlink{class_cercle_a050f306f6fe3c652cd6769a2a188640c}{Cercle::homothetie}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& c, \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& rh)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00086}00086     \mbox{\hyperlink{class_cercle}{Cercle}} cercle = *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00088}00088     cercle.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}} = cercle.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}.\mbox{\hyperlink{class_vecteur2_d_a2736273978a39fde720f5e4642e30d6a}{homothetie}}(c, rh);}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00089}00089     cercle.\mbox{\hyperlink{class_cercle_a59e75bd5f5d9578b0402ff65c888af0b}{r}} *= rh;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00091}00091     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{repere}}.\mbox{\hyperlink{class_repere_af3e2537b12b5c06d73890f19b92fdbed}{estDans}}(cercle.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}))}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00092}00092         \textcolor{keywordflow}{throw} exception(\textcolor{stringliteral}{"{}La forme n'est pas dans le repere."{}});}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00094}00094     \textcolor{keywordflow}{return} cercle;}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00095}00095 \}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00097}\mbox{\hyperlink{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}{00097}} Cercle::operator string()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00098}00098     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Cercle[ "{}} + (string)couleur + \textcolor{stringliteral}{"{} -\/ centre"{}} + centre + \textcolor{stringliteral}{"{} -\/ rayon"{}} + to\_string(r) + \textcolor{stringliteral}{"{} -\/ Repere["{}} + (string)repere + \textcolor{stringliteral}{"{}]]"{}};}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00099}00099 \}}
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_cercle_8h_source_l00101}00101 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

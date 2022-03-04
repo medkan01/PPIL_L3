@@ -1,0 +1,142 @@
+\hypertarget{class_forme_1_1_repere}{}\doxysection{Forme.\+Repere Class Reference}
+\label{class_forme_1_1_repere}\index{Forme.Repere@{Forme.Repere}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_forme_1_1_repere_a6c8414499cca77072b1f37b85404dee0}{Repere}} (\mbox{\hyperlink{class_forme_1_1_zone_scene}{Zone\+Scene}} z1, \mbox{\hyperlink{class_forme_1_1_zone_scene}{Zone\+Scene}} z2)
+\item 
+\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_1_1_repere_a26000be1d781514ab5327b53ff32da70}{transforme}} (\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} u)
+\item 
+\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_1_1_repere_aa9e6b8e9b84153726e5061356763577b}{transforme\+Inverse}} (\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} u)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}{lambda}}
+\item 
+int \mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{e1}}
+\item 
+int \mbox{\hyperlink{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}{e2}}
+\item 
+\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_1_1_repere_a1399f1eba7ff5ef3e79be185f32936b8}{omega}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_repere_8java_source_l00003}{3}} of file \mbox{\hyperlink{_repere_8java_source}{Repere.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_forme_1_1_repere_a6c8414499cca77072b1f37b85404dee0}\label{class_forme_1_1_repere_a6c8414499cca77072b1f37b85404dee0}} 
+\index{Forme.Repere@{Forme.Repere}!Repere@{Repere}}
+\index{Repere@{Repere}!Forme.Repere@{Forme.Repere}}
+\doxysubsubsection{\texorpdfstring{Repere()}{Repere()}}
+{\footnotesize\ttfamily Forme.\+Repere.\+Repere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_forme_1_1_zone_scene}{Zone\+Scene}}}]{z1,  }\item[{\mbox{\hyperlink{class_forme_1_1_zone_scene}{Zone\+Scene}}}]{z2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructeur de la classe \mbox{\hyperlink{class_forme_1_1_repere}{Repere}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em z1} & \+: \mbox{\hyperlink{class_forme_1_1_zone_scene}{Zone\+Scene}} z1. (Ou R) \\
+\hline
+{\em z2} & \+: \mbox{\hyperlink{class_forme_1_1_zone_scene}{Zone\+Scene}} z2. (Ou R\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_repere_8java_source_l00014}{14}} of file \mbox{\hyperlink{_repere_8java_source}{Repere.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_forme_1_1_repere_a26000be1d781514ab5327b53ff32da70}\label{class_forme_1_1_repere_a26000be1d781514ab5327b53ff32da70}} 
+\index{Forme.Repere@{Forme.Repere}!transforme@{transforme}}
+\index{transforme@{transforme}!Forme.Repere@{Forme.Repere}}
+\doxysubsubsection{\texorpdfstring{transforme()}{transforme()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} Forme.\+Repere.\+transforme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Methode permettant de changer le repere d\textquotesingle{}un vecteur dans le nouveau repere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \+: Vecteur qui va subir la transformation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nouveau vecteur. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_repere_8java_source_l00067}{67}} of file \mbox{\hyperlink{_repere_8java_source}{Repere.\+java}}.
+
+\mbox{\Hypertarget{class_forme_1_1_repere_aa9e6b8e9b84153726e5061356763577b}\label{class_forme_1_1_repere_aa9e6b8e9b84153726e5061356763577b}} 
+\index{Forme.Repere@{Forme.Repere}!transformeInverse@{transformeInverse}}
+\index{transformeInverse@{transformeInverse}!Forme.Repere@{Forme.Repere}}
+\doxysubsubsection{\texorpdfstring{transformeInverse()}{transformeInverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} Forme.\+Repere.\+transforme\+Inverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Methode permettant de changer le repere d\textquotesingle{}un vecteur dans le nouveau repere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & \+: Vecteur qui va subir la transformation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nouveau vecteur. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_repere_8java_source_l00082}{82}} of file \mbox{\hyperlink{_repere_8java_source}{Repere.\+java}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}\label{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}} 
+\index{Forme.Repere@{Forme.Repere}!e1@{e1}}
+\index{e1@{e1}!Forme.Repere@{Forme.Repere}}
+\doxysubsubsection{\texorpdfstring{e1}{e1}}
+{\footnotesize\ttfamily int Forme.\+Repere.\+e1}
+
+
+
+Definition at line \mbox{\hyperlink{_repere_8java_source_l00005}{5}} of file \mbox{\hyperlink{_repere_8java_source}{Repere.\+java}}.
+
+\mbox{\Hypertarget{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}\label{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}} 
+\index{Forme.Repere@{Forme.Repere}!e2@{e2}}
+\index{e2@{e2}!Forme.Repere@{Forme.Repere}}
+\doxysubsubsection{\texorpdfstring{e2}{e2}}
+{\footnotesize\ttfamily int Forme.\+Repere.\+e2}
+
+
+
+Definition at line \mbox{\hyperlink{_repere_8java_source_l00005}{5}} of file \mbox{\hyperlink{_repere_8java_source}{Repere.\+java}}.
+
+\mbox{\Hypertarget{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}\label{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}} 
+\index{Forme.Repere@{Forme.Repere}!lambda@{lambda}}
+\index{lambda@{lambda}!Forme.Repere@{Forme.Repere}}
+\doxysubsubsection{\texorpdfstring{lambda}{lambda}}
+{\footnotesize\ttfamily double Forme.\+Repere.\+lambda}
+
+
+
+Definition at line \mbox{\hyperlink{_repere_8java_source_l00004}{4}} of file \mbox{\hyperlink{_repere_8java_source}{Repere.\+java}}.
+
+\mbox{\Hypertarget{class_forme_1_1_repere_a1399f1eba7ff5ef3e79be185f32936b8}\label{class_forme_1_1_repere_a1399f1eba7ff5ef3e79be185f32936b8}} 
+\index{Forme.Repere@{Forme.Repere}!omega@{omega}}
+\index{omega@{omega}!Forme.Repere@{Forme.Repere}}
+\doxysubsubsection{\texorpdfstring{omega}{omega}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} Forme.\+Repere.\+omega}
+
+
+
+Definition at line \mbox{\hyperlink{_repere_8java_source_l00006}{6}} of file \mbox{\hyperlink{_repere_8java_source}{Repere.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Server/src/\+Forme/\mbox{\hyperlink{_repere_8java}{Repere.\+java}}\end{DoxyCompactItemize}

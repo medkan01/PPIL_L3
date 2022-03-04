@@ -1,0 +1,169 @@
+\hypertarget{_vecteur2_d_8h}{}\doxysection{Client/\+Forme/\+Vecteur2D.h File Reference}
+\label{_vecteur2_d_8h}\index{Client/Forme/Vecteur2D.h@{Client/Forme/Vecteur2D.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Utils/\+Radian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Utils/\+Degree.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{_vecteur2_d_8h_aede21d99a0098a906a6ecad0b9714a45}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)
+\item 
+const double \mbox{\hyperlink{_vecteur2_d_8h_ab9d42c0066db5deafa79049bc303c4fd}{determinant}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&u, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)
+\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{_vecteur2_d_8h_ab2560c80739da175e276d1ba04378ccf}{operator$\ast$}} (const double \&k, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)
+\item 
+const string \mbox{\hyperlink{_vecteur2_d_8h_a3fca98a900ad61edeac78f2152a14f7b}{operator+}} (const string \&s, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&u)
+\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{_vecteur2_d_8h_aa8562a03971d2eb6f8bbdb5094850dd3}{operator+}} (const double \&d, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&u)
+\item 
+vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ \mbox{\hyperlink{_vecteur2_d_8h_a9a89d364fe3a2eaedbb5dbe09e31948f}{tri\+\_\+fusion}} (const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ T)
+\item 
+vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ \mbox{\hyperlink{_vecteur2_d_8h_a8340c1a753538da610dea3b49d4b291d}{fusion}} (const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ T1, const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ T2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_vecteur2_d_8h_ab9d42c0066db5deafa79049bc303c4fd}\label{_vecteur2_d_8h_ab9d42c0066db5deafa79049bc303c4fd}} 
+\index{Vecteur2D.h@{Vecteur2D.h}!determinant@{determinant}}
+\index{determinant@{determinant}!Vecteur2D.h@{Vecteur2D.h}}
+\doxysubsubsection{\texorpdfstring{determinant()}{determinant()}}
+{\footnotesize\ttfamily const double determinant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{u,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determinant d\textquotesingle{}un couple de vecteur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & vecteur u. \\
+\hline
+{\em v} & vecteur v. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valeur du determinant du couple de vecteurs u et v. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_vecteur2_d_8h_source_l00311}{311}} of file \mbox{\hyperlink{_vecteur2_d_8h_source}{Vecteur2\+D.\+h}}.
+
+\mbox{\Hypertarget{_vecteur2_d_8h_a8340c1a753538da610dea3b49d4b291d}\label{_vecteur2_d_8h_a8340c1a753538da610dea3b49d4b291d}} 
+\index{Vecteur2D.h@{Vecteur2D.h}!fusion@{fusion}}
+\index{fusion@{fusion}!Vecteur2D.h@{Vecteur2D.h}}
+\doxysubsubsection{\texorpdfstring{fusion()}{fusion()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ fusion (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$}]{T1,  }\item[{const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$}]{T2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fonction qui fusionne deux tableau tries T1 et T2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T1} & Premier tableau trie. \\
+\hline
+{\em T2} & Deuxieme tableau trie. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tableau trie qui contient les elements de T1 et T2. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_vecteur2_d_8h_source_l00382}{382}} of file \mbox{\hyperlink{_vecteur2_d_8h_source}{Vecteur2\+D.\+h}}.
+
+\mbox{\Hypertarget{_vecteur2_d_8h_ab2560c80739da175e276d1ba04378ccf}\label{_vecteur2_d_8h_ab2560c80739da175e276d1ba04378ccf}} 
+\index{Vecteur2D.h@{Vecteur2D.h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vecteur2D.h@{Vecteur2D.h}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const double \&}]{k,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Multiplication d\textquotesingle{}un vecteur par un entier i.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & entier qui sera multiplie avec le vecteur u courant. \\
+\hline
+{\em v} & Vecteur qui va etre multiplie. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vecteur resultant de la multiplication de l\textquotesingle{}entier i et du vecteur u courant. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_vecteur2_d_8h_source_l00315}{315}} of file \mbox{\hyperlink{_vecteur2_d_8h_source}{Vecteur2\+D.\+h}}.
+
+\mbox{\Hypertarget{_vecteur2_d_8h_aa8562a03971d2eb6f8bbdb5094850dd3}\label{_vecteur2_d_8h_aa8562a03971d2eb6f8bbdb5094850dd3}} 
+\index{Vecteur2D.h@{Vecteur2D.h}!operator+@{operator+}}
+\index{operator+@{operator+}!Vecteur2D.h@{Vecteur2D.h}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} operator+ (\begin{DoxyParamCaption}\item[{const double \&}]{d,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creer un vecteur qui est le resulat d\textquotesingle{}une translation du vecteur courant par le double d. La translation s\textquotesingle{}effectue champ à champ.
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Double qui va servir a la translation. \\
+\hline
+{\em u} & Vecteur qui va subir la translation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vecteur resultant de la translation. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_vecteur2_d_8h_source_l00336}{336}} of file \mbox{\hyperlink{_vecteur2_d_8h_source}{Vecteur2\+D.\+h}}.
+
+\mbox{\Hypertarget{_vecteur2_d_8h_a3fca98a900ad61edeac78f2152a14f7b}\label{_vecteur2_d_8h_a3fca98a900ad61edeac78f2152a14f7b}} 
+\index{Vecteur2D.h@{Vecteur2D.h}!operator+@{operator+}}
+\index{operator+@{operator+}!Vecteur2D.h@{Vecteur2D.h}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const string operator+ (\begin{DoxyParamCaption}\item[{const string \&}]{s,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Operateur de concatenation de string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String qui va etre concatene au vecteur. (au format string) \\
+\hline
+{\em u} & Vecteur qui va être concatene au string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultat de la concatenation. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_vecteur2_d_8h_source_l00332}{332}} of file \mbox{\hyperlink{_vecteur2_d_8h_source}{Vecteur2\+D.\+h}}.
+
+\mbox{\Hypertarget{_vecteur2_d_8h_aede21d99a0098a906a6ecad0b9714a45}\label{_vecteur2_d_8h_aede21d99a0098a906a6ecad0b9714a45}} 
+\index{Vecteur2D.h@{Vecteur2D.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Vecteur2D.h@{Vecteur2D.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_vecteur2_d_8h_source_l00282}{282}} of file \mbox{\hyperlink{_vecteur2_d_8h_source}{Vecteur2\+D.\+h}}.
+
+\mbox{\Hypertarget{_vecteur2_d_8h_a9a89d364fe3a2eaedbb5dbe09e31948f}\label{_vecteur2_d_8h_a9a89d364fe3a2eaedbb5dbe09e31948f}} 
+\index{Vecteur2D.h@{Vecteur2D.h}!tri\_fusion@{tri\_fusion}}
+\index{tri\_fusion@{tri\_fusion}!Vecteur2D.h@{Vecteur2D.h}}
+\doxysubsubsection{\texorpdfstring{tri\_fusion()}{tri\_fusion()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ tri\+\_\+fusion (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fonction de tri par fusion.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & Tableau de \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} a trier. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_vecteur2_d_8h_source_l00372}{372}} of file \mbox{\hyperlink{_vecteur2_d_8h_source}{Vecteur2\+D.\+h}}.
+

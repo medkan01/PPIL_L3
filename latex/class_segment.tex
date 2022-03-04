@@ -1,0 +1,251 @@
+\hypertarget{class_segment}{}\doxysection{Segment Class Reference}
+\label{class_segment}\index{Segment@{Segment}}
+
+
+Classe \mbox{\hyperlink{class_segment}{Segment}}, definie par un point A et B.  
+
+
+
+
+{\ttfamily \#include $<$Segment.\+h$>$}
+
+Inheritance diagram for Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_segment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_segment_a5ffddc885b53055237c5222fb54f0fc8}{Segment}} (const \mbox{\hyperlink{class_couleur}{Couleur}} \&c=\mbox{\hyperlink{class_couleur_aec5fb960faf70de5e54ccc09b3633b44}{Couleur\+::\+BLACK}}, const \mbox{\hyperlink{class_repere}{Repere}} \&rep=\mbox{\hyperlink{class_repere}{Repere}}(), const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecA=\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(0, 0), const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vecB=\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(0, 0))
+\item 
+virtual \mbox{\hyperlink{class_segment_a5babc73a2978e1aa99b73a4c19d41dd8}{$\sim$\+Segment}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe segment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_segment}{Segment}} \mbox{\hyperlink{class_segment_a9f23388da8e6f438960324adec526183}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) const
+\item 
+virtual \mbox{\hyperlink{class_segment}{Segment}} \mbox{\hyperlink{class_segment_a8a4fd05bec22e9669f41ea0fd3144cdc}{homothetie}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&pi, const double \&rh) const
+\item 
+virtual \mbox{\hyperlink{class_segment}{Segment}} \mbox{\hyperlink{class_segment_a88eef54f694372d48a98edd702c40e28}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&pi, const \mbox{\hyperlink{class_radian}{Radian}} \&alpha) const
+\item 
+virtual \mbox{\hyperlink{class_segment}{Segment}} \mbox{\hyperlink{class_segment_ad11213b46f2e96a626fb3d4e1dd16f97}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&pi, const \mbox{\hyperlink{class_degree}{Degree}} \&theta) const
+\item 
+virtual \mbox{\hyperlink{class_segment_a28b3be893a35a0d73574354752c147fd}{operator string}} () const
+\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_segment_aad33802e04d4f9f8b01b549a99701b29}{clone}} () const
+\item 
+virtual void \mbox{\hyperlink{class_segment_a4f34aec71771c64c876fdfc406fc9207}{accepte}} (\mbox{\hyperlink{class_visiteur_forme}{Visiteur\+Forme}} $\ast$visiteur) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{class_segment}{Segment}}, definie par un point A et B. 
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00008}{8}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_segment_a5ffddc885b53055237c5222fb54f0fc8}\label{class_segment_a5ffddc885b53055237c5222fb54f0fc8}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_couleur}{Couleur}} \&}]{c = {\ttfamily \mbox{\hyperlink{class_couleur_aec5fb960faf70de5e54ccc09b3633b44}{Couleur\+::\+BLACK}}},  }\item[{const \mbox{\hyperlink{class_repere}{Repere}} \&}]{rep = {\ttfamily \mbox{\hyperlink{class_repere}{Repere}}()},  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vecA = {\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(0,~0)},  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vecB = {\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(0,~0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructeur de la classe \mbox{\hyperlink{class_segment}{Segment}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \mbox{\hyperlink{class_couleur}{Couleur}} de la forme. \\
+\hline
+{\em rep} & \mbox{\hyperlink{class_repere}{Repere}} de la forme. \\
+\hline
+{\em vecA} & point a du segment. \\
+\hline
+{\em vecB} & point b du segment. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00020}{20}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+\mbox{\Hypertarget{class_segment_a5babc73a2978e1aa99b73a4c19d41dd8}\label{class_segment_a5babc73a2978e1aa99b73a4c19d41dd8}} 
+\index{Segment@{Segment}!````~Segment@{$\sim$Segment}}
+\index{````~Segment@{$\sim$Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{$\sim$Segment()}{~Segment()}}
+{\footnotesize\ttfamily virtual Segment\+::$\sim$\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructeur de la classe segment. 
+
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00038}{38}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_segment_a4f34aec71771c64c876fdfc406fc9207}\label{class_segment_a4f34aec71771c64c876fdfc406fc9207}} 
+\index{Segment@{Segment}!accepte@{accepte}}
+\index{accepte@{accepte}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{accepte()}{accepte()}}
+{\footnotesize\ttfamily void Segment\+::accepte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visiteur_forme}{Visiteur\+Forme}} $\ast$}]{visiteur }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Methode visitor pour ajouter des fonctionnalites oublies. 
+
+Implements \mbox{\hyperlink{class_forme_afb180f9ea157c58f88fccff91d2e70f3}{Forme}}.
+
+
+
+Definition at line \mbox{\hyperlink{_segment_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_segment_8cpp_source}{Segment.\+cpp}}.
+
+\mbox{\Hypertarget{class_segment_aad33802e04d4f9f8b01b549a99701b29}\label{class_segment_aad33802e04d4f9f8b01b549a99701b29}} 
+\index{Segment@{Segment}!clone@{clone}}
+\index{clone@{clone}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Segment\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Clone une forme.
+
+\begin{DoxyReturn}{Returns}
+Copie de la forme. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{Forme}}.
+
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00085}{85}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+\mbox{\Hypertarget{class_segment_a8a4fd05bec22e9669f41ea0fd3144cdc}\label{class_segment_a8a4fd05bec22e9669f41ea0fd3144cdc}} 
+\index{Segment@{Segment}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} Segment\+::homothetie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{pi,  }\item[{const double \&}]{rh }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Effectue une homothetie sur la forme. (zoom)
+
+
+\begin{DoxyParams}{Parameters}
+{\em pi} & Point invariant. \\
+\hline
+{\em rh} & Rapport d\textquotesingle{}homothetie. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00101}{101}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+\mbox{\Hypertarget{class_segment_a28b3be893a35a0d73574354752c147fd}\label{class_segment_a28b3be893a35a0d73574354752c147fd}} 
+\index{Segment@{Segment}!operator string@{operator string}}
+\index{operator string@{operator string}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily Segment\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Operateur de cast. Equivalent d\textquotesingle{}une methode to\+String().
+
+\begin{DoxyReturn}{Returns}
+to\+String vecteur courant. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a6ad05e3231b6753d2133ca5438e0feeb}{Forme}}.
+
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00113}{113}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+\mbox{\Hypertarget{class_segment_ad11213b46f2e96a626fb3d4e1dd16f97}\label{class_segment_ad11213b46f2e96a626fb3d4e1dd16f97}} 
+\index{Segment@{Segment}!rotation@{rotation}}
+\index{rotation@{rotation}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} Segment\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{pi,  }\item[{const \mbox{\hyperlink{class_degree}{Degree}} \&}]{theta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Effectue une rotation sur la forme. A noter que dans la quasi-\/totalite du temps la rotation sera effectuee par rapport au centre de la forme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pi} & Point invariant. (centre de rotation) \\
+\hline
+{\em theta} & Angle de rotation. (en radian) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00105}{105}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+\mbox{\Hypertarget{class_segment_a88eef54f694372d48a98edd702c40e28}\label{class_segment_a88eef54f694372d48a98edd702c40e28}} 
+\index{Segment@{Segment}!rotation@{rotation}}
+\index{rotation@{rotation}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} Segment\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{pi,  }\item[{const \mbox{\hyperlink{class_radian}{Radian}} \&}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Effectue une rotation sur la forme. A noter que dans la quasi-\/totalite du temps la rotation sera effectuee par rapport au centre de la forme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pi} & Point invariant. (centre de rotation) \\
+\hline
+{\em alpha} & Angle de rotation. (en radian) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00109}{109}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+\mbox{\Hypertarget{class_segment_a9f23388da8e6f438960324adec526183}\label{class_segment_a9f23388da8e6f438960324adec526183}} 
+\index{Segment@{Segment}!translation@{translation}}
+\index{translation@{translation}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} Segment\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Effectue une translation sur la forme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vecteur de translation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00097}{97}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_segment_a568c79d6e215c71c23cb8609d7e66db2}\label{class_segment_a568c79d6e215c71c23cb8609d7e66db2}} 
+\index{Segment@{Segment}!a@{a}}
+\index{a@{a}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Segment\+::a}
+
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00010}{10}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+\mbox{\Hypertarget{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}\label{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}} 
+\index{Segment@{Segment}!b@{b}}
+\index{b@{b}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Segment\+::b}
+
+
+
+Definition at line \mbox{\hyperlink{_segment_8h_source_l00010}{10}} of file \mbox{\hyperlink{_segment_8h_source}{Segment.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/\+Forme/\mbox{\hyperlink{_segment_8h}{Segment.\+h}}\item 
+Client/\+Forme/\mbox{\hyperlink{_segment_8cpp}{Segment.\+cpp}}\end{DoxyCompactItemize}

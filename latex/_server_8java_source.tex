@@ -1,0 +1,45 @@
+\hypertarget{_server_8java_source}{}\doxysection{Server.\+java}
+\label{_server_8java_source}\index{Server/src/Server/Server.java@{Server/src/Server/Server.java}}
+\mbox{\hyperlink{_server_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00001}00001 \textcolor{keyword}{package }Server;}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00003}00003 \textcolor{keyword}{import} java.net.ServerSocket;}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00004}00004 \textcolor{keyword}{import} java.net.Socket;}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00006}00006 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_dessin}{Dessin}}.\mbox{\hyperlink{class_dessin_1_1_dessin}{Dessin}};}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00007}00007 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_forme}{Forme}}.\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}};}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00013}\mbox{\hyperlink{class_server_1_1_server}{00013}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{namespace_server}{Server}} \{}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00014}\mbox{\hyperlink{class_server_1_1_server_ab692a877dac277cf3c8276cd610fd6f3}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_server_1_1_server_ab692a877dac277cf3c8276cd610fd6f3}{main}}(String[] args) \{}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00015}00015         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00016}00016             \textcolor{keywordtype}{int} n = 10;}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00018}00018             \textcolor{comment}{// Creation d'une fenetre de dessin}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00019}00019             \mbox{\hyperlink{namespace_dessin}{Dessin}} d = \textcolor{keyword}{new} \mbox{\hyperlink{namespace_dessin}{Dessin}}(\textcolor{stringliteral}{"{}Serveur de dessin"{}}, \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}(0, 0), 1100, 700);}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00021}00021             \textcolor{comment}{// Creation et initialisation du socket}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00022}00022             \textcolor{keywordtype}{int} port = 44444;}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00023}00023             ServerSocket serveur = \textcolor{keyword}{new} ServerSocket(port);}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00024}00024             \textcolor{keywordflow}{while} (-\/-\/n >= 0) \{}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00025}00025                 \textcolor{comment}{// Attente de connexion}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00026}00026                 Socket adresseClient = serveur.accept(); \textcolor{comment}{// Bloquant}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00027}00027                 \mbox{\hyperlink{class_server_1_1_interlocuteur}{Interlocuteur}} interlocuteur = \textcolor{keyword}{new} \mbox{\hyperlink{class_server_1_1_interlocuteur}{Interlocuteur}}(adresseClient, d);}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00029}00029                 \textcolor{comment}{// Creation d'un thread pour permettre la connexion de plusieurs client}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00030}00030                 \textcolor{comment}{// simultanement}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00031}00031                 \mbox{\hyperlink{class_server_1_1_thread_serveur}{ThreadServeur}} run = \textcolor{keyword}{new} \mbox{\hyperlink{class_server_1_1_thread_serveur}{ThreadServeur}}(interlocuteur);}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00032}00032                 Thread t = \textcolor{keyword}{new} Thread(run);}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00033}00033                 t.start();}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00034}00034             \}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00036}00036             serveur.close();}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00037}00037         \} \textcolor{keywordflow}{catch} (}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00039}00039         Exception e) \{}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00040}00040             System.out.println(\textcolor{stringliteral}{"{}Erreur: "{}} + e);}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00041}00041         \}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_server_8java_source_l00043}00043 \}}
+
+\end{DoxyCode}

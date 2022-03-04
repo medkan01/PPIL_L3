@@ -1,0 +1,89 @@
+\hypertarget{_test_segment_8h_source}{}\doxysection{Test\+Segment.\+h}
+\label{_test_segment_8h_source}\index{Client/Tests/TestSegment.h@{Client/Tests/TestSegment.h}}
+\mbox{\hyperlink{_test_segment_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef TESTSEGMENT\_H}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00002}\mbox{\hyperlink{_test_segment_8h_a921ed79d34db16c08f9257330a9d26c9}{00002}} \textcolor{preprocessor}{\#define TESTSEMGENT\_H}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}../Forme/Segment.h"{}}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00006}\mbox{\hyperlink{class_test_segment}{00006}} \textcolor{keyword}{class }\mbox{\hyperlink{class_test_segment}{TestSegment}} \{}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00007}00007 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00013}00013     \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_segment_a3f31993cfebfda8476ee05886124c505}{testTranslation}}();}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00020}00020     \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_segment_ae540ef80f94fd47040b656bafbea628d}{testRotationDegree}}();}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00027}00027     \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_segment_a9fcfcebfa050b13caa1916f5034f660d}{testRotationRadian}}();}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00034}00034     \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_segment_a18428386ab1a78207ed010d43abbd9be}{testHomothetie}}();}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00041}00041     \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_test_segment_a20864dbb65f3f7c5d80f3ceab3fb4fd1}{resultatTest}}(\textcolor{keyword}{const} \textcolor{keywordtype}{bool}\&);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00044}00044     \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_test_segment_ab7807aee1ae8d60cc0c6311452e481a2}{sessionTest}}();}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00045}00045 \};}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00047}\mbox{\hyperlink{class_test_segment_a3f31993cfebfda8476ee05886124c505}{00047}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_segment_a3f31993cfebfda8476ee05886124c505}{TestSegment::testTranslation}}() \{}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00048}00048     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} a(0, 0), b(2, 3), u(4, 3), resA(4, 3), resB(6, 6), resCentre(5, 4.5);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00049}00049     \mbox{\hyperlink{class_segment}{Segment}} s(\mbox{\hyperlink{class_couleur_aec5fb960faf70de5e54ccc09b3633b44}{Couleur::BLACK}}, \mbox{\hyperlink{class_repere}{Repere}}(), a, b);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00050}00050     }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00051}00051     s = s.\mbox{\hyperlink{class_segment_a9f23388da8e6f438960324adec526183}{translation}}(u);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00053}00053     \textcolor{keywordflow}{return} (s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}} == resA \&\& s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}} == resB \&\& s.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}} == resCentre);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00054}00054 \}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00056}\mbox{\hyperlink{class_test_segment_ae540ef80f94fd47040b656bafbea628d}{00056}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_segment_ae540ef80f94fd47040b656bafbea628d}{TestSegment::testRotationDegree}}() \{}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00057}00057     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} a(-\/4, 0), b(4, 0), resA(4, 0), resB(-\/4, 0), resCentre(0, 0);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00058}00058     \mbox{\hyperlink{class_segment}{Segment}} s(\mbox{\hyperlink{class_couleur_aec5fb960faf70de5e54ccc09b3633b44}{Couleur::BLACK}}, \mbox{\hyperlink{class_repere}{Repere}}(), a, b);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00060}00060     s = s.\mbox{\hyperlink{class_segment_a88eef54f694372d48a98edd702c40e28}{rotation}}(s.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}, \mbox{\hyperlink{class_degree}{Degree}}(180));}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00062}00062     \textcolor{keywordflow}{return} ((s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}.\mbox{\hyperlink{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}{x}} >= 3.999 \&\& s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}.\mbox{\hyperlink{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}{x}} <= 4.0001) \&\& (s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}.\mbox{\hyperlink{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}{y}} >= -\/0.0001 \&\& s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}.\mbox{\hyperlink{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}{y}} <= 0.0001) \&\& (s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}.\mbox{\hyperlink{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}{x}} >= -\/4.0001 \&\& s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}.\mbox{\hyperlink{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}{x}} <= -\/3.999) \&\& (s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}.\mbox{\hyperlink{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}{y}} >= -\/0.0001 \&\& s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}.\mbox{\hyperlink{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}{y}} <= 0.0001));}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00065}\mbox{\hyperlink{class_test_segment_a9fcfcebfa050b13caa1916f5034f660d}{00065}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_segment_a9fcfcebfa050b13caa1916f5034f660d}{TestSegment::testRotationRadian}}() \{}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00066}00066     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} a(-\/4, 0), b(4, 0), resA(4, 0), resB(-\/4, 0), resCentre(0, 0);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00067}00067     \mbox{\hyperlink{class_segment}{Segment}} s(\mbox{\hyperlink{class_couleur_aec5fb960faf70de5e54ccc09b3633b44}{Couleur::BLACK}}, \mbox{\hyperlink{class_repere}{Repere}}(), a, b);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00069}00069     s = s.\mbox{\hyperlink{class_segment_a88eef54f694372d48a98edd702c40e28}{rotation}}(s.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}, \mbox{\hyperlink{class_radian}{Radian}}(M\_PI));}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00071}00071     \textcolor{keywordflow}{return} ((s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}.\mbox{\hyperlink{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}{x}} >= 3.999 \&\& s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}.\mbox{\hyperlink{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}{x}} <= 4.0001) \&\& (s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}.\mbox{\hyperlink{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}{y}} >= -\/0.0001 \&\& s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}}.\mbox{\hyperlink{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}{y}} <= 0.0001) \&\& (s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}.\mbox{\hyperlink{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}{x}} >= -\/4.0001 \&\& s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}.\mbox{\hyperlink{class_vecteur2_d_a3a18b26b7d21dd930e3b0d22ba8ae4ee}{x}} <= -\/3.999) \&\& (s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}.\mbox{\hyperlink{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}{y}} >= -\/0.0001 \&\& s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}}.\mbox{\hyperlink{class_vecteur2_d_a3c8beeb57ed70e29fb603b46798a5d9e}{y}} <= 0.0001));}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00072}00072 \}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00074}\mbox{\hyperlink{class_test_segment_a18428386ab1a78207ed010d43abbd9be}{00074}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_segment_a18428386ab1a78207ed010d43abbd9be}{TestSegment::testHomothetie}}() \{}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00075}00075     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} a(-\/2, 0), b(2, 0), resA(-\/3, 0), resB(3, 0), resCentre(0, 0);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00076}00076     \mbox{\hyperlink{class_segment}{Segment}} s(\mbox{\hyperlink{class_couleur_aec5fb960faf70de5e54ccc09b3633b44}{Couleur::BLACK}}, \mbox{\hyperlink{class_repere}{Repere}}(), a, b);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00078}00078     s = s.\mbox{\hyperlink{class_segment_a8a4fd05bec22e9669f41ea0fd3144cdc}{homothetie}}(s.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}, 1.5);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00080}00080     \textcolor{keywordflow}{return} (s.\mbox{\hyperlink{class_segment_a568c79d6e215c71c23cb8609d7e66db2}{a}} == resA \&\& s.\mbox{\hyperlink{class_segment_ac6d8ffe408ad11a7590e7e3ce60a3661}{b}} == resB \&\& s.\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}} == resCentre);}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00083}\mbox{\hyperlink{class_test_segment_a20864dbb65f3f7c5d80f3ceab3fb4fd1}{00083}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_test_segment_a20864dbb65f3f7c5d80f3ceab3fb4fd1}{TestSegment::resultatTest}}(\textcolor{keyword}{const} \textcolor{keywordtype}{bool}\& test) \{}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00084}00084     \textcolor{keywordflow}{if} (test) \{}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00085}00085         cout << \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00086}00086         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00087}00087     \}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00089}00089     cout << \textcolor{stringliteral}{"{}x"{}};}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00090}00090     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00091}00091 \}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00093}\mbox{\hyperlink{class_test_segment_ab7807aee1ae8d60cc0c6311452e481a2}{00093}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_test_segment_ab7807aee1ae8d60cc0c6311452e481a2}{TestSegment::sessionTest}}() \{}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00094}00094     \textcolor{keywordtype}{int} score = 0;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00095}00095     \textcolor{keywordtype}{int} nbTests = 0;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00097}00097     cout << endl << \textcolor{stringliteral}{"{}Debut de la session de tests pour la classe Segment.."{}} << endl << \textcolor{stringliteral}{"{}Resultats : "{}};}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00099}00099     score += \mbox{\hyperlink{class_test_segment_a20864dbb65f3f7c5d80f3ceab3fb4fd1}{resultatTest}}(\mbox{\hyperlink{class_test_segment_a3f31993cfebfda8476ee05886124c505}{testTranslation}}()); nbTests++;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00100}00100     score += \mbox{\hyperlink{class_test_segment_a20864dbb65f3f7c5d80f3ceab3fb4fd1}{resultatTest}}(\mbox{\hyperlink{class_test_segment_ae540ef80f94fd47040b656bafbea628d}{testRotationDegree}}()); nbTests++;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00101}00101     score += \mbox{\hyperlink{class_test_segment_a20864dbb65f3f7c5d80f3ceab3fb4fd1}{resultatTest}}(\mbox{\hyperlink{class_test_segment_a9fcfcebfa050b13caa1916f5034f660d}{testRotationRadian}}()); nbTests++;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00102}00102     score += \mbox{\hyperlink{class_test_segment_a20864dbb65f3f7c5d80f3ceab3fb4fd1}{resultatTest}}(\mbox{\hyperlink{class_test_segment_a18428386ab1a78207ed010d43abbd9be}{testHomothetie}}()); nbTests++;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00104}00104     cout << endl << \textcolor{stringliteral}{"{}Fin de la session de tests.."{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00106}00106     cout << \textcolor{stringliteral}{"{}Score : "{}} << score << \textcolor{stringliteral}{"{}/"{}} << nbTests << endl << endl;}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00107}00107 \}}
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_test_segment_8h_source_l00109}00109 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

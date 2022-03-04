@@ -1,0 +1,49 @@
+\hypertarget{_forme_8h_source}{}\doxysection{Forme.\+h}
+\label{_forme_8h_source}\index{Client/Forme/Forme.h@{Client/Forme/Forme.h}}
+\mbox{\hyperlink{_forme_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef FORME\_H}}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00002}00002 \textcolor{preprocessor}{\#define FORME\_H}}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}../Utils/Couleur.h"{}}}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vecteur2_d_8h}{Vecteur2D.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_repere_8h}{Repere.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00008}00008 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00010}00010 \textcolor{keyword}{class }\mbox{\hyperlink{class_visiteur_forme}{VisiteurForme}};}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00017}\mbox{\hyperlink{class_forme}{00017}} \textcolor{keyword}{class }\mbox{\hyperlink{namespace_forme}{Forme}} \{}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00018}00018 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00019}\mbox{\hyperlink{class_forme_a2de74910d531036bf8c200e26db787d1}{00019}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_forme_a2de74910d531036bf8c200e26db787d1}{dansGroupe}};}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00020}00020 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00021}\mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{00021}}     \mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{couleur}};}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00022}\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{00022}}     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}};}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00023}\mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{00023}}     \mbox{\hyperlink{class_repere}{Repere}} \mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{repere}};}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00031}\mbox{\hyperlink{class_forme_a6911c61ec26abd486c4f5e5a546e1ef0}{00031}}     \mbox{\hyperlink{class_forme_a6911c61ec26abd486c4f5e5a546e1ef0}{Forme}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}}\& \mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{couleur}}, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& c, \textcolor{keyword}{const} \mbox{\hyperlink{class_repere}{Repere}}\& rep) : }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00032}00032         \mbox{\hyperlink{class_forme_a2de74910d531036bf8c200e26db787d1}{dansGroupe}}(false),}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00033}00033         \mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{couleur}}(\mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{couleur}}) \{}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00034}00034         \textcolor{keywordflow}{if} (!rep.\mbox{\hyperlink{class_repere_af3e2537b12b5c06d73890f19b92fdbed}{estDans}}(\mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}))}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00035}00035             \textcolor{keywordflow}{throw} exception(\textcolor{stringliteral}{"{}La forme n'est pas dans le repere."{}});}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00036}00036         \mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}} = c;}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00037}00037         \mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{repere}} = rep;}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00042}\mbox{\hyperlink{class_forme_a3c97c1066856b548d2fe6db963a28800}{00042}}     \mbox{\hyperlink{class_forme_a3c97c1066856b548d2fe6db963a28800}{Forme}}() : \mbox{\hyperlink{class_forme_a2de74910d531036bf8c200e26db787d1}{dansGroupe}}(false), \mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{couleur}}(\mbox{\hyperlink{class_couleur}{Couleur}}::BLACK), \mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}(\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(0, 0)) \{\}}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00045}\mbox{\hyperlink{class_forme_ab4582182a0cd4da315743afce6c7f05c}{00045}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_forme_ab4582182a0cd4da315743afce6c7f05c}{\string~Forme}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00052}\mbox{\hyperlink{class_forme_a6ad05e3231b6753d2133ca5438e0feeb}{00052}}     \textcolor{keyword}{virtual} \textcolor{keyword}{operator} string() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00059}\mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{00059}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{namespace_forme}{Forme}}* \mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{clone}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00064}\mbox{\hyperlink{class_forme_afb180f9ea157c58f88fccff91d2e70f3}{00064}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_afb180f9ea157c58f88fccff91d2e70f3}{accepte}}(\mbox{\hyperlink{class_visiteur_forme}{VisiteurForme}}* visiteur) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00066}\mbox{\hyperlink{class_forme_a397033e7a7ef7a1f5b5d88cd2faed744}{00066}}     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_groupe_formes}{GroupeFormes}};}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00067}00067 \};}
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_forme_8h_source_l00069}00069 \textcolor{preprocessor}{\#endif }}
+
+\end{DoxyCode}

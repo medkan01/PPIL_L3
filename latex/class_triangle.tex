@@ -1,0 +1,295 @@
+\hypertarget{class_triangle}{}\doxysection{Triangle Class Reference}
+\label{class_triangle}\index{Triangle@{Triangle}}
+
+
+{\ttfamily \#include $<$Triangle.\+h$>$}
+
+Inheritance diagram for Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_triangle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_a86ccf8988857e0bd9b1df0dc7ccb171e}{Triangle}} (const \mbox{\hyperlink{class_couleur}{Couleur}} \&couleur\+Triangle, const \mbox{\hyperlink{class_repere}{Repere}} \&rep, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&pa, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&pb, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&pc)
+\item 
+virtual \mbox{\hyperlink{class_triangle_a81dbbf1be60e083d3d92be4d0291b3b5}{$\sim$\+Triangle}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe triangle. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{class_triangle_ab7a3e6d670f5dd63bfbb1b65bd8f96b2}{aire}} () const
+\item 
+virtual const \mbox{\hyperlink{class_triangle}{Triangle}} \mbox{\hyperlink{class_triangle_a9fef98c2afcc9bb6fec41e18048002fa}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v) const
+\item 
+virtual const \mbox{\hyperlink{class_triangle}{Triangle}} \mbox{\hyperlink{class_triangle_a9da9e861a218d59ec3473f06535875bf}{homothetie}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&C, const double \&k) const
+\item 
+virtual const \mbox{\hyperlink{class_triangle}{Triangle}} \mbox{\hyperlink{class_triangle_af2a328f38604ea38f3bdfcf6bd64152f}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&R, const \mbox{\hyperlink{class_degree}{Degree}} \&theta) const
+\item 
+virtual const \mbox{\hyperlink{class_triangle}{Triangle}} \mbox{\hyperlink{class_triangle_aba09d2e70ff6fa0022b730eacc0ee78c}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&R, const \mbox{\hyperlink{class_radian}{Radian}} \&alpha) const
+\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_triangle_a610a6de862fd2f720036ae515dd71930}{clone}} () const
+\item 
+virtual \mbox{\hyperlink{class_triangle_acd8612cc20ffb71e543944c869e4ab81}{operator string}} () const
+\item 
+virtual void \mbox{\hyperlink{class_triangle_aafeca5279283f6590c8e9f3edb9fb57d}{accepte}} (\mbox{\hyperlink{class_visiteur_forme}{Visiteur\+Forme}} $\ast$visiteur) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_triangle_a478ac150bfe7032b6cfa276d0f4ea214}{a}}
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_triangle_a7d3ca51e61decdf148b9e69d012615e6}{b}}
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_triangle_ae44850e8e7803669e2ed9bae24394bb4}{c}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_triangle_a9caff34cd741f5bbbc929abd51787171}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_triangle}{Triangle}} \&t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represente un triangle defini par une couleur, un vecteur d\textquotesingle{}origine a et deux autres vecteurs b et c. Par exemple, dans le triangle ABC, A est l\textquotesingle{}origine. Entre autre, le triangle sera donc defini par AB et AC. 
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00011}{11}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_triangle_a86ccf8988857e0bd9b1df0dc7ccb171e}\label{class_triangle_a86ccf8988857e0bd9b1df0dc7ccb171e}} 
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{Triangle()}{Triangle()}}
+{\footnotesize\ttfamily Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_couleur}{Couleur}} \&}]{couleur\+Triangle,  }\item[{const \mbox{\hyperlink{class_repere}{Repere}} \&}]{rep,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{pa,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{pb,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{pc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructeur de la classe \mbox{\hyperlink{class_triangle}{Triangle}} qui construit un triangle ABC d\textquotesingle{}une couleur donnee.
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur\+Triangle} & \mbox{\hyperlink{class_couleur}{Couleur}} du triangle. \\
+\hline
+{\em rep} & \mbox{\hyperlink{class_repere}{Repere}} de la forme. \\
+\hline
+{\em pa} & Origine du triangle ABC. \\
+\hline
+{\em pb} & Point B du triangle ABC. \\
+\hline
+{\em pc} & Point C du triangle ABC. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00130}{130}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_a81dbbf1be60e083d3d92be4d0291b3b5}\label{class_triangle_a81dbbf1be60e083d3d92be4d0291b3b5}} 
+\index{Triangle@{Triangle}!````~Triangle@{$\sim$Triangle}}
+\index{````~Triangle@{$\sim$Triangle}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{$\sim$Triangle()}{~Triangle()}}
+{\footnotesize\ttfamily virtual Triangle\+::$\sim$\+Triangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructeur de la classe triangle. 
+
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00039}{39}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_aafeca5279283f6590c8e9f3edb9fb57d}\label{class_triangle_aafeca5279283f6590c8e9f3edb9fb57d}} 
+\index{Triangle@{Triangle}!accepte@{accepte}}
+\index{accepte@{accepte}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{accepte()}{accepte()}}
+{\footnotesize\ttfamily void Triangle\+::accepte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visiteur_forme}{Visiteur\+Forme}} $\ast$}]{visiteur }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Methode visitor pour ajouter des fonctionnalites oublies. 
+
+Implements \mbox{\hyperlink{class_forme_afb180f9ea157c58f88fccff91d2e70f3}{Forme}}.
+
+
+
+Definition at line \mbox{\hyperlink{_triangle_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{_triangle_8cpp_source}{Triangle.\+cpp}}.
+
+\mbox{\Hypertarget{class_triangle_ab7a3e6d670f5dd63bfbb1b65bd8f96b2}\label{class_triangle_ab7a3e6d670f5dd63bfbb1b65bd8f96b2}} 
+\index{Triangle@{Triangle}!aire@{aire}}
+\index{aire@{aire}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{aire()}{aire()}}
+{\footnotesize\ttfamily const double Triangle\+::aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determine l\textquotesingle{}aire du triangle.
+
+\begin{DoxyReturn}{Returns}
+aire du triangle. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00140}{140}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_a610a6de862fd2f720036ae515dd71930}\label{class_triangle_a610a6de862fd2f720036ae515dd71930}} 
+\index{Triangle@{Triangle}!clone@{clone}}
+\index{clone@{clone}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Triangle\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Clone un triangle.
+
+\begin{DoxyReturn}{Returns}
+Copie du triangle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{Forme}}.
+
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00197}{197}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_a9da9e861a218d59ec3473f06535875bf}\label{class_triangle_a9da9e861a218d59ec3473f06535875bf}} 
+\index{Triangle@{Triangle}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_triangle}{Triangle}} Triangle\+::homothetie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{C,  }\item[{const double \&}]{k }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Effectue une homothetie sur la forme. (zoom) Calcule d\textquotesingle{}une homothetie \+: OM\textquotesingle{} = k(\+OM OC) + OC M\textquotesingle{} = k $\ast$ (M C) + C
+
+
+\begin{DoxyParams}{Parameters}
+{\em C} & Point invariant. \\
+\hline
+{\em k} & Rapport d\textquotesingle{}homothetie. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00163}{163}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_acd8612cc20ffb71e543944c869e4ab81}\label{class_triangle_acd8612cc20ffb71e543944c869e4ab81}} 
+\index{Triangle@{Triangle}!operator string@{operator string}}
+\index{operator string@{operator string}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily Triangle\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Operateur de cast. Equivalent d\textquotesingle{}une methode to\+String().
+
+\begin{DoxyReturn}{Returns}
+to\+String du vecteur courant. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_forme_a6ad05e3231b6753d2133ca5438e0feeb}{Forme}}.
+
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00193}{193}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_af2a328f38604ea38f3bdfcf6bd64152f}\label{class_triangle_af2a328f38604ea38f3bdfcf6bd64152f}} 
+\index{Triangle@{Triangle}!rotation@{rotation}}
+\index{rotation@{rotation}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_triangle}{Triangle}} Triangle\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{R,  }\item[{const \mbox{\hyperlink{class_degree}{Degree}} \&}]{theta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Effectue une rotation sur la forme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Point invariant. (centre de rotation) \\
+\hline
+{\em theta} & Angle de rotation. (en degree) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00173}{173}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_aba09d2e70ff6fa0022b730eacc0ee78c}\label{class_triangle_aba09d2e70ff6fa0022b730eacc0ee78c}} 
+\index{Triangle@{Triangle}!rotation@{rotation}}
+\index{rotation@{rotation}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_triangle}{Triangle}} Triangle\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{R,  }\item[{const \mbox{\hyperlink{class_radian}{Radian}} \&}]{alpha }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Effectue une rotation sur la forme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Point invariant. (centre de rotation) \\
+\hline
+{\em alpha} & Angle de rotation. (en radian) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00183}{183}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_a9fef98c2afcc9bb6fec41e18048002fa}\label{class_triangle_a9fef98c2afcc9bb6fec41e18048002fa}} 
+\index{Triangle@{Triangle}!translation@{translation}}
+\index{translation@{translation}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_triangle}{Triangle}} Triangle\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Effectue une translation sur la forme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vecteur de translation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00153}{153}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_triangle_a9caff34cd741f5bbbc929abd51787171}\label{class_triangle_a9caff34cd741f5bbbc929abd51787171}} 
+\index{Triangle@{Triangle}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_triangle}{Triangle}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00201}{201}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_triangle_a478ac150bfe7032b6cfa276d0f4ea214}\label{class_triangle_a478ac150bfe7032b6cfa276d0f4ea214}} 
+\index{Triangle@{Triangle}!a@{a}}
+\index{a@{a}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Triangle\+::a}
+
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00026}{26}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_a7d3ca51e61decdf148b9e69d012615e6}\label{class_triangle_a7d3ca51e61decdf148b9e69d012615e6}} 
+\index{Triangle@{Triangle}!b@{b}}
+\index{b@{b}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Triangle\+::b}
+
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00026}{26}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+\mbox{\Hypertarget{class_triangle_ae44850e8e7803669e2ed9bae24394bb4}\label{class_triangle_ae44850e8e7803669e2ed9bae24394bb4}} 
+\index{Triangle@{Triangle}!c@{c}}
+\index{c@{c}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Triangle\+::c}
+
+
+
+Definition at line \mbox{\hyperlink{_triangle_8h_source_l00026}{26}} of file \mbox{\hyperlink{_triangle_8h_source}{Triangle.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/\+Forme/\mbox{\hyperlink{_triangle_8h}{Triangle.\+h}}\item 
+Client/\+Forme/\mbox{\hyperlink{_triangle_8cpp}{Triangle.\+cpp}}\end{DoxyCompactItemize}

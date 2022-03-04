@@ -1,0 +1,143 @@
+\hypertarget{class_client}{}\doxysection{Client Class Reference}
+\label{class_client}\index{Client@{Client}}
+
+
+{\ttfamily \#include $<$Client.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+SOCKADDR\+\_\+\+IN \mbox{\hyperlink{class_client_a4bdee7f63d0e95d9551da6cb2af22abd}{get\+Sockadrr}} () const
+\item 
+SOCKET \mbox{\hyperlink{class_client_a6de50342f2f2d55d2b740209d23b122f}{get\+Socket}} () const
+\item 
+WSADATA \mbox{\hyperlink{class_client_a9a3bfeac9cda11fab2f97a76eba335df}{get\+Wsa\+Data}} () const
+\item 
+void \mbox{\hyperlink{class_client_a4d8c7bb6a2cbfd808d694fc56062c8cc}{connexion}} ()
+\begin{DoxyCompactList}\small\item\em Permet de connecter le socket au serveur local 127.\+0.\+0.\+1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_client_afaaa4a667b6b4bc1b7cc0518ac463dc4}{envoi\+Donnees}} (const string \&data) const
+\item 
+void \mbox{\hyperlink{class_client_acac6c068667148d9f6a868406b338d89}{deconnexion}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_client}{Client}} \& \mbox{\hyperlink{class_client_a89ab2ad76b4a2aa18a0a4b06d2e2cd66}{instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_client_8h_source_l00014}{14}} of file \mbox{\hyperlink{_client_8h_source}{Client.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_client_a4d8c7bb6a2cbfd808d694fc56062c8cc}\label{class_client_a4d8c7bb6a2cbfd808d694fc56062c8cc}} 
+\index{Client@{Client}!connexion@{connexion}}
+\index{connexion@{connexion}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{connexion()}{connexion()}}
+{\footnotesize\ttfamily void Client\+::connexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Permet de connecter le socket au serveur local 127.\+0.\+0.\+1. 
+
+
+
+Definition at line \mbox{\hyperlink{_client_8h_source_l00105}{105}} of file \mbox{\hyperlink{_client_8h_source}{Client.\+h}}.
+
+\mbox{\Hypertarget{class_client_acac6c068667148d9f6a868406b338d89}\label{class_client_acac6c068667148d9f6a868406b338d89}} 
+\index{Client@{Client}!deconnexion@{deconnexion}}
+\index{deconnexion@{deconnexion}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{deconnexion()}{deconnexion()}}
+{\footnotesize\ttfamily void Client\+::deconnexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_client_8h_source_l00129}{129}} of file \mbox{\hyperlink{_client_8h_source}{Client.\+h}}.
+
+\mbox{\Hypertarget{class_client_afaaa4a667b6b4bc1b7cc0518ac463dc4}\label{class_client_afaaa4a667b6b4bc1b7cc0518ac463dc4}} 
+\index{Client@{Client}!envoiDonnees@{envoiDonnees}}
+\index{envoiDonnees@{envoiDonnees}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{envoiDonnees()}{envoiDonnees()}}
+{\footnotesize\ttfamily void Client\+::envoi\+Donnees (\begin{DoxyParamCaption}\item[{const string \&}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Envoie du texte au serveur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & message a envoyer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_client_8h_source_l00117}{117}} of file \mbox{\hyperlink{_client_8h_source}{Client.\+h}}.
+
+\mbox{\Hypertarget{class_client_a4bdee7f63d0e95d9551da6cb2af22abd}\label{class_client_a4bdee7f63d0e95d9551da6cb2af22abd}} 
+\index{Client@{Client}!getSockadrr@{getSockadrr}}
+\index{getSockadrr@{getSockadrr}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{getSockadrr()}{getSockadrr()}}
+{\footnotesize\ttfamily SOCKADDR\+\_\+\+IN Client\+::get\+Sockadrr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter de l\textquotesingle{}attribut sockaddr.
+
+\begin{DoxyReturn}{Returns}
+sockaddr 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_client_8h_source_l00036}{36}} of file \mbox{\hyperlink{_client_8h_source}{Client.\+h}}.
+
+\mbox{\Hypertarget{class_client_a6de50342f2f2d55d2b740209d23b122f}\label{class_client_a6de50342f2f2d55d2b740209d23b122f}} 
+\index{Client@{Client}!getSocket@{getSocket}}
+\index{getSocket@{getSocket}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{getSocket()}{getSocket()}}
+{\footnotesize\ttfamily SOCKET Client\+::get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter de l\textquotesingle{}attribut sock.
+
+\begin{DoxyReturn}{Returns}
+sock 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_client_8h_source_l00043}{43}} of file \mbox{\hyperlink{_client_8h_source}{Client.\+h}}.
+
+\mbox{\Hypertarget{class_client_a9a3bfeac9cda11fab2f97a76eba335df}\label{class_client_a9a3bfeac9cda11fab2f97a76eba335df}} 
+\index{Client@{Client}!getWsaData@{getWsaData}}
+\index{getWsaData@{getWsaData}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{getWsaData()}{getWsaData()}}
+{\footnotesize\ttfamily WSADATA Client\+::get\+Wsa\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter de l\textquotesingle{}attribut sockaddr.
+
+\begin{DoxyReturn}{Returns}
+wsa\+Data 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_client_8h_source_l00050}{50}} of file \mbox{\hyperlink{_client_8h_source}{Client.\+h}}.
+
+\mbox{\Hypertarget{class_client_a89ab2ad76b4a2aa18a0a4b06d2e2cd66}\label{class_client_a89ab2ad76b4a2aa18a0a4b06d2e2cd66}} 
+\index{Client@{Client}!instance@{instance}}
+\index{instance@{instance}!Client@{Client}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_client}{Client}} \& Client\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Permet de récupérer l\textquotesingle{}instance de client, geree avec le design pattern singleton.
+
+\begin{DoxyReturn}{Returns}
+instance de client 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_client_8h_source_l00057}{57}} of file \mbox{\hyperlink{_client_8h_source}{Client.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/\+TCPIP/\mbox{\hyperlink{_client_8h}{Client.\+h}}\item 
+Client/\+TCPIP/\mbox{\hyperlink{_client_8cpp}{Client.\+cpp}}\end{DoxyCompactItemize}

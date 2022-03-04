@@ -1,0 +1,58 @@
+\hypertarget{_couleur_8h_source}{}\doxysection{Couleur.\+h}
+\label{_couleur_8h_source}\index{Client/Utils/Couleur.h@{Client/Utils/Couleur.h}}
+\mbox{\hyperlink{_couleur_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00002}00002 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00004}00004 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00006}\mbox{\hyperlink{class_couleur}{00006}} \textcolor{keyword}{class }\mbox{\hyperlink{class_couleur}{Couleur}} \{}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00007}00007     \textcolor{keywordtype}{int} r, g, b;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00009}00009 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00019}00019     \textcolor{keyword}{inline} \mbox{\hyperlink{class_couleur_a5552dd67d8ca49d3c0095d45b8ff5f49}{Couleur}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& red = 0, \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& green = 0, \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& blue = 0);}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00022}\mbox{\hyperlink{class_couleur_a7f87014f3347e59b47b6a39eb3a525fd}{00022}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_couleur_a7f87014f3347e59b47b6a39eb3a525fd}{\string~Couleur}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00025}00025     \textcolor{keyword}{inline} \textcolor{keyword}{operator} string() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00033}00033     \textcolor{keyword}{inline} \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_couleur_a92107c1ea44e0165ef3dcd65242a4352}{operator +}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& s) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00042}00042     \textcolor{keyword}{friend} \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_couleur_a92107c1ea44e0165ef3dcd65242a4352}{operator +}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& s, \textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}}\& couleur);}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00044}\mbox{\hyperlink{class_couleur_aec5fb960faf70de5e54ccc09b3633b44}{00044}}     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_couleur_aec5fb960faf70de5e54ccc09b3633b44}{BLACK}};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00045}\mbox{\hyperlink{class_couleur_aa54309dc6491b4731f6d8f9c12441254}{00045}}     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_couleur_aa54309dc6491b4731f6d8f9c12441254}{BLUE}};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00046}\mbox{\hyperlink{class_couleur_a872467cb3c397a7c2c398a89b9370ebe}{00046}}     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_couleur_a872467cb3c397a7c2c398a89b9370ebe}{RED}};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00047}\mbox{\hyperlink{class_couleur_afed21a5a69b7e9baae2d9410a83d7978}{00047}}     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_couleur_afed21a5a69b7e9baae2d9410a83d7978}{GREEN}};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00048}\mbox{\hyperlink{class_couleur_a02b24075ed198b2930477748dc73dcf0}{00048}}     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_couleur_a02b24075ed198b2930477748dc73dcf0}{YELLOW}};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00049}\mbox{\hyperlink{class_couleur_a16605f1192770e0f3f79247a4e198a9f}{00049}}     \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_couleur_a16605f1192770e0f3f79247a4e198a9f}{CYAN}};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00050}00050 \};}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00052}\mbox{\hyperlink{class_couleur_a5552dd67d8ca49d3c0095d45b8ff5f49}{00052}} \mbox{\hyperlink{class_couleur_a5552dd67d8ca49d3c0095d45b8ff5f49}{Couleur::Couleur}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& red, \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& green, \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& blue) \{}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00053}00053     r = red;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00054}00054     g = green;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00055}00055     b = blue;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00057}00057     \textcolor{keywordflow}{if} (r > 255) r = 255;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00058}00058     \textcolor{keywordflow}{if} (g > 255) g = 255;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00059}00059     \textcolor{keywordflow}{if} (b > 255) b = 255;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00061}00061     \textcolor{keywordflow}{if} (r < 0) r = 0;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00062}00062     \textcolor{keywordflow}{if} (g < 0) g = 0;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00063}00063     \textcolor{keywordflow}{if} (b < 0) b = 0;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00064}00064 \}}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00066}\mbox{\hyperlink{class_couleur_acff55563e5760e4cea32ca275eb62205}{00066}} \textcolor{keyword}{inline} Couleur::operator string()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00067}00067     \textcolor{keywordflow}{return} to\_string(r) + \textcolor{stringliteral}{"{}-\/"{}} + to\_string(g) + \textcolor{stringliteral}{"{}-\/"{}} + to\_string(b);}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00068}00068 \}}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00070}\mbox{\hyperlink{class_couleur_a92107c1ea44e0165ef3dcd65242a4352}{00070}} \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_couleur_a92107c1ea44e0165ef3dcd65242a4352}{Couleur::operator +}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& s)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00071}00071     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{string})(*this) + s;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00072}00072 \}}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00074}\mbox{\hyperlink{class_couleur_af0794843bd1dfea3de8f7448a89cfedb}{00074}} \textcolor{keyword}{inline} \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{_couleur_8h_af0794843bd1dfea3de8f7448a89cfedb}{operator+}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& s, \textcolor{keyword}{const} \mbox{\hyperlink{class_couleur}{Couleur}}\& couleur) \{}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00075}00075     \textcolor{keywordflow}{return} s + (string) couleur;}
+\DoxyCodeLine{\Hypertarget{_couleur_8h_source_l00076}00076 \}}
+
+\end{DoxyCode}

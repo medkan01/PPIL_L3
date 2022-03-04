@@ -1,0 +1,209 @@
+\hypertarget{class_forme}{}\doxysection{Forme Class Reference}
+\label{class_forme}\index{Forme@{Forme}}
+
+
+{\ttfamily \#include $<$Forme.\+h$>$}
+
+Inheritance diagram for Forme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_forme}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_forme_a6911c61ec26abd486c4f5e5a546e1ef0}{Forme}} (const \mbox{\hyperlink{class_couleur}{Couleur}} \&\mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{couleur}}, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&c, const \mbox{\hyperlink{class_repere}{Repere}} \&rep)
+\item 
+\mbox{\hyperlink{class_forme_a3c97c1066856b548d2fe6db963a28800}{Forme}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par defaut de la classe \mbox{\hyperlink{class_forme}{Forme}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme_ab4582182a0cd4da315743afce6c7f05c}{$\sim$\+Forme}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe forme. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme_a6ad05e3231b6753d2133ca5438e0feeb}{operator string}} () const =0
+\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{clone}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_forme_afb180f9ea157c58f88fccff91d2e70f3}{accepte}} (\mbox{\hyperlink{class_visiteur_forme}{Visiteur\+Forme}} $\ast$visiteur) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}{couleur}}
+\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}{centre}}
+\item 
+\mbox{\hyperlink{class_repere}{Repere}} \mbox{\hyperlink{class_forme_a1702e4d84ad709c03474334eea0f8b9b}{repere}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_forme_a2de74910d531036bf8c200e26db787d1}{dans\+Groupe}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_forme_a397033e7a7ef7a1f5b5d88cd2faed744}{Groupe\+Formes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represente une forme quelconque.
+
+Definie par une couleur et un point d\textquotesingle{}origine. 
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00017}{17}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_forme_a6911c61ec26abd486c4f5e5a546e1ef0}\label{class_forme_a6911c61ec26abd486c4f5e5a546e1ef0}} 
+\index{Forme@{Forme}!Forme@{Forme}}
+\index{Forme@{Forme}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{Forme()}{Forme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Forme\+::\+Forme (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_couleur}{Couleur}} \&}]{couleur,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{c,  }\item[{const \mbox{\hyperlink{class_repere}{Repere}} \&}]{rep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructeur de la classe \mbox{\hyperlink{class_forme}{Forme}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur} & \mbox{\hyperlink{class_couleur}{Couleur}} de la forme. \\
+\hline
+{\em origine} & Origine de la forme. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00031}{31}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+\mbox{\Hypertarget{class_forme_a3c97c1066856b548d2fe6db963a28800}\label{class_forme_a3c97c1066856b548d2fe6db963a28800}} 
+\index{Forme@{Forme}!Forme@{Forme}}
+\index{Forme@{Forme}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{Forme()}{Forme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Forme\+::\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur par defaut de la classe \mbox{\hyperlink{class_forme}{Forme}}. 
+
+
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00042}{42}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+\mbox{\Hypertarget{class_forme_ab4582182a0cd4da315743afce6c7f05c}\label{class_forme_ab4582182a0cd4da315743afce6c7f05c}} 
+\index{Forme@{Forme}!````~Forme@{$\sim$Forme}}
+\index{````~Forme@{$\sim$Forme}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{$\sim$Forme()}{~Forme()}}
+{\footnotesize\ttfamily virtual Forme\+::$\sim$\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructeur de la classe forme. 
+
+
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00045}{45}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_forme_afb180f9ea157c58f88fccff91d2e70f3}\label{class_forme_afb180f9ea157c58f88fccff91d2e70f3}} 
+\index{Forme@{Forme}!accepte@{accepte}}
+\index{accepte@{accepte}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{accepte()}{accepte()}}
+{\footnotesize\ttfamily virtual void Forme\+::accepte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visiteur_forme}{Visiteur\+Forme}} $\ast$}]{visiteur }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Methode visitor pour ajouter des fonctionnalites oublies. 
+
+Implemented in \mbox{\hyperlink{class_cercle_a30c22e1d9767f186c9147e6618cf4362}{Cercle}}, \mbox{\hyperlink{class_polygone_a80a9b67c5c44d9ae387ae340a59347e8}{Polygone}}, \mbox{\hyperlink{class_segment_a4f34aec71771c64c876fdfc406fc9207}{Segment}}, and \mbox{\hyperlink{class_triangle_aafeca5279283f6590c8e9f3edb9fb57d}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_aa846673739124ed44293ceaf515f3fa8}\label{class_forme_aa846673739124ed44293ceaf515f3fa8}} 
+\index{Forme@{Forme}!clone@{clone}}
+\index{clone@{clone}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Forme\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Clone une forme.
+
+\begin{DoxyReturn}{Returns}
+Copie de la forme. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_a4a1adbb93abf9a5d197a29dfdb4206fc}{Cercle}}, \mbox{\hyperlink{class_polygone_a7b1b8ce2289513ff5729a3904ea77d83}{Polygone}}, \mbox{\hyperlink{class_segment_aad33802e04d4f9f8b01b549a99701b29}{Segment}}, and \mbox{\hyperlink{class_triangle_a610a6de862fd2f720036ae515dd71930}{Triangle}}.
+
+\mbox{\Hypertarget{class_forme_a6ad05e3231b6753d2133ca5438e0feeb}\label{class_forme_a6ad05e3231b6753d2133ca5438e0feeb}} 
+\index{Forme@{Forme}!operator string@{operator string}}
+\index{operator string@{operator string}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily virtual Forme\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Operateur de cast. Equivalent d\textquotesingle{}une methode to\+String().
+
+\begin{DoxyReturn}{Returns}
+to\+String vecteur courant. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}{Cercle}}, \mbox{\hyperlink{class_polygone_abd801a84b5306df8021f1571d82deafd}{Polygone}}, \mbox{\hyperlink{class_segment_a28b3be893a35a0d73574354752c147fd}{Segment}}, and \mbox{\hyperlink{class_triangle_acd8612cc20ffb71e543944c869e4ab81}{Triangle}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_forme_a397033e7a7ef7a1f5b5d88cd2faed744}\label{class_forme_a397033e7a7ef7a1f5b5d88cd2faed744}} 
+\index{Forme@{Forme}!GroupeFormes@{GroupeFormes}}
+\index{GroupeFormes@{GroupeFormes}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{GroupeFormes}{GroupeFormes}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_groupe_formes}{Groupe\+Formes}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00066}{66}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}\label{class_forme_ad26f6239453678ca3ac8e9ad5cc09e95}} 
+\index{Forme@{Forme}!centre@{centre}}
+\index{centre@{centre}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{centre}{centre}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Forme\+::centre}
+
+
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00022}{22}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+\mbox{\Hypertarget{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}\label{class_forme_a3b97e946b4eadbfcffcdcdd606fbdf80}} 
+\index{Forme@{Forme}!couleur@{couleur}}
+\index{couleur@{couleur}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{couleur}{couleur}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_couleur}{Couleur}} Forme\+::couleur}
+
+
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00021}{21}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+\mbox{\Hypertarget{class_forme_a2de74910d531036bf8c200e26db787d1}\label{class_forme_a2de74910d531036bf8c200e26db787d1}} 
+\index{Forme@{Forme}!dansGroupe@{dansGroupe}}
+\index{dansGroupe@{dansGroupe}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{dansGroupe}{dansGroupe}}
+{\footnotesize\ttfamily bool Forme\+::dans\+Groupe\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00019}{19}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+\mbox{\Hypertarget{class_forme_a1702e4d84ad709c03474334eea0f8b9b}\label{class_forme_a1702e4d84ad709c03474334eea0f8b9b}} 
+\index{Forme@{Forme}!repere@{repere}}
+\index{repere@{repere}!Forme@{Forme}}
+\doxysubsubsection{\texorpdfstring{repere}{repere}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_repere}{Repere}} Forme\+::repere}
+
+
+
+Definition at line \mbox{\hyperlink{_forme_8h_source_l00023}{23}} of file \mbox{\hyperlink{_forme_8h_source}{Forme.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Client/\+Forme/\mbox{\hyperlink{_forme_8h}{Forme.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{_dessiner_triangle_8java_source}{}\doxysection{Dessiner\+Triangle.\+java}
+\label{_dessiner_triangle_8java_source}\index{Server/src/DessinerFormesCOR/DessinerTriangle.java@{Server/src/DessinerFormesCOR/DessinerTriangle.java}}
+\mbox{\hyperlink{_dessiner_triangle_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00001}00001 \textcolor{keyword}{package }DessinerFormesCOR;}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00003}00003 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_dessin}{Dessin}}.\mbox{\hyperlink{class_dessin_1_1_dessin}{Dessin}};}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00004}00004 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_forme}{Forme}}.\mbox{\hyperlink{class_forme_1_1_repere}{Repere}};}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_forme}{Forme}}.\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}};}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00006}00006 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_forme}{Forme}}.\mbox{\hyperlink{class_forme_1_1_zone_scene}{ZoneScene}};}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00008}00008 \textcolor{keyword}{import} java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00010}\mbox{\hyperlink{class_dessiner_formes_c_o_r_1_1_dessiner_triangle}{00010}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_dessiner_formes_c_o_r_1_1_dessiner_triangle}{DessinerTriangle}} \textcolor{keyword}{extends} \mbox{\hyperlink{class_dessiner_formes_c_o_r_1_1_dessiner_c_o_r}{DessinerCOR}} \{}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00017}\mbox{\hyperlink{class_dessiner_formes_c_o_r_1_1_dessiner_triangle_aa87b158bf3bbe65f31ff57ca4b3ae533}{00017}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_dessiner_formes_c_o_r_1_1_dessiner_triangle_aa87b158bf3bbe65f31ff57ca4b3ae533}{DessinerTriangle}}(\mbox{\hyperlink{class_dessiner_formes_c_o_r_1_1_dessiner_c_o_r}{DessinerCOR}} suivant) \{}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00018}00018         super(suivant);}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00028}\mbox{\hyperlink{class_dessiner_formes_c_o_r_1_1_dessiner_triangle_ab1c21ca7b9150544158c33d0c5027460}{00028}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{class_dessiner_formes_c_o_r_1_1_dessiner_triangle_ab1c21ca7b9150544158c33d0c5027460}{dessinerForme1}}(String requete, \mbox{\hyperlink{namespace_dessin}{Dessin}} d) \{}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00029}00029         \textcolor{comment}{// On separe les informations.}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00030}00030         String[] newStr = requete.split(\textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00032}00032         \textcolor{comment}{// On recupere le type de la forme.}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00033}00033         String type = newStr[0];}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00035}00035         \textcolor{comment}{// On verifie si c'est un triangle.}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00036}00036         \textcolor{keywordflow}{if} (!type.equals(\textcolor{stringliteral}{"{}triangle"{}}))}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00037}00037             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00039}00039         \textcolor{comment}{// On recupere la couleur}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00040}00040         String[] couleur = newStr[1].split(\textcolor{stringliteral}{"{}-\/"{}});}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00041}00041         Color c = \textcolor{keyword}{new} Color(Integer.parseInt(couleur[0]), Integer.parseInt(couleur[1]), Integer.parseInt(couleur[2]));}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00043}00043         \textcolor{comment}{// On recupere ensuite le repere dans lequel se trouvais la forme afin de faire}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00044}00044         \textcolor{comment}{// un changement de base.}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00045}00045         String[] rep = newStr[2].split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00046}00046         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} p1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}(rep[0]);}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00047}00047         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} p2 = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}(rep[1]);}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00049}00049         \mbox{\hyperlink{class_forme_1_1_zone_scene}{ZoneScene}} zoneRecue = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_zone_scene}{ZoneScene}}(p1, p2);}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00051}00051         \mbox{\hyperlink{class_forme_1_1_repere}{Repere}} r = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_repere}{Repere}}(zoneRecue, d.\mbox{\hyperlink{class_dessin_1_1_dessin_a7ab5a982176316c3f40545e5178e1607}{zone}});}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00053}00053         \textcolor{comment}{// On passe ensuite a la recuperation des points.}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00054}00054         String[] listePoints = newStr[3].split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00056}00056         \textcolor{comment}{// On verifie qu'il y a le bon nombre de points pour faire un triangle.}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00057}00057         \textcolor{keywordflow}{if} (listePoints.length != 3)}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00058}00058             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00060}00060         \textcolor{comment}{// On transforme les points sous forme de string en Vecteur2D.}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00061}00061         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}[] points = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}[3]; \textcolor{comment}{// 3 points pour un triangle}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00062}00062         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00064}00064         \textcolor{keywordflow}{for} (String s : listePoints) \{}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00065}00065             points[i] = r.\mbox{\hyperlink{class_forme_1_1_repere_a26000be1d781514ab5327b53ff32da70}{transforme}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}(s));}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00066}00066             i++;}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00067}00067         \}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00069}00069         \textcolor{comment}{// Tout est bon pour dessiner le triangle, alors on le dessine}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00070}00070         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00071}00071             d.\mbox{\hyperlink{class_dessin_1_1_dessin_af2673cebbace560fd0dfd6c7ac07d08f}{graphics}}.setColor(c);}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00072}00072             d.\mbox{\hyperlink{class_dessin_1_1_dessin_af2673cebbace560fd0dfd6c7ac07d08f}{graphics}}.drawLine((\textcolor{keywordtype}{int}) points[0].x, (\textcolor{keywordtype}{int}) points[0].y, (\textcolor{keywordtype}{int}) points[1].x, (\textcolor{keywordtype}{int}) points[1].y);}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00073}00073             d.\mbox{\hyperlink{class_dessin_1_1_dessin_af2673cebbace560fd0dfd6c7ac07d08f}{graphics}}.drawLine((\textcolor{keywordtype}{int}) points[1].x, (\textcolor{keywordtype}{int}) points[1].y, (\textcolor{keywordtype}{int}) points[2].x, (\textcolor{keywordtype}{int}) points[2].y);}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00074}00074             d.\mbox{\hyperlink{class_dessin_1_1_dessin_af2673cebbace560fd0dfd6c7ac07d08f}{graphics}}.drawLine((\textcolor{keywordtype}{int}) points[2].x, (\textcolor{keywordtype}{int}) points[2].y, (\textcolor{keywordtype}{int}) points[0].x, (\textcolor{keywordtype}{int}) points[0].y);}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00075}00075         \} \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00076}00076             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00077}00077         \}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00079}00079         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00080}00080     \}}
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_dessiner_triangle_8java_source_l00082}00082 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,78 @@
+\hypertarget{_repere_8java_source}{}\doxysection{Repere.\+java}
+\label{_repere_8java_source}\index{Server/src/Forme/Repere.java@{Server/src/Forme/Repere.java}}
+\mbox{\hyperlink{_repere_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00001}\mbox{\hyperlink{namespace_forme}{00001}} \textcolor{keyword}{package }Forme;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00003}\mbox{\hyperlink{class_forme_1_1_repere}{00003}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_forme_1_1_repere}{Repere}} \{}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00004}\mbox{\hyperlink{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}{00004}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}{lambda}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00005}\mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{00005}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{e1}}, \mbox{\hyperlink{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}{e2}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00006}\mbox{\hyperlink{class_forme_1_1_repere_a1399f1eba7ff5ef3e79be185f32936b8}{00006}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_1_1_repere_a1399f1eba7ff5ef3e79be185f32936b8}{omega}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00014}\mbox{\hyperlink{class_forme_1_1_repere_a6c8414499cca77072b1f37b85404dee0}{00014}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_forme_1_1_repere_a6c8414499cca77072b1f37b85404dee0}{Repere}}(\mbox{\hyperlink{class_forme_1_1_zone_scene}{ZoneScene}} z1, \mbox{\hyperlink{class_forme_1_1_zone_scene}{ZoneScene}} z2) \{}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00015}00015         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} p1, p2, q1, q2;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00016}00016         \textcolor{keywordtype}{double} x1, x2, y1, y2, x1p, x2p, y1p, y2p;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00018}00018         p1 = z1.\mbox{\hyperlink{class_forme_1_1_zone_scene_a8a09fc904c1c4bb2b5e7c7d2982d5990}{p1}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00019}00019         p2 = z1.\mbox{\hyperlink{class_forme_1_1_zone_scene_ae8cf40ae215a12682ff37ea568f39ecf}{p2}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00020}00020         q1 = z2.\mbox{\hyperlink{class_forme_1_1_zone_scene_a8a09fc904c1c4bb2b5e7c7d2982d5990}{p1}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00021}00021         q2 = z2.\mbox{\hyperlink{class_forme_1_1_zone_scene_ae8cf40ae215a12682ff37ea568f39ecf}{p2}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00023}00023         x1 = p1.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00024}00024         x2 = p2.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00025}00025         y1 = p1.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00026}00026         y2 = p2.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00028}00028         x1p = q1.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00029}00029         x2p = q2.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00030}00030         y1p = q1.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00031}00031         y2p = q2.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00033}00033         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} C = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}((x1 + x2) / 2, (y1 + y2) / 2);}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00034}00034         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} Cp = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}((x1p + x2p) / 2, (y1p + y2p) / 2);}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00036}00036         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}{lambda}} = Math.min((Math.abs(x2p -\/ x1p)) / (Math.abs(x2 -\/ x1)),}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00037}00037                 (Math.abs(y2p -\/ y1p)) / (Math.abs(y2 -\/ y1)));}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00039}00039         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{e1}}, \mbox{\hyperlink{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}{e2}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00041}00041         \textcolor{keywordflow}{if} ((x2 -\/ x1 >= 0) == (x2p -\/ x1p >= 0))}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00042}00042             \mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{e1}} = 1;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00043}00043         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00044}00044             \mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{e1}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00046}00046         \textcolor{keywordflow}{if} ((y2 -\/ y1 >= 0) == (y2p -\/ y1p >= 0))}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00047}00047             \mbox{\hyperlink{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}{e2}} = 1;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00048}00048         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00049}00049             \mbox{\hyperlink{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}{e2}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00051}00051         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} LYc = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}(\mbox{\hyperlink{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}{lambda}} * \mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{e1}} * C.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}}, \mbox{\hyperlink{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}{lambda}} * \mbox{\hyperlink{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}{e2}} * C.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}});}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00053}00053         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_1_1_repere_a1399f1eba7ff5ef3e79be185f32936b8}{omega}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}(Cp.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}} -\/ LYc.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}}, Cp.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}} -\/ LYc.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}});}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00055}00055         this.lambda = \mbox{\hyperlink{class_forme_1_1_repere_a6dafa27724de744aa1b78669fd900966}{lambda}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00056}00056         this.e1 = \mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{e1}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00057}00057         this.e2 = \mbox{\hyperlink{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}{e2}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00058}00058         this.omega = \mbox{\hyperlink{class_forme_1_1_repere_a1399f1eba7ff5ef3e79be185f32936b8}{omega}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00067}\mbox{\hyperlink{class_forme_1_1_repere_a26000be1d781514ab5327b53ff32da70}{00067}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_1_1_repere_a26000be1d781514ab5327b53ff32da70}{transforme}}(\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} u) \{}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00068}00068         \textcolor{keywordtype}{double} xp = this.lambda * this.e1 * u.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}} + this.omega.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00069}00069         \textcolor{keywordtype}{double} yp = this.lambda * this.e2 * u.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}} + this.omega.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}};}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00071}00071         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} v = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}(xp, yp);}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00073}00073         \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00074}00074     \}}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00082}\mbox{\hyperlink{class_forme_1_1_repere_aa9e6b8e9b84153726e5061356763577b}{00082}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_forme_1_1_repere_aa9e6b8e9b84153726e5061356763577b}{transformeInverse}}(\mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} u) \{}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00083}00083         \textcolor{keywordtype}{double} xp = (u.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}} -\/ this.omega.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab3fefc2f59155c5fff8237a9a8f5ea69}{x}}) / (this.lambda * \mbox{\hyperlink{class_forme_1_1_repere_a9bcd454790469fe91cfde85548ec746e}{e1}});}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00084}00084         \textcolor{keywordtype}{double} yp = (u.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}} -\/ this.omega.\mbox{\hyperlink{class_forme_1_1_vecteur2_d_ab9cbba5d1f79a04b5fdefe91ce3d037e}{y}}) / (this.lambda * \mbox{\hyperlink{class_forme_1_1_repere_a812cc1b7ef67c113f9214a1e706cfa70}{e2}});}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00086}00086         \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}} v = \textcolor{keyword}{new} \mbox{\hyperlink{class_forme_1_1_vecteur2_d}{Vecteur2D}}(xp, yp);}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00088}00088         \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00089}00089     \}}
+\DoxyCodeLine{\Hypertarget{_repere_8java_source_l00090}00090 \}}
+
+\end{DoxyCode}
