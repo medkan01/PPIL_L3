@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TESTREPERE_H
+#define TESTREPERE_H
+
 #include <string>
 #include <iostream>
 #include "../Forme/Repere.h"
@@ -67,3 +69,5 @@ void TestRepere::sessionTest() {
 
 	cout << "Score : " << score << "/" << nbTests << endl << endl;
 }
+
+#endif

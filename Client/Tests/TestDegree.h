@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TESTDEGREE_H
+#define TESTDEGREE_H
+
 #include <string>
 #include <iostream>
 #include "../Utils/Degree.h"
@@ -55,3 +57,5 @@ void TestDegree::sessionTest() {
 
 	cout << "Score : " << score << "/" << nbTests << endl << endl;
 }
+
+#endif

@@ -4,6 +4,13 @@ import Dessin.Dessin;
 
 public class DessinerForme {
 
+    /**
+     * Expert qui dessine une forme.
+     * 
+     * @param requete : Forme a decoder.
+     * @param d       : Dessin sur lequel la forme a decoder doit etre dessinee.
+     * @return Resultat du decodage.
+     */
     public static boolean dessine(String s, Dessin dessin) {
         DessinerCOR d;
 

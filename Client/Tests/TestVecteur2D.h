@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TESTVECTEUR2D_H
+#define TESTVECTEUR2D_H
+
 #include "../Forme/Vecteur2D.h"
 using namespace std;
 
@@ -270,3 +272,5 @@ void TestVecteur2D::sessionTest() {
 
 	cout << "Score : " << score << "/" << nbTests << endl << endl;
 }
+
+#endif

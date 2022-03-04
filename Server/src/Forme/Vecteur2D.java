@@ -18,6 +18,11 @@ public class Vecteur2D {
         this.y = y;
     }
 
+    /**
+     * Constructeur de la classe Vecteur2D
+     * 
+     * @param str : String sous la forme (x, y).
+     */
     public Vecteur2D(String str) {
         try {
             Pattern p = Pattern.compile("\\(([+-]?(\\d*[.])?\\d+)\\,\\s*([+-]?(\\d*[.])?\\d+)\\)");
@@ -37,6 +42,13 @@ public class Vecteur2D {
         }
     }
 
+    /**
+     * Distance qui separe deux vecteurs.
+     * 
+     * @param u : Premier vecteur.
+     * @param v : Deuxieme vecteur.
+     * @return Distance entre les deux vecteurs.
+     */
     public static double distance(Vecteur2D u, Vecteur2D v) {
         return Math.abs(Math.sqrt(Math.pow((v.x - u.x), 2) + Math.pow((v.y - u.y), 2)));
     }

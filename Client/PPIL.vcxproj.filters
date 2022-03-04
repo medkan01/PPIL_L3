@@ -131,6 +131,9 @@
     <ClInclude Include="Forme\Polygone.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Tests\SessionTests.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />

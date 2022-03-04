@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TESTSEGMENT_H
+#define TESTSEMGENT_H
+
 #include "../Forme/Segment.h"
 
 class TestSegment {
@@ -103,3 +105,5 @@ void TestSegment::sessionTest() {
 
 	cout << "Score : " << score << "/" << nbTests << endl << endl;
 }
+
+#endif

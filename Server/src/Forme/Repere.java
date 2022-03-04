@@ -5,6 +5,12 @@ public class Repere {
     public int e1, e2;
     public Vecteur2D omega;
 
+    /**
+     * Constructeur de la classe Repere.
+     * 
+     * @param z1 : ZoneScene z1. (Ou R)
+     * @param z2 : ZoneScene z2. (Ou R')
+     */
     public Repere(ZoneScene z1, ZoneScene z2) {
         Vecteur2D p1, p2, q1, q2;
         double x1, x2, y1, y2, x1p, x2p, y1p, y2p;
@@ -52,6 +58,12 @@ public class Repere {
         this.omega = omega;
     }
 
+    /**
+     * Methode permettant de changer le repere d'un vecteur dans le nouveau repere.
+     * 
+     * @param u : Vecteur qui va subir la transformation.
+     * @return Nouveau vecteur.
+     */
     public Vecteur2D transforme(Vecteur2D u) {
         double xp = this.lambda * this.e1 * u.x + this.omega.x;
         double yp = this.lambda * this.e2 * u.y + this.omega.y;
@@ -61,6 +73,12 @@ public class Repere {
         return v;
     }
 
+    /**
+     * Methode permettant de changer le repere d'un vecteur dans le nouveau repere.
+     * 
+     * @param u : Vecteur qui va subir la transformation.
+     * @return Nouveau vecteur.
+     */
     public Vecteur2D transformeInverse(Vecteur2D u) {
         double xp = (u.x - this.omega.x) / (this.lambda * e1);
         double yp = (u.y - this.omega.y) / (this.lambda * e2);

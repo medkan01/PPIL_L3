@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TESTTRIANGLE_H
+#define TESTTRIANGLE_H
+
 #include "../Forme/Triangle.h"
 
 class TestTriangle {
@@ -103,3 +105,5 @@ void TestTriangle::sessionTest() {
 
 	cout << "Score : " << score << "/" << nbTests << endl << endl;
 }
+
+#endif

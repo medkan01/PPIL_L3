@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TESTRADIAN_H
+#define TESTRADIAN_H
+
 #include <string>
 #include <iostream>
 #include "../Utils/Radian.h"
@@ -55,3 +57,5 @@ void TestRadian::sessionTest() {
 
 	cout << "Score : " << score << "/" << nbTests << endl << endl;
 }
+
+#endif

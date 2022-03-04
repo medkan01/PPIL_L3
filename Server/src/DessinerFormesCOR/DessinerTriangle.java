@@ -9,10 +9,22 @@ import java.awt.Color;
 
 public class DessinerTriangle extends DessinerCOR {
 
+    /**
+     * Constructeur de la classe DessinerTriangle
+     * 
+     * @param suivant : Pointeur sur le decodeur suivant.
+     */
     public DessinerTriangle(DessinerCOR suivant) {
         super(suivant);
     }
 
+    /**
+     * Expert qui dessine un triangle.
+     * 
+     * @param requete : Forme a decoder.
+     * @param d       : Dessin sur lequel la forme a decoder doit etre dessinee.
+     * @return Resultat du decodage.
+     */
     protected boolean dessinerForme1(String requete, Dessin d) {
         // On separe les informations.
         String[] newStr = requete.split("/");

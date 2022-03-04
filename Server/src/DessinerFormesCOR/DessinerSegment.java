@@ -9,10 +9,22 @@ import java.awt.Color;
 
 public class DessinerSegment extends DessinerCOR {
 
+    /**
+     * Constructeur de la classe DessinerSegment
+     * 
+     * @param suivant : Pointeur sur le decodeur suivant.
+     */
     public DessinerSegment(DessinerCOR suivant) {
         super(suivant);
     }
 
+    /**
+     * Expert qui dessine un segment.
+     * 
+     * @param requete : Forme a decoder.
+     * @param d       : Dessin sur lequel la forme a decoder doit etre dessinee.
+     * @return Resultat du decodage.
+     */
     protected boolean dessinerForme1(String requete, Dessin d) {
         // On separe les informations.
         String[] newStr = requete.split("/"); // newStr[0] = type; newStr[1] = liste des points; newStr[2] = couleur;

@@ -1,18 +1,13 @@
 #pragma once
 #include <stdio.h>
-#include "Tests/TestVecteur2D.h"
-#include "Tests/TestRepere.h"
-#include "Tests/TestRadian.h"
-#include "Tests/TestDegree.h"
-#include "Tests/TestSegment.h"
-#include "Tests/TestTriangle.h"
 #include "TCPIP/Client.h"
 #include "Visitor/DessinerFormeJava.h"
 #include "Forme/Cercle.h"
 #include "Forme/Polygone.h"
+#include "Tests/SessionTests.h"
 using namespace std;
 
-
+/*
 int main() {
 	const Couleur noire = Couleur::BLACK;
 	const Couleur rouge = Couleur::RED;
@@ -62,4 +57,9 @@ int main() {
 	Client::instance().deconnexion();
 
 	return 0;
+}
+*/
+
+int main() {
+	sessionTests();
 }

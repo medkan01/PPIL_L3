@@ -163,6 +163,7 @@
     <ClInclude Include="Forme\Triangle.h" />
     <ClInclude Include="Forme\Vecteur2D.h" />
     <ClInclude Include="TCPIP\Client.h" />
+    <ClInclude Include="Tests\SessionTests.h" />
     <ClInclude Include="Tests\TestDegree.h" />
     <ClInclude Include="Tests\TestRadian.h" />
     <ClInclude Include="Tests\TestRepere.h" />
